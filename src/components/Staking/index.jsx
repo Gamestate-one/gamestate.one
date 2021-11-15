@@ -35,6 +35,7 @@ const StyledStakingTitleLeft = styled.p`
   position: relative;
   z-index: 1;
   margin-top: 135px;
+  margin-left: 4px;
   &::before {
     position: absolute;
     content: "";
