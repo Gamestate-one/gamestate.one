@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "./logo.svg"
+import "./App.css"
+import Staking from "./components/Staking"
 
 function App() {
-  return <div className='App'></div>;
+  return <Staking />
 }
 
-export default App;
+export default App
