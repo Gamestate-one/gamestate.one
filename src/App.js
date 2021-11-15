@@ -1,5 +1,6 @@
 import Header from "./components/Navbar";
 import Hero from "./components/Hero";
+import Explore from "./components/Explore";
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
       </header>
       <main>
         <Hero />
+        <Explore />
       </main>
     </>
   );
