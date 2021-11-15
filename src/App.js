@@ -1,6 +1,7 @@
-import Header from "./components/Navbar";
-import Hero from "./components/Hero";
-import Explore from "./components/Explore";
+import Staking from "./components/Staking"
+import Header from "./components/Navbar"
+import Hero from "./components/Hero"
+import Explore from "./components/Explore"
 function App() {
   return (
     <>
@@ -10,9 +11,10 @@ function App() {
       <main>
         <Hero />
         <Explore />
+        <Staking />
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
