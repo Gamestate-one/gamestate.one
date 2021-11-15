@@ -1,4 +1,4 @@
-import HeroImage from "../../assets/img/hero.svg";
+import HeroImage from "../../assets/img/HeroBanner/hero.svg";
 import styled from "styled-components";
 
 const Hero = () => {

@@ -1,4 +1,4 @@
-import Logo from "../../assets/img/logo.svg";
+import Logo from "../../assets/img/Logo/logo.svg";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -34,7 +34,7 @@ const Div = styled.div`
   margin-left: 50px;
   font-size: 16px;
   font-style: normal;
-  font-weight: medium;
+  font-weight: 500;
   border-radius: 24px;
 `;
 const StyledLitePaper = styled(Div)`
@@ -71,7 +71,7 @@ const StyledNav = styled(Nav)`
 `;
 
 const StyledContainer = styled(Container)`
-  margin: 0 7%;
+  padding: 0 7%;
 `;
 const StyledImg = styled.img`
   max-width: 100%;
