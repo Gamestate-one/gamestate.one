@@ -14,20 +14,20 @@ const Explore = () => {
     <Div>
       <StyledContainer>
         <StyledHead>
-          <StyledImg width='239px' height='76px' src={Discord} alt='Discord' />
-          <StyledImg width='75px' height='75px' src={Telegram} alt='Telegram' />
-          <StyledImg width='170px' height='90px' src={Twitter} alt='Twitter' />
-          <StyledImg width='184px' height='77px' src={Medium} alt='Medium' />
-          <StyledImg width='84px' height='84px' src={Bird} alt='Bird' />
+          <StyledImg width="239px" height="76px" src={Discord} alt="Discord" />
+          <StyledImg width="75px" height="75px" src={Telegram} alt="Telegram" />
+          <StyledImg width="170px" height="90px" src={Twitter} alt="Twitter" />
+          <StyledImg width="184px" height="77px" src={Medium} alt="Medium" />
+          <StyledImg width="84px" height="84px" src={Bird} alt="Bird" />
           <StyledImg
-            width='224px'
-            height='65px'
+            width="224px"
+            height="65px"
             src={Facebook}
-            alt='Facebook'
+            alt="Facebook"
           />
         </StyledHead>
         <div>
-          <StyledHeroImage src={HeroImage} alt='Hero' />
+          <StyledHeroImage src={HeroImage} alt="Hero" />
           <StyledDescription>
             EXPLORE, PLAY, EARN AND SOCIALISE IN THE DECENTRALIZED VIRTUAL
             WORLD.START YOUR METAVERSE GAMING WITH VIP CARD NOW!
@@ -59,7 +59,6 @@ const StyledContainer = styled(Container)`
 `;
 const StyledHead = styled(Row)`
   align-items: center;
-  margin-top: 33px;
   margin-bottom: 60px;
   height: 90px;
   justify-content: space-between;
