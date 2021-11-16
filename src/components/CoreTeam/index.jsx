@@ -10,12 +10,20 @@ import extKhanh from "../../assets/img/Team/extKhanh.png"
 import extMarco from "../../assets/img/Team/extMarco.png"
 import extWilliam from "../../assets/img/Team/extWilliam.png"
 import AvatarItem from "../AvatarItem"
+import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
 
 const StyledItemCol = styled(Col)`
   padding: 0 15px;
 `
-
+const StyledBlockCoreTeam = styled.div`
+  width: 100%;
+  background: url(${team}),
+    transparent linear-gradient(128deg, #163f8c 0%, #8f65be 48%, #e740f0 100%)
+      0% 0% no-repeat padding-box;
+  background-repeat: no-repeat;
+  background-position: right top;
+`
 const EXTENDED_TEAM = [
   {
     src: extErik,
@@ -66,21 +74,23 @@ const EXTENDED_TEAM = [
     desc: "Marco has extensive experience in Corporate Finance, M&A, Fintech, Real-estate, NFT’s and Metaverses. In recent years, he has developed business across Asia and Europe, acted as head of operations for AngelVest and founded a marketplace for digital fashion collectibles.",
   },
 ]
-const ExtendedTeam = () => {
+const CoreTeam = () => {
   return (
-    <Container>
-      <Row>
-        <LabelSection label="EXTENDED TEAM / ADVISORS" note="MEET THE" />
-      </Row>
-      <Row className="mt-4">
-        {EXTENDED_TEAM.map((item, idx) => (
-          <StyledItemCol lg={3} key={idx}>
-            <AvatarItem item={item} />
-          </StyledItemCol>
-        ))}
-      </Row>
-    </Container>
+    <StyledBlockCoreTeam>
+      <Container>
+        <Row>
+          <LabelSection label="CORE TEAM" note="MEET THE" />
+        </Row>
+        <Row className="mt-4">
+          {EXTENDED_TEAM.map((item, idx) => (
+            <StyledItemCol lg={3} key={idx}>
+              <AvatarItem item={item} />
+            </StyledItemCol>
+          ))}
+        </Row>
+      </Container>
+    </StyledBlockCoreTeam>
   )
 }
 
-export default ExtendedTeam
+export default CoreTeam
