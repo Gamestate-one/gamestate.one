@@ -33,7 +33,9 @@ const StyledStakingTitleLeft = styled.p`
   text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
   text-transform: uppercase;
   position: relative;
+  z-index: 1;
   margin-top: 135px;
+  margin-left: 4px;
   &::before {
     position: absolute;
     content: "";
@@ -88,6 +90,7 @@ const StyledStakingTitleRight = styled.span`
   text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
   text-transform: uppercase;
   position: relative;
+  z-index: 1;
   margin-top: 135px;
   &::after {
     position: absolute;
@@ -100,6 +103,18 @@ const StyledStakingTitleRight = styled.span`
       0% no-repeat padding-box;
     z-index: -1;
   }
+  /* &::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 100%;
+    height: 44px;
+    background: #e740f0 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(50px);
+    z-index: -1;
+  } */
 `
 const StyledDescRight = styled.span`
   display: block;
