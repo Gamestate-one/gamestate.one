@@ -34,9 +34,7 @@ const App = () => {
   }, [])
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <StyledMain>
         <Hero />
         <Explore />
