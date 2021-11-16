@@ -1,5 +1,4 @@
 import React from "react"
-import { Container, Row } from "react-bootstrap"
 import styled from "styled-components"
 const StyledLabelSection = styled.div`
   font-style: normal;
