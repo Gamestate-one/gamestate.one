@@ -17,4 +17,7 @@ const StyledHero = styled.div`
 `;
 const StyledImg = styled.img`
   object-fit: cover;
+  width: 100%;
+  max-width: 883px;
+  height: auto;
 `;
