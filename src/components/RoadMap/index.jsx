@@ -51,9 +51,7 @@ const CONTENT = [
     className: "card_top_right",
     color: "#1F95FF",
     label: "Q3 2022",
-    description: [
-      "Expand Gamestate to include game world, economy, staking and minting of NFTs",
-    ],
+    description: ["Expand Gamestate to include game world, economy, staking"],
   },
   {
     className: "card_bottom_left",

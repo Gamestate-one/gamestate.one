@@ -21,6 +21,12 @@ const StyledStaking = styled(Container)`
     margin-top: -350px;
   }
 `
+const StyledStakingColLeft = styled(Col)`
+  padding-left: 112px;
+`
+const StyledStakingColRight = styled(Col)`
+  padding-right: 146px;
+`
 const StyledStakingTitleLeft = styled.p`
   font-size: 77px;
   font-weight: bold;
@@ -155,23 +161,23 @@ const Staking = () => {
     <>
       <StyledStaking>
         <Row className="mt-156">
-          <Col lg={6}>
+          <StyledStakingColLeft lg={6}>
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LOTTERY REWARDS</StyledTitleLeft>
             <StyledDescLeft>
               VIP card gives gamers ticket for staking and a chance to spin the
               wheel and win rewards.
             </StyledDescLeft>
-          </Col>
+          </StyledStakingColLeft>
           <Col lg={6}>
             <StyledImgNft image={StakingNftImage} height={1186} />
           </Col>
         </Row>
-        <Row className="mt-350 grid-image">
+        <Row className="mt-350">
           <Col lg={6}>
             <StyledImgNft image={StakingCupImage} height={780} />
           </Col>
-          <Col>
+          <StyledStakingColRight>
             <StyledStakingTitleRight>
               <span>TOURNAMENT</span>
               <span>PRIZES</span>
@@ -179,7 +185,7 @@ const Staking = () => {
             <StyledDescRight>
               Gamers can participate in tournaments on Gamestate and win prizes.
             </StyledDescRight>
-          </Col>
+          </StyledStakingColRight>
         </Row>
       </StyledStaking>
       <StyledContainerFluid />

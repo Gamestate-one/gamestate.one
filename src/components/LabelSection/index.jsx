@@ -26,8 +26,9 @@ const StyledLabelSection = styled.div`
     z-index: -1;
   }
 `
-const LabelSection = ({ label }) => {
-  return <StyledLabelSection>{label}</StyledLabelSection>
+const LabelSection = ({ label, note }) => {
+  console.log(note)
+  return <StyledLabelSection note={note}>{label}</StyledLabelSection>
 }
 
 export default LabelSection

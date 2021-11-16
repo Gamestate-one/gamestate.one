@@ -12,6 +12,7 @@ import Description from "./components/Description"
 import styled from "styled-components"
 import BackTop from "../src/assets/img/backtop.png"
 import BackTopBackground from "../src/assets/img/backtopBackground.png"
+import ExtendedTeam from "./components/ExtendedTeam"
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -42,6 +43,7 @@ const App = () => {
         <TokenSale />
         <Description />
         <Staking />
+        <ExtendedTeam />
         <Partners />
         <RoadMap />
         <Contact />

@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react"
+import { Container, Row } from "react-bootstrap"
+import LabelSection from "../LabelSection"
 
 const ExtendedTeam = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <Container>
+      <Row>
+        <LabelSection label="EXTENDED TEAM / ADVISORS" note />
+      </Row>
+    </Container>
+  )
 }
 
 export default ExtendedTeam

@@ -108,7 +108,7 @@ const ContactForm = () => {
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Row>
           <StyledColInput md={6}>
-            <StyledInput className="mb-3" controlId="formBasicEmail">
+            <StyledInput className="mb-3" controlId="formBasicFirstName">
               <Form.Label>First Name *</Form.Label>
               <Form.Control type="text" />
               <StyledIconInput src={bookIcon} />
@@ -116,14 +116,14 @@ const ContactForm = () => {
           </StyledColInput>
 
           <StyledColInput md={6}>
-            <StyledInput className="mb-3" controlId="formBasicPassword">
+            <StyledInput className="mb-3" controlId="formBasicLastName">
               <Form.Label>Last Name *</Form.Label>
               <Form.Control type="text" />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledInput className="mb-3" controlId="formBasicPassword">
+            <StyledInput className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email *</Form.Label>
               <Form.Control type="email" />
               <StyledIconInput src={emailIcon} />
