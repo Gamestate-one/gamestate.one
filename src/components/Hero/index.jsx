@@ -12,9 +12,10 @@ export default Hero;
 
 const StyledHero = styled.div`
   margin-top: 128px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
+  background-color: #05080a;
 `;
 const StyledImg = styled.img`
   object-fit: cover;

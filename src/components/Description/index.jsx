@@ -18,12 +18,12 @@ const Description = () => {
             </StyledUserDescription>
           </StyledUserContent>
           <Col>
-            <StyledAvatar src={Avatar} alt='avatar' />
+            <StyledAvatar src={Avatar} alt="avatar" />
           </Col>
         </Row>
         <Row>
           <Col>
-            <StyledBannerImage src={Banner} alt='Banner' />
+            <StyledBannerImage src={Banner} alt="Banner" />
           </Col>
           <StyledGameContent>
             <StyledGameTitle>UNIFIED GAME</StyledGameTitle>
@@ -36,14 +36,14 @@ const Description = () => {
         </Row>
       </Container>
       <img
-        className='gridBackground'
+        className="gridBackground"
         src={GridBackground}
-        alt='Grid Background'
+        alt="Grid Background"
       />
       <img
-        className='unifiledBackground'
+        className="unifiledBackground"
         src={UnifiledBackground}
-        alt='Unidiled Background'
+        alt="Unidiled Background"
       />
     </Div>
   );
@@ -51,7 +51,7 @@ const Description = () => {
 // Styled Container
 const Div = styled.div`
   position: relative;
-  padding-bottom: 170px;
+  padding-bottom: 190px;
   .gridBackground {
     position: absolute;
     bottom: 0;
@@ -61,9 +61,10 @@ const Div = styled.div`
   .unifiledBackground {
     position: absolute;
     bottom: 140px;
-    left: 120px;
-    width: 90%;
+    left: 100px;
+    width: 92%;
     z-index: -50;
+    height: 221px;
   }
 `;
 // User Content
@@ -85,7 +86,7 @@ const StyledUserTitle = styled(P)`
   position: relative;
   font: normal normal bold 77px/60px Whyte;
   color: #e740f0;
-  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
+  /* text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4; */
   text-transform: uppercase;
   height: 77px;
   &::before {
@@ -128,16 +129,16 @@ const StyledGameContent = styled(Col)`
   flex-direction: column;
   align-items: flex-end;
   padding-top: 120px;
-  margin-right: 80px;
+  margin-right: 40px;
 `;
 const StyledBannerImage = styled.img`
-  padding-top: 80px;
-  padding-left: 40px;
+  padding-top: 100px;
+  padding-left: 0px;
 `;
 const StyledGameTitle = styled(P)`
   font: normal normal bold 77px/60px Whyte;
   color: #6a9df9;
-  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c; */
   text-transform: uppercase;
   height: 77px;
   position: relative;

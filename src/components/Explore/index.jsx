@@ -33,7 +33,7 @@ const Explore = () => {
             WORLD.START YOUR METAVERSE GAMING WITH VIP CARD NOW!
           </StyledDescription>
           <StyledButton>
-            <StyledSpan blue={true}>BUY</StyledSpan>
+            <StyledSpan>BUY</StyledSpan>
             <StyledSubSpan>NOW</StyledSubSpan>
           </StyledButton>
         </div>
@@ -85,7 +85,8 @@ const StyledDescription = styled.div`
 `;
 const StyledButton = styled.button`
   position: relative;
-  width: 292px;
+  max-width: 292px;
+  width: 100%;
   height: 76px;
   background-color: #000000;
   border-radius: 4px;
@@ -102,7 +103,7 @@ const StyledButton = styled.button`
     background: transparent
       linear-gradient(104deg, #163f8c 0%, #8f65be 48%, #e740f0 100%) 0% 0%
       no-repeat;
-    width: 310px;
+    width: 300px;
     height: 80px;
     top: -8px;
     left: -8px;
@@ -121,7 +122,7 @@ const StyledButton = styled.button`
   }
 `;
 const Span = styled.span`
-  font: normal normal normal 23px/31px Whyte;
+  font: normal normal normal 23px/28px Whyte;
   letter-spacing: 0px;
   opacity: 1;
 `;
