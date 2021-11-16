@@ -84,11 +84,14 @@ const StyledNav = styled(Nav)`
   justify-content: flex-end;
 `;
 
-const StyledContainer = styled(Container)``;
 const StyledImg = styled.img`
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+`;
+const StyledContainer = styled(Container)`
+  height: 100%;
 `;
 const StyledNavbar = styled(Navbar)`
   background-color: #000000;
+  height: 102px;
 `;

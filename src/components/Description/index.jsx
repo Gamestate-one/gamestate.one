@@ -61,8 +61,8 @@ const Div = styled.div`
   .unifiledBackground {
     position: absolute;
     bottom: 140px;
-    left: 120px;
-    width: 90%;
+    left: 200px;
+    width: 86%;
     z-index: -50;
   }
 `;
@@ -128,7 +128,6 @@ const StyledGameContent = styled(Col)`
   flex-direction: column;
   align-items: flex-end;
   padding-top: 120px;
-  margin-right: 80px;
 `;
 const StyledBannerImage = styled.img`
   padding-top: 80px;
