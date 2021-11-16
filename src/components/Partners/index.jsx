@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import styled from "styled-components"
 import LabelSection from "../LabelSection"
 import logoDig from "../../assets/img/Logo/logoDig.svg"
