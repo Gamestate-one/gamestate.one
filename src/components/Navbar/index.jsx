@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import Logo from "../../assets/img/Logo/logo.svg";
+import Logo from "../../assets/img/Logo/logo.png";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import styled from "styled-components";
 
+var deviceWidth = window.innerWidth;
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -54,12 +55,18 @@ const A = styled.a`
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
-  @media (min-width: 1400px) {
-    max-height: 41px;
+  max-height: 41px;
+  min-width: 148px;
+  max-width: 150px;
+  @media screen and (min-width: 992px) and (max-width: 1310px) {
+    font: normal normal medium 12px/12px Whyte;
+    min-width: 116px;
+  }
+  @media (max-width: 992px) {
+    margin-bottom: 16px;
   }
 `;
 const StyledFirstButton = styled(A)`
-  padding: 6px 28px;
   color: #ffffff;
   border: 3px solid #ffffff;
   box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
@@ -70,7 +77,6 @@ const StyledFirstButton = styled(A)`
   }
 `;
 const StyledSecondButton = styled(A)`
-  padding: 10px 53px;
   color: #81efff;
   border: 3px solid #81efff;
   box-shadow: 0px 3px 6px #406ef8;
@@ -81,7 +87,6 @@ const StyledSecondButton = styled(A)`
   }
 `;
 const StyledThirdButton = styled(A)`
-  padding: 10px 43px;
   color: #1ad177;
   border: 3px solid #1ad177;
   text-shadow: 0px 3px 6px #20ac67, 0px 3px 6px #1ad178;
@@ -92,7 +97,6 @@ const StyledThirdButton = styled(A)`
   }
 `;
 const StyledFourthButton = styled(A)`
-  padding: 10px 27px;
   color: #e740f0;
   border: 3px solid #e740f0;
   text-shadow: 0px 3px 6px rgb(158, 80, 162), 0px 3px 6px rgb(231, 64, 240);
@@ -105,18 +109,48 @@ const StyledFourthButton = styled(A)`
 const StyledNav = styled(Nav)`
   flex: 1;
   justify-content: flex-end;
+  align-items: center;
 `;
 
 const StyledImg = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: 576px) {
+    max-width: 195px;
+    max-height: 53px;
+  }
 `;
 const StyledContainer = styled(Container)`
   height: 100%;
+  max-width: 94%;
+  @media screen and (max-width: 992px) {
+    max-width: 100%;
+    padding: 0;
+    .navbar-brand {
+      margin-left: 2%;
+    }
+    .navbar-toggler {
+      margin-right: 2%;
+    }
+  }
 `;
 const StyledNavbar = styled(Navbar)`
   background-color: #000000;
-  height: 102px;
+  max-height: 102px;
+  .navbar-toggler {
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    .navbar-toggler-icon {
+      margin-left: -8px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .navbar-collapse {
+    background-color: #000000;
+    /* width: ${deviceWidth}px; */
+  }
 `;
 const Div = styled.div`
   .add-boxshadow {

@@ -25,16 +25,24 @@ const Div = styled.div`
   -webkit-backdrop-filter: blur(16px);
   padding-bottom: 138px;
   padding-top: 102px;
+  img {
+    max-width: 100%;
+  }
 `;
 const Title = styled.span`
   font: normal normal bold 50px/60px Whyte;
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
+  @media (max-width: 768px) {
+    font: normal normal bold 40px/40px Whyte;
+  }
+  @media (max-width: 564px) {
+    font: normal normal bold 32px/32px Whyte;
+  }
 `;
 const StyledTitle = styled(Title)`
   color: #6a9df9;
-  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c; */
   padding-right: 14px;
   position: relative;
   &::before {
@@ -71,5 +79,11 @@ const Description = styled.p`
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
+  @media (max-width: 768px) {
+    font: normal normal bold 20px/28px Whyte;
+  }
+  @media screen and (max-width: 564px) {
+    font: normal normal normal 16px/28px Whyte;
+  }
 `;
 export default MarketPlace;
