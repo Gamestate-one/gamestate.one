@@ -24,6 +24,7 @@ const Div = styled.div`
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding-bottom: 138px;
+  padding-top: 102px;
 `;
 const Title = styled.span`
   font: normal normal bold 50px/60px Whyte;
