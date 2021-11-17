@@ -1,40 +1,40 @@
-import Staking from "./components/Staking";
-import Header from "./components/Navbar";
-import Hero from "./components/Hero";
-import Explore from "./components/Explore";
-import Partners from "./components/Partners";
-import RoadMap from "./components/RoadMap";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { useState, useEffect } from "react";
-import TokenSale from "./components/TokenSale";
-import Description from "./components/Description";
-import MarketPlace from "./components/MarketPlace";
-import Igos from "./components/Igos";
-import styled from "styled-components";
-import BackTop from "../src/assets/img/backtop.png";
-import BackTopBackground from "../src/assets/img/backtopBackground.png";
-import ExtendedTeam from "./components/ExtendedTeam";
-import CoreTeam from "./components/CoreTeam";
+import Staking from "./components/Staking"
+import Header from "./components/Navbar"
+import Hero from "./components/Hero"
+import Explore from "./components/Explore"
+import Partners from "./components/Partners"
+import RoadMap from "./components/RoadMap"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+import { useState, useEffect } from "react"
+import TokenSale from "./components/TokenSale"
+import Description from "./components/Description"
+import MarketPlace from "./components/MarketPlace"
+import Igos from "./components/Igos"
+import styled from "styled-components"
+import BackTop from "../src/assets/img/backtop.png"
+import BackTopBackground from "../src/assets/img/backtopBackground.png"
+import ExtendedTeam from "./components/ExtendedTeam"
+import CoreTeam from "./components/CoreTeam"
 
 const App = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   const toggleVisibility = () => {
     if (window.pageYOffset > 250) {
-      setIsVisible(true);
+      setIsVisible(true)
     } else {
-      setIsVisible(false);
+      setIsVisible(false)
     }
-  };
+  }
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    });
-  };
+    })
+  }
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-  }, []);
+    window.addEventListener("scroll", toggleVisibility)
+  }, [])
   return (
     <>
       <Header />
@@ -61,12 +61,12 @@ const App = () => {
         )}
       </StyledBackTop>
     </>
-  );
-};
+  )
+}
 
 const StyledMain = styled.main`
   overflow: hidden;
-`;
+`
 const BackTopBtn = styled.div`
   position: relative;
   border-radius: 4px;
@@ -87,9 +87,10 @@ const BackTopBtn = styled.div`
       height: 32px;
     }
   }
-`;
+`
 const StyledBackTop = styled.div`
   position: fixed;
+  z-index: 999;
   bottom: 1.5em;
   right: 1.2em;
   animation: fadeIn 700ms ease-in-out 1s both;
@@ -104,5 +105,5 @@ const StyledBackTop = styled.div`
   }
   @media (max-width: 767px) {
   }
-`;
-export default App;
+`
+export default App
