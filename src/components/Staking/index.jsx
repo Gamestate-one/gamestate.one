@@ -159,7 +159,7 @@ const StyledDescRight = styled.span`
 const Staking = () => {
   return (
     <>
-      <StyledStaking>
+      <StyledStaking id="staking">
         <Row className="mt-156">
           <StyledStakingColLeft lg={6}>
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>

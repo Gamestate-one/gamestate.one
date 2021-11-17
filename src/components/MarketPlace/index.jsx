@@ -4,7 +4,7 @@ import Banner from "../../assets/img/MarketPlace/banner.png";
 const MarketPlace = () => {
   return (
     <Div>
-      <img src={Banner} alt="banner" />
+      <img src={Banner} alt='banner' />
       <div>
         <StyledTitle>NFT</StyledTitle>
         <StyledSubTitle>MARKETPLACE</StyledSubTitle>
@@ -20,7 +20,7 @@ const MarketPlace = () => {
 const Div = styled.div`
   text-align: center;
   opacity: 1;
-  background-color: #141414;
+  background-color: #0c0c0c;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding-bottom: 138px;

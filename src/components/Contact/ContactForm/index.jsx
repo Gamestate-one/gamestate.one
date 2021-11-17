@@ -6,7 +6,7 @@ import bookIcon from "../../../assets/img/Contact/book.svg"
 import emailIcon from "../../../assets/img/Contact/email.svg"
 
 const StyledContactForm = styled.div`
-  background: #9e08a6;
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px 80px;
   border-radius: 8px;
 `
@@ -27,9 +27,9 @@ const StyledDesc = styled.span`
   width: 100%;
 `
 const StyledInput = styled(Form.Group)`
-  background-color: #b163d5;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 16px;
-  border: 1px solid #e740f0;
+  /* border: 1px solid #e740f0; */
   border-radius: 16px;
   font-size: 12px;
   line-height: 16px;
@@ -73,12 +73,24 @@ const StyledColInput = styled(Col)`
 `
 const StyledButton = styled(Button)`
   padding: 22px 0;
-  background-color: #b163d5;
+  background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 4px;
   width: 100%;
   font: normal normal bold 24px/32px Whyte;
   color: #ffffff;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    opacity: 1;
+    left: 48%;
+    top: 38%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    filter: blur(14px);
+  }
 `
 const StyledCountTextarea = styled.span`
   font: normal normal normal 12px/14px Whyte;

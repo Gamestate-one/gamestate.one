@@ -9,15 +9,15 @@ const Upcoming = () => {
     <Div>
       <Title>Upcoming IGOS</Title>
       <StyledRow>
-        <BigBanner xs={8}>
-          <img src={BigImage} alt="BigImage" />
+        <BigBanner lg={8}>
+          <img src={BigImage} alt='BigImage' />
         </BigBanner>
-        <Col xs={4}>
+        <Col lg={4}>
           <Row>
-            <SideBanner src={SideImage1} alt="SideImage1" />
+            <SideBanner src={SideImage1} alt='SideImage1' />
           </Row>
           <Row>
-            <SideBanner2 src={SideImage2} alt="SideImage2" />
+            <SideBanner2 src={SideImage2} alt='SideImage2' />
           </Row>
         </Col>
       </StyledRow>
@@ -42,7 +42,11 @@ const Title = styled.span`
   margin-left: 70px;
 `;
 const BigBanner = styled(Col)`
+  margin-left: -50px;
+  /* margin-right: 30px; */
   img {
+    width: 100%;
+    height: 100%;
     max-width: 1319px;
     max-height: 954px;
   }
