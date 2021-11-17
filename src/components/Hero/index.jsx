@@ -3,15 +3,16 @@ import styled from "styled-components";
 
 const Hero = () => {
   return (
-    <StyledHero>
-      <StyledImg src={HeroImage} alt="Hero" />
-    </StyledHero>
+    <Div>
+      <StyledImg src={HeroImage} alt='Hero' />
+    </Div>
   );
 };
 export default Hero;
 
-const StyledHero = styled.div`
-  margin-top: 128px;
+const Div = styled.div`
+  margin-top: 102px;
+  padding-top: 26px;
   padding-bottom: 100px;
   display: flex;
   justify-content: center;

@@ -1,9 +1,9 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import styled from "styled-components"
-import StakingNftImage from "../../assets/img/Staking/stakingNft.png"
-import StakingCupImage from "../../assets/img/Staking/stakingCup.png"
-import StakingGrid from "../../assets/img/Staking/stakingGrid.png"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import styled from "styled-components";
+import StakingNftImage from "../../assets/img/Staking/stakingNft.png";
+import StakingCupImage from "../../assets/img/Staking/stakingCup.png";
+import StakingGrid from "../../assets/img/Staking/stakingGrid.png";
 const StyledContainerFluid = styled.div`
   background-image: url(${StakingGrid});
   background-size: cover;
@@ -11,7 +11,7 @@ const StyledContainerFluid = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: 315px;
-`
+`;
 const StyledStaking = styled(Container)`
   min-height: 1247px;
   .mt-156 {
@@ -20,7 +20,7 @@ const StyledStaking = styled(Container)`
   .mt-350 {
     margin-top: -350px;
   }
-`
+`;
 const StyledStakingTitleLeft = styled.p`
   font-size: 77px;
   font-weight: bold;
@@ -56,7 +56,7 @@ const StyledStakingTitleLeft = styled.p`
     filter: blur(50px);
     z-index: -1;
   }
-`
+`;
 const StyledImgNft = styled.div`
   background-image: url(${(props) => props.image});
   background-size: contain;
@@ -64,7 +64,7 @@ const StyledImgNft = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: ${(props) => props.height}px;
-`
+`;
 const StyledTitleLeft = styled.p`
   font-size: 50px;
   font-weight: normal;
@@ -75,7 +75,7 @@ const StyledTitleLeft = styled.p`
   text-transform: uppercase;
   margin-left: 74px;
   margin-top: 30px;
-`
+`;
 const StyledDescLeft = styled.span`
   font-style: normal;
   font-weight: normal;
@@ -85,7 +85,7 @@ const StyledDescLeft = styled.span`
   margin-left: 100px;
   display: inline-block;
   max-width: 420px;
-`
+`;
 
 const StyledStakingTitleRight = styled.span`
   display: flex;
@@ -134,7 +134,7 @@ const StyledStakingTitleRight = styled.span`
     width: 35%;
     top: 10px;
   }
-`
+`;
 const StyledDescRight = styled.span`
   display: block;
   text-align: right;
@@ -148,13 +148,13 @@ const StyledDescRight = styled.span`
   width: 520px;
   margin-right: -16px;
   margin-top: 26px;
-`
+`;
 
 const Staking = () => {
   return (
     <>
-      <StyledStaking>
-        <Row className="mt-156">
+      <StyledStaking id='staking'>
+        <Row className='mt-156'>
           <Col lg={6}>
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LOTTERY REWARDS</StyledTitleLeft>
@@ -167,7 +167,7 @@ const Staking = () => {
             <StyledImgNft image={StakingNftImage} height={1186} />
           </Col>
         </Row>
-        <Row className="mt-350 grid-image">
+        <Row className='mt-350 grid-image'>
           <Col lg={6}>
             <StyledImgNft image={StakingCupImage} height={780} />
           </Col>
@@ -184,7 +184,7 @@ const Staking = () => {
       </StyledStaking>
       <StyledContainerFluid />
     </>
-  )
-}
+  );
+};
 
-export default Staking
+export default Staking;
