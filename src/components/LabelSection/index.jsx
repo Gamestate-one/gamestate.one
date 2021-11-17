@@ -46,6 +46,14 @@ const StyledLabelSection = styled.div`
     margin-bottom: 16px;
     margin-top: 30px;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @media screen and (max-width: 1660px) {
+    margin: 80px 0;
+    margin-left: 12px;
+  }
 `
 const LabelSection = ({ label, note, className, before, topAuto }) => {
   return (

@@ -9,6 +9,17 @@ const StyledContactForm = styled.div`
   background: rgba(255, 255, 255, 0.1);
   padding: 30px 80px;
   border-radius: 8px;
+  @media screen and (max-width: 767px) {
+    padding: 40px 20px;
+    & button {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 16px 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
 `
 const StyledContactTitle = styled.h3`
   font-size: 32px;
@@ -51,6 +62,8 @@ const StyledInput = styled(Form.Group)`
     &:focus {
       background: transparent;
       color: #fff;
+      outline: none;
+      box-shadow: unset;
     }
   }
   & textarea,
@@ -119,7 +132,7 @@ const ContactForm = () => {
       </StyledDesc>
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Row>
-          <StyledColInput md={6}>
+          <StyledColInput xxl={6}>
             <StyledInput className="mb-3" controlId="formBasicFirstName">
               <Form.Label>First Name *</Form.Label>
               <Form.Control type="text" />
@@ -127,7 +140,7 @@ const ContactForm = () => {
             </StyledInput>
           </StyledColInput>
 
-          <StyledColInput md={6}>
+          <StyledColInput xxl={6}>
             <StyledInput className="mb-3" controlId="formBasicLastName">
               <Form.Label>Last Name *</Form.Label>
               <Form.Control type="text" />

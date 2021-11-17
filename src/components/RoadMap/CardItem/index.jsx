@@ -19,6 +19,10 @@ const StyledCardItem = styled.div`
   opacity: 1;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
+  @media screen and (max-width: 768px) {
+    max-width: unset;
+    margin-top: 50px;
+  }
 `
 const StyledContent = styled.ul`
   font-size: 24px;
@@ -29,6 +33,9 @@ const StyledContent = styled.ul`
   text-align: left;
   padding-bottom: 24px;
   padding-right: 10px;
+  @media screen and (max-width: 991px) {
+    list-style: none;
+  }
 `
 const CardItem = ({ label, content, color, className }) => {
   return (
