@@ -22,7 +22,7 @@ const StyledCardInfo = styled(Card)`
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   width: 100%;
-  margin: 0 12px 22px 12px;
+  margin: 0 12px 12px 12px;
   text-align: center;
   border: none;
 `
@@ -41,19 +41,24 @@ const StyledCardJob = styled(Card.Text)`
   font: normal normal normal 18px/24px Whyte;
   letter-spacing: 0px;
   color: #ffffff;
-  text-decoration: underline;
+  @media screen and (max-width: 1919px) {
+    font-size: 16px;
+  }
 `
 const StyledCardDesc = styled(Card.Text)`
   text-align: center;
   font: normal normal normal 16px/21px Whyte;
   letter-spacing: 0px;
   color: #ededed;
-  display: -webkit-box;
+  flex: 1;
+  margin-bottom: auto;
+
+  /* display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-word;
+  word-break: break-word; */
 `
 const AvatarItem = ({ item }) => {
   return (

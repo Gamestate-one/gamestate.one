@@ -48,7 +48,6 @@ const StyledLabelSection = styled.div`
   }
 `
 const LabelSection = ({ label, note, className, before, topAuto }) => {
-  console.log(topAuto)
   return (
     <StyledLabelSection className={className} before={before}>
       {note && <span className="note">{note}</span>}

@@ -4,8 +4,24 @@ import styled from "styled-components"
 import StakingNftImage from "../../assets/img/Staking/stakingNft.png"
 import StakingCupImage from "../../assets/img/Staking/stakingCup.png"
 import StakingGrid from "../../assets/img/Staking/stakingGrid.png"
+import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png"
 const StyledContainerFluid = styled.div`
   background-image: url(${StakingGrid});
+  @media screen and (max-width: 991px) {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 40%;
+      left: 0;
+      background-image: url(${StakingUnifiled});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 63px;
+    }
+  }
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,13 +35,33 @@ const StyledStaking = styled(Container)`
   }
   .mt-350 {
     margin-top: -350px;
+    @media screen and (max-width: 991px) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    .mt-156 {
+      padding-top: 0;
+    }
+    .row {
+      margin: 0;
+    }
+    .mt-170 {
+      margin-top: -150px;
+    }
   }
 `
 const StyledStakingColLeft = styled(Col)`
   padding-left: 112px;
+  @media screen and (max-width: 1399px) {
+    padding-left: 0;
+  }
 `
 const StyledStakingColRight = styled(Col)`
   padding-right: 146px;
+  @media screen and (max-width: 1399px) {
+    padding-right: 0;
+  }
 `
 const StyledStakingTitleLeft = styled.p`
   font-size: 77px;
@@ -43,7 +79,7 @@ const StyledStakingTitleLeft = styled.p`
   &::before {
     position: absolute;
     content: "";
-    top: -60px;
+    top: -22px;
     left: -16px;
     width: 44px;
     height: 179px;
@@ -62,6 +98,20 @@ const StyledStakingTitleLeft = styled.p`
     filter: blur(50px);
     z-index: -1;
   }
+  @media screen and (max-width: 991px) {
+    margin-top: -160px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 414px) {
+    padding-left: 10px;
+    &:before {
+      left: 3px;
+      height: 85px;
+      width: 20px;
+      top: -50%;
+    }
+  }
 `
 const StyledImgNft = styled.div`
   background-image: url(${(props) => props.image});
@@ -70,6 +120,15 @@ const StyledImgNft = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: ${(props) => props.height}px;
+  @media screen and (max-width: 1399px) {
+    margin-top: ${(props) => props.top}px;
+  }
+  @media screen and (max-width: 414px) {
+    &.mt-200 {
+      margin-top: -200px;
+      margin-bottom: -284px;
+    }
+  }
 `
 const StyledTitleLeft = styled.p`
   font-size: 50px;
@@ -79,8 +138,20 @@ const StyledTitleLeft = styled.p`
   letter-spacing: 0;
   line-height: 60px;
   text-transform: uppercase;
-  margin-left: 74px;
+  margin-left: 4px;
   margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  @media screen and (max-width: 991px) {
+    font-size: 24px;
+    line-height: 22px;
+  }
+  @media screen and (max-width: 414px) {
+    margin-top: 18px;
+    margin-left: 14px;
+    position: relative;
+    z-index: 1;
+  }
 `
 const StyledDescLeft = styled.span`
   font-style: normal;
@@ -88,13 +159,20 @@ const StyledDescLeft = styled.span`
   font-size: 20px;
   line-height: 28px;
   color: #d4d4d4;
-  margin-left: 100px;
+  margin-left: 6px;
   display: inline-block;
   max-width: 420px;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 414px) {
+    margin-left: 14px;
+  }
 `
 
 const StyledStakingTitleRight = styled.span`
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   text-align: right;
   font-size: 77px;
@@ -140,6 +218,18 @@ const StyledStakingTitleRight = styled.span`
     width: 35%;
     top: 10px;
   }
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 414px) {
+    &:after {
+      width: 20px;
+      height: 85px;
+      right: 0;
+    }
+    padding-right: 10px;
+  }
 `
 const StyledDescRight = styled.span`
   display: block;
@@ -152,8 +242,17 @@ const StyledDescRight = styled.span`
   color: #d4d4d4;
   margin-left: 100px;
   width: 520px;
-  margin-right: -16px;
+  /* margin-right: -16px; */
   margin-top: 26px;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  @media screen and (max-width: 414px) {
+    width: 397px;
+    margin-right: 0;
+  }
 `
 
 const Staking = () => {
@@ -161,7 +260,11 @@ const Staking = () => {
     <>
       <StyledStaking id="staking">
         <Row className="mt-156">
-          <StyledStakingColLeft lg={6}>
+          <StyledStakingColLeft
+            lg={{ span: 6, order: 1 }}
+            xs={{ order: 2 }}
+            className="mt-170"
+          >
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LOTTERY REWARDS</StyledTitleLeft>
             <StyledDescLeft>
@@ -169,15 +272,20 @@ const Staking = () => {
               wheel and win rewards.
             </StyledDescLeft>
           </StyledStakingColLeft>
-          <Col lg={6}>
-            <StyledImgNft image={StakingNftImage} height={1186} />
+          <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
+            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
           </Col>
         </Row>
         <Row className="mt-350">
           <Col lg={6}>
-            <StyledImgNft image={StakingCupImage} height={780} />
+            <StyledImgNft
+              image={StakingCupImage}
+              height={780}
+              top="165"
+              className="mt-200"
+            />
           </Col>
-          <StyledStakingColRight>
+          <StyledStakingColRight lg={6}>
             <StyledStakingTitleRight>
               <span>TOURNAMENT</span>
               <span>PRIZES</span>
