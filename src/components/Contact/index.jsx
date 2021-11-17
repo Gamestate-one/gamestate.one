@@ -15,6 +15,9 @@ const StyledImageContact = styled(Col)`
   background-image: url(${girl});
   background-size: cover;
   background-position: center center;
+  @media screen and (max-width: 768px) {
+    min-height: 560px;
+  }
 `
 const StyledBlockForm = styled(Col)`
   background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
@@ -32,6 +35,20 @@ const StyledBlockForm = styled(Col)`
     filter: blur(16px);
     width: 100px;
     height: 100%;
+  }
+  @media screen and (max-width: 1399px) {
+    padding: 40px 0 40px 50px;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 0;
+    padding: 20px 10px 40px 20px;
+    &:before {
+      width: 100%;
+      height: 76px;
+      top: -50px;
+      left: 0;
+      right: 0;
+    }
   }
 `
 const Contact = () => {

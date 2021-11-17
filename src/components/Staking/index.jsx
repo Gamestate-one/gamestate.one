@@ -162,8 +162,11 @@ const StyledDescLeft = styled.span`
   margin-left: 6px;
   display: inline-block;
   max-width: 420px;
+
   @media screen and (max-width: 991px) {
     font-size: 16px;
+    position: relative;
+    z-index: 1;
   }
   @media screen and (max-width: 414px) {
     margin-left: 14px;

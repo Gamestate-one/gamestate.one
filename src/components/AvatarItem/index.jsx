@@ -14,6 +14,13 @@ const StyledAvatar = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  @media screen and (max-width: 1660px) {
+    margin: 8px 0;
+  }
+  @media screen and (max-width: 414px) {
+    height: 265px;
+    width: 93%;
+  }
 `
 const StyledCardInfo = styled(Card)`
   background: rgba(0, 0, 0, 0.2) 0% 0% no-repeat padding-box;
@@ -25,6 +32,13 @@ const StyledCardInfo = styled(Card)`
   margin: 0 12px 12px 12px;
   text-align: center;
   border: none;
+  @media screen and (max-width: 1660px) {
+    min-height: 228px;
+    margin: 0 6px 6px 6px;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 200px;
+  }
 `
 const StyledCardName = styled(Card.Title)`
   font: normal normal bold 24px/32px Whyte;
@@ -43,6 +57,8 @@ const StyledCardJob = styled(Card.Text)`
   color: #ffffff;
   @media screen and (max-width: 1919px) {
     font-size: 16px;
+    min-height: 48px;
+    margin-bottom: 0;
   }
 `
 const StyledCardDesc = styled(Card.Text)`
@@ -52,14 +68,8 @@ const StyledCardDesc = styled(Card.Text)`
   color: #ededed;
   flex: 1;
   margin-bottom: auto;
-
-  /* display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word; */
 `
+
 const AvatarItem = ({ item }) => {
   return (
     <StyledAvatar image={item.src}>

@@ -14,6 +14,18 @@ import logoEdso from "../../assets/img/Logo/logoEdso.svg"
 
 const StyledBlockLogo = styled(Row)`
   margin-bottom: 124px;
+  @media screen and (max-width: 1788px) {
+    justify-content: center;
+    & img {
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    & img {
+      max-width: 100%;
+      margin-bottom: 120px;
+    }
+  }
 `
 
 const StyledLogo = styled.img`

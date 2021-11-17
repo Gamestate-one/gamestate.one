@@ -9,12 +9,23 @@ import coreRicardo from "../../assets/img/Team/coreRicardo.png"
 import coreSang from "../../assets/img/Team/coreSang.png"
 import coreTung from "../../assets/img/Team/coreTung.png"
 import coreViet from "../../assets/img/Team/coreViet.png"
+import mobileCoreCong from "../../assets/img/Team/mobileCoreCong.png"
+import mobileCoreKobus from "../../assets/img/Team/mobileCoreKobus.png"
+import mobileCoreLocke from "../../assets/img/Team/mobileCoreLocke.png"
+import mobileCorePeter from "../../assets/img/Team/mobileCorePeter.png"
+import mobileCoreRicardo from "../../assets/img/Team/mobileCoreRicardo.png"
+import mobileCoreSang from "../../assets/img/Team/mobileCoreSang.png"
+import mobileCoreTung from "../../assets/img/Team/mobileCoreTung.png"
+import mobileCoreViet from "../../assets/img/Team/mobileCoreViet.png"
 import AvatarItem from "../AvatarItem"
 import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
 
 const StyledItemCol = styled(Col)`
   padding: 0 15px;
+  @media screen and (max-width: 1660px) {
+    padding: 0 4px;
+  }
 `
 const StyledBlockCoreTeam = styled.div`
   width: 100%;
@@ -36,7 +47,7 @@ const StyledBlockCoreTeam = styled.div`
     & .row:first-child div:first-child {
       min-height: 0;
       margin-left: 0;
-      margin-top: 40px;
+      margin-top: 6px;
     }
     & span:first-child {
       font-size: 16px;
@@ -49,7 +60,49 @@ const StyledBlockCoreTeam = styled.div`
     }
   }
 `
-const EXTENDED_TEAM = [
+const StyledTeamRow = styled(Row)`
+  @media screen and (max-width: 414px) {
+    display: none;
+  }
+`
+const StyledMobileTeamRow = styled(Row)`
+  @media screen and (max-width: 414px) {
+    display: flex;
+  }
+  @media screen and (min-width: 415px) {
+    display: none;
+  }
+`
+
+const StyledItemColMobile = styled.div`
+  padding: 0px 6px 40px;
+  width: 50%;
+  margin-top: 28px;
+`
+const StyledItemImage = styled.div`
+  background-image: url(${(props) => props.image});
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 265px;
+  border-radius: 8px;
+`
+const StyledItemName = styled.h5`
+  font: normal normal bold 16px/19px Whyte;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-shadow: 0px 3px 6px #00000029;
+  margin-top: 12px;
+`
+const StyledItemJob = styled.span`
+  font: normal normal normal 14px/20px Whyte !important;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: inline-block;
+  width: 190px;
+`
+const CORE_TEAM = [
   {
     src: coreRicardo,
     name: "RICARDO FERREIRA",
@@ -99,6 +152,41 @@ const EXTENDED_TEAM = [
     desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education.",
   },
 ]
+
+const MOBILE_CORE_TEAM = [
+  {
+    image: mobileCoreRicardo,
+    name: "RICARDO FERREIRA",
+    job: "CO-FOUNDER & TECHNICAL DIRECTOR",
+  },
+  { image: mobileCorePeter, name: "PETER HJORTSOE", job: "CO-FOUNDER" },
+  { image: mobileCoreKobus, name: "KOBUS KOTZE", job: "CREATIVE LEAD" },
+  {
+    image: mobileCoreLocke,
+    name: "LOCKE KOSNOFF",
+    job: "MARKETING SPECIALIST & BIZ DEV",
+  },
+  {
+    image: mobileCoreCong,
+    name: "CONG NGUYEN",
+    job: "CEO - BLOCKCHAIN DEVELOPER ASIA",
+  },
+  {
+    image: mobileCoreTung,
+    name: "TUNG DUONG THANH",
+    job: "DEV. LEAD - BLOCKCHAIN DEVELOPER ASIA",
+  },
+  {
+    image: mobileCoreViet,
+    name: `VIET TUAN VU`,
+    job: "VR GAME SPECIALIST",
+  },
+  {
+    image: mobileCoreSang,
+    name: "SANG THE DUONG",
+    job: "3D DESIGNER",
+  },
+]
 const CoreTeam = () => {
   return (
     <StyledBlockCoreTeam>
@@ -111,13 +199,22 @@ const CoreTeam = () => {
             before
           />
         </Row>
-        <Row>
-          {EXTENDED_TEAM.map((item, idx) => (
+        <StyledTeamRow>
+          {CORE_TEAM.map((item, idx) => (
             <StyledItemCol md={6} xxl={3} key={idx}>
               <AvatarItem item={item} />
             </StyledItemCol>
           ))}
-        </Row>
+        </StyledTeamRow>
+        <StyledMobileTeamRow>
+          {MOBILE_CORE_TEAM.map((item, idx) => (
+            <StyledItemColMobile key={idx}>
+              <StyledItemImage image={item.image} />
+              <StyledItemName>{item.name}</StyledItemName>
+              <StyledItemJob>{item.job}</StyledItemJob>
+            </StyledItemColMobile>
+          ))}
+        </StyledMobileTeamRow>
       </Container>
     </StyledBlockCoreTeam>
   )
