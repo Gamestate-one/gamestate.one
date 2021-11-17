@@ -139,13 +139,17 @@ const StyledTokenImage = styled.img`
 `;
 const StyledUserGenerated = styled.img`
   position: absolute;
+  display: block;
   left: -60px;
   bottom: 0;
   width: 106%;
   max-height: 211px;
   animation: linear infinite;
+  -webkit-animation: linear infinite;
+  -moz-animation: linear infinite;
+  -o-animation: linear infinite;
   animation-name: run;
-  animation-duration: 20s;
+  animation-duration: 40s;
   @keyframes run {
     0% {
       left: -60px;
@@ -263,7 +267,7 @@ const BarMobile = styled.div`
   img {
     position: absolute;
     top: -30px;
-    left: 46%;
+    margin: auto;
   }
   .title {
     font: normal normal normal 20px/24px Whyte;

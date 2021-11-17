@@ -161,7 +161,7 @@ const StyledUserTitle = styled(P)`
     }
     @media screen and (max-width: 654px) {
       max-width: 300px;
-      height: 30px;
+      height: 24px;
     }
   }
 `;
@@ -171,7 +171,7 @@ const StyledSubUserTitle = styled(P)`
   text-transform: uppercase;
   height: 50px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/22px Whyte;
+    font: normal normal normal 40px/22px Whyte;
   }
   @media screen and (max-width: 654px) {
     font: normal normal normal 24px/22px Whyte;
@@ -179,7 +179,7 @@ const StyledSubUserTitle = styled(P)`
   }
 `;
 const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal bold 20px/28px Whyte;
   color: #d4d4d4;
   @media screen and (max-width: 1759px) {
     font: normal normal bold 16px/28px Whyte;
@@ -226,6 +226,9 @@ const StyledGameTitle = styled(P)`
     height: 34px;
     background: #6294ef 0% 0% no-repeat padding-box;
     filter: blur(39px);
+    @media screen and (max-width: 654px) {
+      height: 24px;
+    }
   }
 `;
 const StyledGameSubTitle = styled(P)`
@@ -236,7 +239,7 @@ const StyledGameSubTitle = styled(P)`
   height: 50px;
   font: normal normal normal 50px/60px Whyte;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/22px Whyte;
+    font: normal normal normal 40px/22px Whyte;
   }
   @media screen and (max-width: 654px) {
     font: normal normal normal 24px/60px Whyte;
@@ -261,7 +264,7 @@ const StyledGameSubTitle = styled(P)`
   }
 `;
 const StyledGameDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal bold 20px/28px Whyte;
   color: #d4d4d4;
   max-width: 556px;
   @media screen and (max-width: 1759px) {
