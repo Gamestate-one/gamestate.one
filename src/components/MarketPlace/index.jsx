@@ -4,7 +4,7 @@ import Banner from "../../assets/img/MarketPlace/banner.png";
 const MarketPlace = () => {
   return (
     <Div>
-      <img src={Banner} alt='banner' />
+      <img src={Banner} alt="banner" />
       <div>
         <StyledTitle>NFT</StyledTitle>
         <StyledSubTitle>MARKETPLACE</StyledSubTitle>
@@ -27,6 +27,10 @@ const Div = styled.div`
   padding-top: 102px;
   img {
     max-width: 100%;
+  }
+  @media (max-width: 564px) {
+    padding-bottom: 30px;
+    padding-top: 40px;
   }
 `;
 const Title = styled.span`
@@ -51,8 +55,11 @@ const StyledTitle = styled(Title)`
     background: #4e7fd6 0% 0% no-repeat padding-box;
     opacity: 1;
     filter: blur(41px);
-    width: 278px;
+    width: 258px;
     height: 33px;
+    @media (max-width: 564px) {
+      height: 26px;
+    }
   }
 `;
 const StyledSubTitle = styled(Title)`
@@ -69,21 +76,22 @@ const StyledSubTitle = styled(Title)`
     right: 20px;
     max-width: 278px;
     height: 33px;
+    @media (max-width: 564px) {
+      height: 26px;
+    }
   }
 `;
 const Description = styled.p`
-  margin-top: 38px;
-  margin-bottom: 0;
+  margin: 38px auto 0 auto;
   text-align: center;
   font: normal normal normal 20px/28px Whyte;
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
-  @media (max-width: 768px) {
-    font: normal normal bold 20px/28px Whyte;
-  }
+  max-width: 80%;
   @media screen and (max-width: 564px) {
     font: normal normal normal 16px/28px Whyte;
+    margin-top: 20px;
   }
 `;
 export default MarketPlace;

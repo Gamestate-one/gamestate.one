@@ -14,21 +14,21 @@ const Explore = () => {
     <Div>
       <StyledContainer>
         <StyledHead>
-          <StyledImg width='239px' height='76px' src={Discord} alt='Discord' />
-          <StyledImg width='75px' height='75px' src={Telegram} alt='Telegram' />
-          <StyledImg width='170px' height='90px' src={Twitter} alt='Twitter' />
-          <StyledImg width='184px' height='77px' src={Medium} alt='Medium' />
-          <StyledImg width='84px' height='84px' src={Bird} alt='Bird' />
+          <StyledImg width="239px" height="76px" src={Discord} alt="Discord" />
+          <StyledImg width="75px" height="75px" src={Telegram} alt="Telegram" />
+          <StyledImg width="170px" height="90px" src={Twitter} alt="Twitter" />
+          <StyledImg width="184px" height="77px" src={Medium} alt="Medium" />
+          <StyledImg width="84px" height="84px" src={Bird} alt="Bird" />
           <StyledImg
-            width='224px'
-            height='65px'
+            width="224px"
+            height="65px"
             src={Facebook}
-            alt='Facebook'
+            alt="Facebook"
           />
         </StyledHead>
-        <StyledListIcon src={ListIcon} alt='ListIcon' />
+        <StyledListIcon src={ListIcon} alt="ListIcon" />
         <div>
-          <StyledHeroImage src={HeroImage} alt='Hero' />
+          <StyledHeroImage src={HeroImage} alt="Hero" />
           <StyledDescription>
             EXPLORE, PLAY, EARN AND SOCIALISE IN THE DECENTRALIZED VIRTUAL
             WORLD.
@@ -79,23 +79,30 @@ const StyledImg = styled.img`
 const StyledListIcon = styled.img`
   display: none;
   position: absolute;
+  @keyframes slideIcon {
+    0% {
+      left: 0px;
+    }
+    50% {
+      left: -1400px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
   @media screen and (max-width: 1199px) {
     display: block;
     width: 1400px;
     animation: linear infinite;
-    animation-name: run;
-    animation-duration: 30s;
-    @keyframes run {
-      0% {
-        left: 0px;
-      }
-      100% {
-        left: -1400px;
-      }
-    }
+    -webkit-animation: linear infinite;
+    -moz-animation: linear infinite;
+    -o-animation: linear infinite;
+
+    animation-name: slideIcon;
+    animation-duration: 60s;
   }
   @media screen and (max-width: 576px) {
-    height: 60px;
+    height: 66px;
   }
 `;
 const StyledHeroImage = styled.img`

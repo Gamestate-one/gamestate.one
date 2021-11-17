@@ -3,7 +3,6 @@ import Logo from "../../assets/img/Logo/logo.png";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import styled from "styled-components";
 
-var deviceWidth = window.innerWidth;
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,21 +21,21 @@ const Header = () => {
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed='top'
-        expand='lg'
-        variant='dark'
+        fixed="top"
+        expand="lg"
+        variant="dark"
       >
         <StyledContainer>
-          <Navbar.Brand href='#'>
-            <StyledImg src={Logo} alt='Logo' />
+          <Navbar.Brand href="#">
+            <StyledImg src={Logo} alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <StyledNav>
-              <StyledFirstButton href='#'>LITE PAPER</StyledFirstButton>
-              <StyledSecondButton href='#'>NFT's</StyledSecondButton>
-              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
-              <StyledFourthButton href='#'>GET STARTED</StyledFourthButton>
+              <StyledFirstButton href="#">LITE PAPER</StyledFirstButton>
+              <StyledSecondButton href="#">NFT's</StyledSecondButton>
+              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
+              <StyledFourthButton href="#">GET STARTED</StyledFourthButton>
             </StyledNav>
           </Navbar.Collapse>
         </StyledContainer>
@@ -55,7 +54,7 @@ const A = styled.a`
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
-  max-height: 41px;
+  height: 41px;
   min-width: 148px;
   max-width: 150px;
   @media screen and (min-width: 992px) and (max-width: 1310px) {
@@ -107,7 +106,6 @@ const StyledFourthButton = styled(A)`
   }
 `;
 const StyledNav = styled(Nav)`
-  flex: 1;
   justify-content: flex-end;
   align-items: center;
 `;
@@ -149,7 +147,10 @@ const StyledNavbar = styled(Navbar)`
   }
   .navbar-collapse {
     background-color: #000000;
-    /* width: ${deviceWidth}px; */
+    justify-content: flex-end;
+    @media screen and (max-width: 991px) {
+      margin-top: 16px;
+    }
   }
 `;
 const Div = styled.div`

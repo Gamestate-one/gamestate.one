@@ -22,16 +22,17 @@ const Description = () => {
             </StyledUserDescription>
           </StyledUserContent>
           <Col
+            className="text-center"
             xs={{ span: 12, order: 1 }}
             sm={{ span: 12, order: 1 }}
             xxl={{ span: 6, order: 2 }}
           >
-            <StyledAvatar src={Avatar} alt='avatar' />
+            <StyledAvatar src={Avatar} alt="avatar" />
           </Col>
         </Row>
         <Row>
           <Col sm={12} xxl={6}>
-            <StyledBannerImage src={Banner} alt='Banner' />
+            <StyledBannerImage src={Banner} alt="Banner" />
           </Col>
           <StyledGameContent xxl={6}>
             <StyledGameTitle>UNIFIED GAME</StyledGameTitle>
@@ -44,14 +45,14 @@ const Description = () => {
         </Row>
       </StyledContainer>
       <img
-        className='gridBackground'
+        className="gridBackground"
         src={GridBackground}
-        alt='Grid Background'
+        alt="Grid Background"
       />
       <img
-        className='unifiledBackground'
+        className="unifiledBackground"
         src={UnifiledBackground}
-        alt='Unidiled Background'
+        alt="Unidiled Background"
       />
     </Div>
   );
@@ -110,7 +111,6 @@ const StyledUserContent = styled(Col)`
   padding-top: 70px;
 `;
 const StyledAvatar = styled.img`
-  /* padding-top: 50px; */
   max-width: 967px;
   max-height: 967px;
   @media screen and (max-width: 1759px) {
@@ -156,6 +156,13 @@ const StyledUserTitle = styled(P)`
     width: 100%;
     max-width: 728px;
     height: 45px;
+    @media screen and (max-width: 1759px) {
+      max-width: 550px;
+    }
+    @media screen and (max-width: 654px) {
+      max-width: 300px;
+      height: 24px;
+    }
   }
 `;
 const StyledSubUserTitle = styled(P)`
@@ -164,7 +171,7 @@ const StyledSubUserTitle = styled(P)`
   text-transform: uppercase;
   height: 50px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/22px Whyte;
+    font: normal normal normal 40px/22px Whyte;
   }
   @media screen and (max-width: 654px) {
     font: normal normal normal 24px/22px Whyte;
@@ -172,7 +179,7 @@ const StyledSubUserTitle = styled(P)`
   }
 `;
 const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal bold 20px/28px Whyte;
   color: #d4d4d4;
   @media screen and (max-width: 1759px) {
     font: normal normal bold 16px/28px Whyte;
@@ -219,6 +226,9 @@ const StyledGameTitle = styled(P)`
     height: 34px;
     background: #6294ef 0% 0% no-repeat padding-box;
     filter: blur(39px);
+    @media screen and (max-width: 654px) {
+      height: 24px;
+    }
   }
 `;
 const StyledGameSubTitle = styled(P)`
@@ -229,10 +239,10 @@ const StyledGameSubTitle = styled(P)`
   height: 50px;
   font: normal normal normal 50px/60px Whyte;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/22px Whyte;
+    font: normal normal normal 40px/22px Whyte;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/28px Whyte;
+    font: normal normal normal 24px/60px Whyte;
     height: 24px;
   }
   &::before {
@@ -252,16 +262,18 @@ const StyledGameSubTitle = styled(P)`
       right: -8px;
     }
   }
-  @media screen and (max-width: 654px) {
-    font: normal normal bold 12px/28px Whyte;
-  }
 `;
 const StyledGameDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal bold 20px/28px Whyte;
   color: #d4d4d4;
   max-width: 556px;
   @media screen and (max-width: 1759px) {
     font: normal normal bold 16px/28px Whyte;
+    max-width: 460px;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal bold 12px/28px Whyte;
+    max-width: 280px;
   }
 `;
 export default Description;
