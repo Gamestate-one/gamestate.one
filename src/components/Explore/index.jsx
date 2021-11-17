@@ -8,29 +8,31 @@ import Telegram from "../../assets/img/Explore/telegram.svg";
 import Twitter from "../../assets/img/Explore/twitter.svg";
 import HeroImage from "../../assets/img/Explore/hero.png";
 import Background from "../../assets/img/Explore/background.png";
-
+import ListIcon from "../../assets/img/Explore/listIcon.png";
 const Explore = () => {
   return (
     <Div>
       <StyledContainer>
         <StyledHead>
-          <StyledImg width="239px" height="76px" src={Discord} alt="Discord" />
-          <StyledImg width="75px" height="75px" src={Telegram} alt="Telegram" />
-          <StyledImg width="170px" height="90px" src={Twitter} alt="Twitter" />
-          <StyledImg width="184px" height="77px" src={Medium} alt="Medium" />
-          <StyledImg width="84px" height="84px" src={Bird} alt="Bird" />
+          <StyledImg width='239px' height='76px' src={Discord} alt='Discord' />
+          <StyledImg width='75px' height='75px' src={Telegram} alt='Telegram' />
+          <StyledImg width='170px' height='90px' src={Twitter} alt='Twitter' />
+          <StyledImg width='184px' height='77px' src={Medium} alt='Medium' />
+          <StyledImg width='84px' height='84px' src={Bird} alt='Bird' />
           <StyledImg
-            width="224px"
-            height="65px"
+            width='224px'
+            height='65px'
             src={Facebook}
-            alt="Facebook"
+            alt='Facebook'
           />
         </StyledHead>
+        <StyledListIcon src={ListIcon} alt='ListIcon' />
         <div>
-          <StyledHeroImage src={HeroImage} alt="Hero" />
+          <StyledHeroImage src={HeroImage} alt='Hero' />
           <StyledDescription>
             EXPLORE, PLAY, EARN AND SOCIALISE IN THE DECENTRALIZED VIRTUAL
-            WORLD.START YOUR METAVERSE GAMING WITH VIP CARD NOW!
+            WORLD.
+            <p>start &nbsp;your metaverse gaming with vip card now!</p>
           </StyledDescription>
           <StyledButton>
             <StyledSpan>BUY</StyledSpan>
@@ -55,38 +57,81 @@ const StyledContainer = styled(Container)`
   opacity: 1;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  padding-bottom: 104px;
+  padding-bottom: 110px;
+  position: relative;
+  @media (max-width: 767px) {
+    padding-bottom: 51px;
+  }
 `;
 const StyledHead = styled(Row)`
   align-items: center;
-  margin-bottom: 60px;
   height: 90px;
   justify-content: space-between;
   opacity: 0.37;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 `;
 const StyledImg = styled.img`
   height: ${(props) => props.height};
   max-width: ${(props) => props.width};
 `;
+const StyledListIcon = styled.img`
+  display: none;
+  position: absolute;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    width: 1400px;
+    animation: linear infinite;
+    animation-name: run;
+    animation-duration: 30s;
+    @keyframes run {
+      0% {
+        left: 0px;
+      }
+      100% {
+        left: -1400px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    height: 60px;
+  }
+`;
 const StyledHeroImage = styled.img`
   max-width: 1132px;
+  margin-top: 60px;
   width: 100%;
   height: auto;
+  @media screen and (max-width: 1199px) {
+    margin-top: 150px;
+  }
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
   font-style: normal;
-  font-size: 50px;
+  font-size: 40px;
   color: #ffffff;
-  line-height: 60px;
+  line-height: 50px;
   padding-bottom: 70px;
   margin: 0 auto;
-  max-width: 1626px;
+  max-width: 1226px;
+  text-transform: uppercase;
+  p {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 991px) {
+    font: normal normal bold 20px/32px Whyte;
+  }
+  @media screen and (max-width: 767px) {
+    font: normal normal bold 16px/28px Whyte;
+    padding-bottom: 40px;
+  }
 `;
 const StyledButton = styled.button`
   position: relative;
-  max-width: 292px;
   width: 100%;
+  max-width: 292px;
   height: 76px;
   background-color: #000000;
   border-radius: 4px;
@@ -97,6 +142,10 @@ const StyledButton = styled.button`
   border-image-slice: 1;
   border-width: 5px;
   border-image-source: linear-gradient(to left, #e740f0, #8f65be, #254492);
+  @media screen and (max-width: 576px) {
+    max-width: 170px;
+    height: 47px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -109,6 +158,10 @@ const StyledButton = styled.button`
     left: -8px;
     z-index: -1;
     filter: blur(15px);
+    @media screen and (max-width: 576px) {
+      width: 176px;
+      height: 49px;
+    }
   }
   &::after {
     content: "";
@@ -119,12 +172,21 @@ const StyledButton = styled.button`
     top: 0;
     left: 0px;
     z-index: -1;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    @media screen and (max-width: 576px) {
+      width: 160px;
+      height: 37px;
+    }
   }
 `;
 const Span = styled.span`
   font: normal normal normal 23px/28px Whyte;
   letter-spacing: 0px;
   opacity: 1;
+  @media screen and (max-width: 576px) {
+    font: normal normal normal 14px/17px Whyte;
+  }
 `;
 const StyledSpan = styled(Span)`
   padding-right: 13px;

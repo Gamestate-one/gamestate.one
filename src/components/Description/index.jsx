@@ -8,24 +8,32 @@ import UnifiledBackground from "../../assets/img/Description/unifiledBackground.
 const Description = () => {
   return (
     <Div>
-      <Container>
+      <StyledContainer>
         <Row>
-          <StyledUserContent>
+          <StyledUserContent
+            xs={{ span: 12, order: 2 }}
+            sm={{ span: 12, order: 2 }}
+            xxl={{ span: 6, order: 1 }}
+          >
             <StyledUserTitle>User-generated</StyledUserTitle>
             <StyledSubUserTitle>CONTENT MONETISATION</StyledSubUserTitle>
             <StyledUserDescription>
               Gamers can create avatars, skins, guides, artworks, and more.
             </StyledUserDescription>
           </StyledUserContent>
-          <Col>
+          <Col
+            xs={{ span: 12, order: 1 }}
+            sm={{ span: 12, order: 1 }}
+            xxl={{ span: 6, order: 2 }}
+          >
             <StyledAvatar src={Avatar} alt='avatar' />
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12} xxl={6}>
             <StyledBannerImage src={Banner} alt='Banner' />
           </Col>
-          <StyledGameContent>
+          <StyledGameContent xxl={6}>
             <StyledGameTitle>UNIFIED GAME</StyledGameTitle>
             <StyledGameSubTitle>ACHIEVEMENTS PROFILES</StyledGameSubTitle>
             <StyledGameDescription>
@@ -34,7 +42,7 @@ const Description = () => {
             </StyledGameDescription>
           </StyledGameContent>
         </Row>
-      </Container>
+      </StyledContainer>
       <img
         className='gridBackground'
         src={GridBackground}
@@ -51,10 +59,14 @@ const Description = () => {
 // Styled Container
 const Div = styled.div`
   position: relative;
-  /* margin-top: -52px; */
   padding-bottom: 190px;
   z-index: -1;
-  /* background-color: #05080a; */
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 140px;
+  }
+  @media screen and (max-width: 654px) {
+    padding-bottom: 70px;
+  }
   .gridBackground {
     position: absolute;
     bottom: 0;
@@ -63,12 +75,21 @@ const Div = styled.div`
   }
   .unifiledBackground {
     position: absolute;
-    bottom: 140px;
-    left: 100px;
+    bottom: 9%;
+    left: 5%;
     width: 92%;
     z-index: -50;
     height: 221px;
+    @media screen and (max-width: 1200px) {
+      bottom: 4%;
+      width: 100%;
+      left: 0;
+      height: auto;
+    }
   }
+`;
+const StyledContainer = styled(Container)`
+  max-width: 94%;
 `;
 const P = styled.p`
   letter-spacing: 0px;
@@ -76,25 +97,40 @@ const P = styled.p`
   opacity: 1;
   align-items: center;
   margin-bottom: 28px;
+  @media (max-width: 1759px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 654px) {
+    margin-bottom: 6px;
+  }
 `;
 
 // User Content
 const StyledUserContent = styled(Col)`
-  padding-top: 120px;
+  padding-top: 70px;
 `;
 const StyledAvatar = styled.img`
   /* padding-top: 50px; */
   max-width: 967px;
   max-height: 967px;
+  @media screen and (max-width: 1759px) {
+    max-width: 100%;
+    max-height: 700px;
+  }
 `;
 const StyledUserTitle = styled(P)`
   position: relative;
   font: normal normal bold 77px/60px Whyte;
   color: #e740f0;
-  /* text-shadow: 2px 2px 6px rgba(158, 8, 166, 0.5), */
-  /* 2px 2px 98px rgba(231, 64, 240, 0.769); */
   text-transform: uppercase;
   height: 77px;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 57px/40px Whyte;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal bold 32px/60px Whyte;
+    height: 30px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -106,6 +142,11 @@ const StyledUserTitle = styled(P)`
     top: -58px;
     background: linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0% 0%
       no-repeat padding-box;
+    @media screen and (max-width: 654px) {
+      max-width: 20px;
+      height: 88px;
+      top: -40px;
+    }
   }
   &::after {
     content: "";
@@ -122,11 +163,23 @@ const StyledSubUserTitle = styled(P)`
   color: #ffffff;
   text-transform: uppercase;
   height: 50px;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 40px/22px Whyte;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal normal 24px/22px Whyte;
+    height: 24px;
+  }
 `;
 const StyledUserDescription = styled(P)`
   font: normal normal normal 20px/28px Whyte;
   color: #d4d4d4;
-  margin-left: 8px;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 16px/28px Whyte;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal bold 12px/28px Whyte;
+  }
 `;
 // Game Content
 const StyledGameContent = styled(Col)`
@@ -135,19 +188,29 @@ const StyledGameContent = styled(Col)`
   flex-direction: column;
   align-items: flex-end;
   padding-top: 120px;
-  margin-right: 40px;
+  padding-right: 40px;
 `;
 const StyledBannerImage = styled.img`
   padding-top: 100px;
   padding-left: 0px;
+  @media screen and (max-width: 1759px) {
+    max-width: 100%;
+    max-height: 700px;
+  }
 `;
 const StyledGameTitle = styled(P)`
   font: normal normal bold 77px/60px Whyte;
   color: #6a9df9;
-  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c; */
   text-transform: uppercase;
   height: 77px;
   position: relative;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 57px/40px Whyte;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal bold 32px/60px Whyte;
+    height: 30px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -165,6 +228,13 @@ const StyledGameSubTitle = styled(P)`
   text-transform: uppercase;
   height: 50px;
   font: normal normal normal 50px/60px Whyte;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 40px/22px Whyte;
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal normal 24px/28px Whyte;
+    height: 24px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -175,11 +245,23 @@ const StyledGameSubTitle = styled(P)`
     top: -120px;
     background: linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0% 0%
       no-repeat padding-box;
+    @media screen and (max-width: 654px) {
+      max-width: 20px;
+      height: 88px;
+      top: -66px;
+      right: -8px;
+    }
+  }
+  @media screen and (max-width: 654px) {
+    font: normal normal bold 12px/28px Whyte;
   }
 `;
 const StyledGameDescription = styled(P)`
   font: normal normal normal 20px/28px Whyte;
   color: #d4d4d4;
   max-width: 556px;
+  @media screen and (max-width: 1759px) {
+    font: normal normal bold 16px/28px Whyte;
+  }
 `;
 export default Description;
