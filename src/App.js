@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import TokenSale from "./components/TokenSale";
 import Description from "./components/Description";
 import MarketPlace from "./components/MarketPlace";
-import Upcoming from "./components/Upcoming";
+import Igos from "./components/Igos";
 import styled from "styled-components";
 import BackTop from "../src/assets/img/backtop.png";
 import BackTopBackground from "../src/assets/img/backtopBackground.png";
@@ -44,7 +44,7 @@ const App = () => {
         <TokenSale />
         <Description />
         <MarketPlace />
-        <Upcoming />
+        <Igos />
         <Staking />
         <CoreTeam />
         <ExtendedTeam />
@@ -56,7 +56,7 @@ const App = () => {
       <StyledBackTop>
         {isVisible && (
           <BackTopBtn onClick={scrollToTop}>
-            <img src={BackTop} alt='back to top' />
+            <img src={BackTop} alt="back to top" />
           </BackTopBtn>
         )}
       </StyledBackTop>

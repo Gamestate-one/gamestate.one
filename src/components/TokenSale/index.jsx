@@ -15,22 +15,22 @@ const TokenSale = () => {
       <StyledBar>
         <HiveProgessBar fluid>
           <Bar>
-            <img src={HiveLogo} alt='Hive Logo' />
-            <span className='title'>HIVE-ENGINE IDO</span>
-            <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
+            <img src={HiveLogo} alt="Hive Logo" />
+            <span className="title">HIVE-ENGINE IDO</span>
+            <div className="progessBar">
+              <div className="progessBar-fill">
+                <div className="progessBar-fill-inner"></div>
               </div>
             </div>
           </Bar>
         </HiveProgessBar>
         <PolygonProgessBar fluid>
           <Bar>
-            <img src={PolygonLogo} alt='Polygon Logo' />
-            <span className='title'>Polygon IDO</span>
-            <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
+            <img src={PolygonLogo} alt="Polygon Logo" />
+            <span className="title">Polygon IDO</span>
+            <div className="progessBar">
+              <div className="progessBar-fill">
+                <div className="progessBar-fill-inner"></div>
               </div>
             </div>
           </Bar>
@@ -39,29 +39,29 @@ const TokenSale = () => {
       <StyledBarMobile>
         <HiveProgessBarMobile fluid>
           <BarMobile>
-            <img src={HiveLogo} alt='Hive Logo' />
-            <span className='title'>HIVE-ENGINE IDO</span>
-            <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
+            <img src={HiveLogo} alt="Hive Logo" />
+            <span className="title">HIVE-ENGINE IDO</span>
+            <div className="progessBar">
+              <div className="progessBar-fill">
+                <div className="progessBar-fill-inner"></div>
               </div>
             </div>
           </BarMobile>
         </HiveProgessBarMobile>
         <PolygonProgessBarMobile fluid>
           <BarMobile>
-            <img src={PolygonLogo} alt='Polygon Logo' />
-            <span className='title'>Polygon IDO</span>
-            <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
+            <img src={PolygonLogo} alt="Polygon Logo" />
+            <span className="title">Polygon IDO</span>
+            <div className="progessBar">
+              <div className="progessBar-fill">
+                <div className="progessBar-fill-inner"></div>
               </div>
             </div>
           </BarMobile>
         </PolygonProgessBarMobile>
       </StyledBarMobile>
-      <StyledTokenImage src={TokenImage} alt='Token' />
-      <StyledUserGenerated src={UserGenerated} alt='User' />
+      <StyledTokenImage src={TokenImage} alt="Token" />
+      <StyledUserGenerated src={UserGenerated} alt="User" />
     </StyledTokenSales>
   );
 };
@@ -90,7 +90,6 @@ const Title = styled.span`
 `;
 const StyledTitle = styled(Title)`
   color: #6a9df9;
-  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c; */
   padding-right: 20px;
   position: relative;
   &::before {
@@ -102,11 +101,14 @@ const StyledTitle = styled(Title)`
     width: 100%;
     max-width: 278px;
     height: 33px;
+    @media screen and (max-width: 991px) {
+      height: 22px;
+      top: 0px;
+    }
   }
 `;
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
-  /* text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4; */
   position: relative;
   &::before {
     content: "";
@@ -117,6 +119,10 @@ const StyledSubTitle = styled(Title)`
     width: 100%;
     max-width: 278px;
     height: 33px;
+    @media screen and (max-width: 991px) {
+      height: 22px;
+      top: 0px;
+    }
   }
 `;
 const StyledTokenImage = styled.img`
