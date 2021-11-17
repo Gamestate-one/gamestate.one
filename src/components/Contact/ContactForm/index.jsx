@@ -1,15 +1,15 @@
-import Button from "@restart/ui/esm/Button"
-import React, { useState } from "react"
-import { Col, FloatingLabel, Form, Row } from "react-bootstrap"
-import styled from "styled-components"
-import bookIcon from "../../../assets/img/Contact/book.svg"
-import emailIcon from "../../../assets/img/Contact/email.svg"
+import Button from "@restart/ui/esm/Button";
+import React, { useState } from "react";
+import { Col, FloatingLabel, Form, Row } from "react-bootstrap";
+import styled from "styled-components";
+import bookIcon from "../../../assets/img/Contact/book.svg";
+import emailIcon from "../../../assets/img/Contact/email.svg";
 
 const StyledContactForm = styled.div`
-  background: #9e08a6;
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px 80px;
   border-radius: 8px;
-`
+`;
 const StyledContactTitle = styled.h3`
   font-size: 32px;
   font-weight: bold;
@@ -17,7 +17,7 @@ const StyledContactTitle = styled.h3`
   font-style: normal;
   color: #fff;
   text-align: center;
-`
+`;
 const StyledDesc = styled.span`
   font-size: 16px;
   line-height: 21px;
@@ -25,9 +25,9 @@ const StyledDesc = styled.span`
   text-align: center;
   display: inline-block;
   width: 100%;
-`
+`;
 const StyledInput = styled(Form.Group)`
-  background-color: #b163d5;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 16px;
   border: 1px solid #e740f0;
   border-radius: 16px;
@@ -61,25 +61,37 @@ const StyledInput = styled(Form.Group)`
     width: 100%;
     resize: none;
   }
-`
+`;
 const StyledIconInput = styled.img`
   position: absolute;
   top: 50%;
   right: 16px;
   transform: translateY(-50%);
-`
+`;
 const StyledColInput = styled(Col)`
   padding: 0 6px;
-`
+`;
 const StyledButton = styled(Button)`
   padding: 22px 0;
-  background-color: #b163d5;
+  background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 4px;
   width: 100%;
   font: normal normal bold 24px/32px Whyte;
   color: #ffffff;
-`
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    opacity: 1;
+    left: 48%;
+    top: 38%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    filter: blur(14px);
+  }
+`;
 const StyledCountTextarea = styled.span`
   font: normal normal normal 12px/14px Whyte;
   color: #ffffff;
@@ -87,55 +99,55 @@ const StyledCountTextarea = styled.span`
   text-align: right;
   opacity: 0.34;
   margin-top: 5px;
-`
+`;
 const ContactForm = () => {
-  const [numberChar, setNumberChar] = useState(0)
+  const [numberChar, setNumberChar] = useState(0);
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
   const handleTextareaOnChange = (e) => {
-    console.log(e.target.value.length)
-    setNumberChar(e.target.value.length)
-  }
+    console.log(e.target.value.length);
+    setNumberChar(e.target.value.length);
+  };
   return (
     <StyledContactForm>
-      <StyledContactTitle className="text-uppercase">
+      <StyledContactTitle className='text-uppercase'>
         SEND EMAIL
       </StyledContactTitle>
       <StyledDesc>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu
       </StyledDesc>
-      <Form className="mt-4" onSubmit={handleSubmit}>
+      <Form className='mt-4' onSubmit={handleSubmit}>
         <Row>
           <StyledColInput md={6}>
-            <StyledInput className="mb-3" controlId="formBasicEmail">
+            <StyledInput className='mb-3' controlId='formBasicEmail'>
               <Form.Label>First Name *</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type='text' />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
           </StyledColInput>
 
           <StyledColInput md={6}>
-            <StyledInput className="mb-3" controlId="formBasicPassword">
+            <StyledInput className='mb-3' controlId='formBasicPassword'>
               <Form.Label>Last Name *</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type='text' />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledInput className="mb-3" controlId="formBasicPassword">
+            <StyledInput className='mb-3' controlId='formBasicPassword'>
               <Form.Label>Email *</Form.Label>
-              <Form.Control type="email" />
+              <Form.Control type='email' />
               <StyledIconInput src={emailIcon} />
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledInput className="mb-3" controlId="formBasicPassword">
-              <FloatingLabel controlId="floatingTextarea2" label="Message">
+            <StyledInput className='mb-3' controlId='formBasicPassword'>
+              <FloatingLabel controlId='floatingTextarea2' label='Message'>
                 <Form.Control
-                  as="textarea"
+                  as='textarea'
                   style={{ height: "198px" }}
-                  maxLength="1000"
+                  maxLength='1000'
                   onChange={handleTextareaOnChange}
                 />
               </FloatingLabel>
@@ -143,14 +155,14 @@ const ContactForm = () => {
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledButton variant="primary" type="submit">
+            <StyledButton variant='primary' type='submit'>
               SEND NOW
             </StyledButton>
           </StyledColInput>
         </Row>
       </Form>
     </StyledContactForm>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

@@ -15,16 +15,16 @@ const TokenSale = () => {
       <StyledBar>
         <HiveProgessBar fluid>
           <StyledRow>
-            <StyledCol sm={1}>
-              <img src={HiveLogo} alt="Hive Logo" />
+            <StyledCol md={1}>
+              <img src={HiveLogo} alt='Hive Logo' />
             </StyledCol>
-            <StyledCol sm={3}>
-              <span className="Title">HIVE-ENGINE IDO</span>
+            <StyledCol md={3}>
+              <span className='Title'>HIVE-ENGINE IDO</span>
             </StyledCol>
             <StyledCol>
-              <div className="progessBar">
-                <div className="progessBar-fill">
-                  <div className="progessBar-fill-inner"></div>
+              <div className='progessBar'>
+                <div className='progessBar-fill'>
+                  <div className='progessBar-fill-inner'></div>
                 </div>
               </div>
             </StyledCol>
@@ -32,24 +32,24 @@ const TokenSale = () => {
         </HiveProgessBar>
         <PolygonProgessBar fluid>
           <StyledRow>
-            <StyledCol sm={1}>
-              <img src={PolygonLogo} alt="Polygon Logo" />
+            <StyledCol md={1}>
+              <img src={PolygonLogo} alt='Polygon Logo' />
             </StyledCol>
-            <StyledCol sm={3}>
-              <span className="Title">Polygon IDO</span>
+            <StyledCol md={3}>
+              <span className='Title'>Polygon IDO</span>
             </StyledCol>
             <StyledCol>
-              <div className="progessBar">
-                <div className="progessBar-fill">
-                  <div className="progessBar-fill-inner"></div>
+              <div className='progessBar'>
+                <div className='progessBar-fill'>
+                  <div className='progessBar-fill-inner'></div>
                 </div>
               </div>
             </StyledCol>
           </StyledRow>
         </PolygonProgessBar>
       </StyledBar>
-      <StyledTokenImage src={TokenImage} alt="Token" />
-      <StyledUserGenerated src={UserGenerated} alt="User" />
+      <StyledTokenImage src={TokenImage} alt='Token' />
+      <StyledUserGenerated src={UserGenerated} alt='User' />
     </StyledTokenSales>
   );
 };
@@ -110,7 +110,22 @@ const StyledUserGenerated = styled.img`
   bottom: 0;
   width: 106%;
   height: 211px;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 20s;
+  @keyframes run {
+    0% {
+      left: -60px;
+    }
+    50% {
+      left: 50%;
+    }
+    100% {
+      left: -60px;
+    }
+  }
 `;
+
 const StyledBar = styled.div`
   margin-top: 134px;
 `;

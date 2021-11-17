@@ -52,7 +52,7 @@ const App = () => {
       <StyledBackTop>
         {isVisible && (
           <BackTopBtn onClick={scrollToTop}>
-            <img src={BackTop} alt="back to top" />
+            <img src={BackTop} alt='back to top' />
           </BackTopBtn>
         )}
       </StyledBackTop>

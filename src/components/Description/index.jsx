@@ -18,12 +18,12 @@ const Description = () => {
             </StyledUserDescription>
           </StyledUserContent>
           <Col>
-            <StyledAvatar src={Avatar} alt="avatar" />
+            <StyledAvatar src={Avatar} alt='avatar' />
           </Col>
         </Row>
         <Row>
           <Col>
-            <StyledBannerImage src={Banner} alt="Banner" />
+            <StyledBannerImage src={Banner} alt='Banner' />
           </Col>
           <StyledGameContent>
             <StyledGameTitle>UNIFIED GAME</StyledGameTitle>
@@ -36,14 +36,14 @@ const Description = () => {
         </Row>
       </Container>
       <img
-        className="gridBackground"
+        className='gridBackground'
         src={GridBackground}
-        alt="Grid Background"
+        alt='Grid Background'
       />
       <img
-        className="unifiledBackground"
+        className='unifiledBackground'
         src={UnifiledBackground}
-        alt="Unidiled Background"
+        alt='Unidiled Background'
       />
     </Div>
   );
@@ -51,7 +51,10 @@ const Description = () => {
 // Styled Container
 const Div = styled.div`
   position: relative;
+  /* margin-top: -52px; */
   padding-bottom: 190px;
+  z-index: -1;
+  /* background-color: #05080a; */
   .gridBackground {
     position: absolute;
     bottom: 0;
@@ -67,14 +70,6 @@ const Div = styled.div`
     height: 221px;
   }
 `;
-// User Content
-const StyledUserContent = styled(Col)`
-  padding-top: 120px;
-`;
-const StyledAvatar = styled.img`
-  max-width: 967px;
-  max-height: 967px;
-`;
 const P = styled.p`
   letter-spacing: 0px;
   display: flex;
@@ -82,11 +77,22 @@ const P = styled.p`
   align-items: center;
   margin-bottom: 28px;
 `;
+
+// User Content
+const StyledUserContent = styled(Col)`
+  padding-top: 120px;
+`;
+const StyledAvatar = styled.img`
+  /* padding-top: 50px; */
+  max-width: 967px;
+  max-height: 967px;
+`;
 const StyledUserTitle = styled(P)`
   position: relative;
   font: normal normal bold 77px/60px Whyte;
   color: #e740f0;
-  /* text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4; */
+  /* text-shadow: 2px 2px 6px rgba(158, 8, 166, 0.5), */
+  /* 2px 2px 98px rgba(231, 64, 240, 0.769); */
   text-transform: uppercase;
   height: 77px;
   &::before {
