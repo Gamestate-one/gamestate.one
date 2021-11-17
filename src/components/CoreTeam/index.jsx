@@ -23,6 +23,31 @@ const StyledBlockCoreTeam = styled.div`
       0% 0% no-repeat padding-box;
   background-repeat: no-repeat;
   background-position: right top;
+  @media screen and (max-width: 991px) {
+    background: transparent
+      linear-gradient(128deg, #163f8c 0%, #8f65be 48%, #e740f0 100%) 0% 0%
+      no-repeat padding-box;
+    & span {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    & .row:first-child div:first-child {
+      min-height: 0;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+    & span:first-child {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+    & span:last-child {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
 `
 const EXTENDED_TEAM = [
   {
@@ -35,7 +60,7 @@ const EXTENDED_TEAM = [
     src: corePeter,
     name: "PETER HJORTSOE",
     job: "CO-FOUNDER",
-    desc: "M.Sc. International Business. Professional experience in real estate, FMCG, retail, renewable energy & finance. Serial entrepreneur, building and scaling businesses in Asia since 2014",
+    desc: "M.Sc. International Business. Professional experience in real estate, FMCG, retail, renewable energy & finance. Serial entrepreneur, building and scaling businesses in Asia since 2014.",
   },
   {
     src: coreKobus,
@@ -47,7 +72,7 @@ const EXTENDED_TEAM = [
     src: coreLocke,
     name: "LOCKE KOSNOFF",
     job: "MARKETING SPECIALIST & BIZ DEV",
-    desc: "BBA and PGCEi graduate with significant experience in the fields of blockchain marketing, project management, communications and advisory roles in various fintech start-ups. Locke is driven and passionate about changing the world by leveraging strong business and interpersonal relationships.",
+    desc: "BBA and PGCEi graduate, experienced in the fields of blockchain marketing, project management, communications, and advisory in various fintech start-ups.",
   },
   {
     src: coreCong,
@@ -63,15 +88,15 @@ const EXTENDED_TEAM = [
   },
   {
     src: coreViet,
-    name: "VIET TUAN VU",
-    job: "VRTECH CEO",
+    name: `VIET TUAN VU`,
+    job: "VR GAME SPECIALIST",
     desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
   {
     src: coreSang,
     name: "SANG THE DUONG",
     job: "3D DESIGNER",
-    desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education",
+    desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education.",
   },
 ]
 const CoreTeam = () => {
@@ -81,14 +106,14 @@ const CoreTeam = () => {
         <Row>
           <LabelSection
             label="CORE TEAM"
-            note="MEET THE"
+            note="MEET &nbsp;THE"
             className="mt-120"
             before
           />
         </Row>
         <Row>
           {EXTENDED_TEAM.map((item, idx) => (
-            <StyledItemCol lg={3} key={idx}>
+            <StyledItemCol md={6} xxl={3} key={idx}>
               <AvatarItem item={item} />
             </StyledItemCol>
           ))}

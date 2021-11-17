@@ -21,7 +21,7 @@ const EXTENDED_TEAM = [
     src: extErik,
     name: "ERIK CURRE",
     job: "SPLINTERLANDS.COM | HIVE-ENGINE.COM",
-    desc: "B.S. in Computer Science from the University of Washington. After a lengthy career as a software developer in the finance industry, he fell down the blockchain rabbit hole. Currently he spends his days writing code for crypto projects based on the Hive blockchain, including the Hive Engine DEX & smart contracts platform, and popular Splinterlands digital trading card game.",
+    desc: "University of Washington B.S.C. Banking industry developer turned code-slinger for Hive Engine smart contract DEX, and the popular Splinterlands digital trading card game.",
   },
   {
     src: extAdam,
@@ -33,19 +33,19 @@ const EXTENDED_TEAM = [
     src: extWilliam,
     name: "WILLIAM GRAY",
     job: "DEFIFORYOU.UK | DIGCHAIN.ORG",
-    desc: "Digital marketing wiz and CMO at DeFi For You and Dig Chain. William’s background includes copywriting, journalism and SMM.",
+    desc: "Digital marketing expert and Chief Marketing Officer at DeFi For You and Dig Chain. William’s background includes copywriting, journalism and social media management.",
   },
   {
     src: extJacob,
     name: "JACOB GADIKIAN",
     job: "NOTIONAL | BLURT.BLOG",
-    desc: "IT professional since 2003 and blockchains with emphasis on decentralized protocols since 2013. Jacob is a technical powerhouse in blockchain-based consumer facing mobile apps, economic exchanges between free-standing blockchain systems, edge-of-network validation and in designing open embedded systems.",
+    desc: "Decentralised protocol developer since 2013, and a technical powerhouse in edge-of-network validation, blockchain interoperability, and open embedded systems design.",
   },
   {
     src: extBrenn,
     name: "BRENN HILL",
     job: "NOTIONAL",
-    desc: "Engineering leader since 2009 focusing on media, sports, and marketing technology. In the blockchain space since 2015, Brenn is a published author with Packt on blockchain topics",
+    desc: "Engineering leader since 2009 focusing on media, sports, and marketing technology. In the blockchain space since 2015, Brenn is a published author with Packt on blockchain topics.",
   },
   {
     src: extKhanh,
@@ -61,20 +61,25 @@ const EXTENDED_TEAM = [
   },
   {
     src: extMarco,
-    name: "MARCO STAGLIANO",
+    name: "MARCO STAGLIANO'",
     job: "ANOTHER-1.IO | SNEAKERHEADZ",
-    desc: "Marco has extensive experience in Corporate Finance, M&A, Fintech, Real-estate, NFT’s and Metaverses. In recent years, he has developed business across Asia and Europe, acted as head of operations for AngelVest and founded a marketplace for digital fashion collectibles.",
+    desc: "Digital fashion collectibles marketplace founder, experienced in Corporate Finance, M&A, Fintech, Real-estate, NFT’s and Metaverses. Developed business across Asia and Europe, and acted as head of operations for AngelVest.",
   },
 ]
 const ExtendedTeam = () => {
   return (
     <Container>
       <Row>
-        <LabelSection label="EXTENDED TEAM / ADVISORS" note="MEET THE" className="mt-75"/>
+        <LabelSection
+          label="EXTENDED TEAM / ADVISORS"
+          note="MEET &nbsp;THE"
+          className="mt-75"
+        />
       </Row>
-      <Row className="mt-4">
+      {/* <Row className="mt-4"></Row> */}
+      <Row className="">
         {EXTENDED_TEAM.map((item, idx) => (
-          <StyledItemCol lg={3} key={idx}>
+          <StyledItemCol md={6} xxl={3} key={idx}>
             <AvatarItem item={item} />
           </StyledItemCol>
         ))}
