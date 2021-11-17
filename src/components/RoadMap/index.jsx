@@ -4,15 +4,21 @@ import LabelSection from "../LabelSection"
 import roadMap from "../../assets/img/RoadMap/roadMap.png"
 import styled from "styled-components"
 import CardItem from "./CardItem"
+const StyledBlockRoadMap = styled.div`
+  height: 1280px;
+  margin-top: 126px;
+  margin-bottom: 200px;
+  @media screen and (min-width: 1921px) {
+    height: 1700px;
+  }
+`
 const StyledBackgroundRoadMap = styled.div`
   background-image: url(${roadMap});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 1280px;
-  margin-top: 126px;
-  margin-bottom: 200px;
+  height: 100%;
 `
 const StyledListCards = styled(Container)`
   position: relative;
@@ -51,9 +57,7 @@ const CONTENT = [
     className: "card_top_right",
     color: "#1F95FF",
     label: "Q3 2022",
-    description: [
-      "Expand Gamestate to include game world, economy, staking and minting of NFTs",
-    ],
+    description: ["Expand Gamestate to include game world, economy, staking"],
   },
   {
     className: "card_bottom_left",
@@ -76,22 +80,24 @@ const RoadMap = () => {
     <>
       <Container>
         <Row>
-          <LabelSection label="ROAD MAP" />
+          <LabelSection label="ROAD MAP" topAuto="mt-auto" />
         </Row>
       </Container>
-      <StyledBackgroundRoadMap>
-        <StyledListCards>
-          {CONTENT.map((card, idx) => (
-            <CardItem
-              key={idx}
-              className={card.className}
-              label={card.label}
-              content={card.description}
-              color={card.color}
-            />
-          ))}
-        </StyledListCards>
-      </StyledBackgroundRoadMap>
+      <StyledBlockRoadMap>
+        <StyledBackgroundRoadMap>
+          <StyledListCards>
+            {CONTENT.map((card, idx) => (
+              <CardItem
+                key={idx}
+                className={card.className}
+                label={card.label}
+                content={card.description}
+                color={card.color}
+              />
+            ))}
+          </StyledListCards>
+        </StyledBackgroundRoadMap>
+      </StyledBlockRoadMap>
     </>
   )
 }

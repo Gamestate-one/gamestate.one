@@ -28,6 +28,7 @@ const StyledContent = styled.ul`
   color: #fff;
   text-align: left;
   padding-bottom: 24px;
+  padding-right: 10px;
 `
 const CardItem = ({ label, content, color, className }) => {
   return (
