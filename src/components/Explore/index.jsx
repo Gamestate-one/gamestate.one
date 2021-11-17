@@ -94,11 +94,15 @@ const StyledListIcon = styled.img`
     display: block;
     width: 1400px;
     animation: linear infinite;
+    -webkit-animation: linear infinite;
+    -moz-animation: linear infinite;
+    -o-animation: linear infinite;
+
     animation-name: slideIcon;
-    animation-duration: 30s;
+    animation-duration: 60s;
   }
   @media screen and (max-width: 576px) {
-    height: 60px;
+    height: 66px;
   }
 `;
 const StyledHeroImage = styled.img`
