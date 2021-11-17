@@ -9,6 +9,8 @@ import Footer from "./components/Footer"
 import { useState, useEffect } from "react"
 import TokenSale from "./components/TokenSale"
 import Description from "./components/Description"
+import MarketPlace from "./components/MarketPlace"
+import Upcoming from "./components/Upcoming"
 import styled from "styled-components"
 import BackTop from "../src/assets/img/backtop.png"
 import BackTopBackground from "../src/assets/img/backtopBackground.png"
@@ -41,8 +43,10 @@ const App = () => {
         <Explore />
         <TokenSale />
         <Description />
+        <MarketPlace />
+        <Upcoming />
         <Staking />
-        <CoreTeam/>
+        <CoreTeam />
         <ExtendedTeam />
         <Partners />
         <RoadMap />

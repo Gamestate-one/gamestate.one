@@ -9,22 +9,22 @@ const TokenSale = () => {
   return (
     <StyledTokenSales>
       <div>
-        <StyledTitle blue={true}>Token</StyledTitle>
+        <StyledTitle>Token</StyledTitle>
         <StyledSubTitle>Sale</StyledSubTitle>
       </div>
       <StyledBar>
         <HiveProgessBar fluid>
           <StyledRow>
             <StyledCol sm={1}>
-              <img src={HiveLogo} alt='Hive Logo' />
+              <img src={HiveLogo} alt="Hive Logo" />
             </StyledCol>
             <StyledCol sm={3}>
-              <span className='Title'>HIVE-ENGINE IDO</span>
+              <span className="Title">HIVE-ENGINE IDO</span>
             </StyledCol>
             <StyledCol>
-              <div className='progessBar'>
-                <div className='progessBar-fill'>
-                  <div className='progessBar-fill-inner'></div>
+              <div className="progessBar">
+                <div className="progessBar-fill">
+                  <div className="progessBar-fill-inner"></div>
                 </div>
               </div>
             </StyledCol>
@@ -33,23 +33,23 @@ const TokenSale = () => {
         <PolygonProgessBar fluid>
           <StyledRow>
             <StyledCol sm={1}>
-              <img src={PolygonLogo} alt='Polygon Logo' />
+              <img src={PolygonLogo} alt="Polygon Logo" />
             </StyledCol>
             <StyledCol sm={3}>
-              <span className='Title'>Polygon IDO</span>
+              <span className="Title">Polygon IDO</span>
             </StyledCol>
             <StyledCol>
-              <div className='progessBar'>
-                <div className='progessBar-fill'>
-                  <div className='progessBar-fill-inner'></div>
+              <div className="progessBar">
+                <div className="progessBar-fill">
+                  <div className="progessBar-fill-inner"></div>
                 </div>
               </div>
             </StyledCol>
           </StyledRow>
         </PolygonProgessBar>
       </StyledBar>
-      <StyledTokenImage src={TokenImage} alt='Token' />
-      <StyledUserGenerated src={UserGenerated} alt='User' />
+      <StyledTokenImage src={TokenImage} alt="Token" />
+      <StyledUserGenerated src={UserGenerated} alt="User" />
     </StyledTokenSales>
   );
 };
@@ -68,17 +68,39 @@ const Title = styled.span`
 `;
 const StyledTitle = styled(Title)`
   color: #6a9df9;
-  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
-  padding-right: 48px;
+  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c; */
+  padding-right: 20px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #4e7fd6 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(41px);
+    width: 100%;
+    max-width: 278px;
+    height: 33px;
+  }
 `;
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
-  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
+  /* text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4; */
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #e740f0 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(41px);
+    width: 100%;
+    max-width: 278px;
+    height: 33px;
+  }
 `;
 const StyledTokenImage = styled.img`
   position: absolute;
   top: 134px;
-  right: -320px;
+  right: -324px;
   max-width: 664px;
   max-height: 566px;
 `;
@@ -86,7 +108,8 @@ const StyledUserGenerated = styled.img`
   position: absolute;
   left: -60px;
   bottom: 0;
-  width: 90%;
+  width: 106%;
+  height: 211px;
 `;
 const StyledBar = styled.div`
   margin-top: 134px;
@@ -98,7 +121,7 @@ const ProgessBar = styled(Container)`
   opacity: 1;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  max-width: 65%;
+  max-width: 66%;
   height: 122px;
   img {
     padding-left: 30px;

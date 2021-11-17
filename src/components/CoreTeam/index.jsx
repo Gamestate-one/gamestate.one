@@ -1,14 +1,14 @@
 import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import LabelSection from "../LabelSection"
-import extAdam from "../../assets/img/Team/extAdam.png"
-import extAnkur from "../../assets/img/Team/extAnkur.png"
-import extBrenn from "../../assets/img/Team/extBrenn.png"
-import extErik from "../../assets/img/Team/extErik.png"
-import extJacob from "../../assets/img/Team/extJacob.png"
-import extKhanh from "../../assets/img/Team/extKhanh.png"
-import extMarco from "../../assets/img/Team/extMarco.png"
-import extWilliam from "../../assets/img/Team/extWilliam.png"
+import coreCong from "../../assets/img/Team/coreCong.png"
+import coreKobus from "../../assets/img/Team/coreKobus.png"
+import coreLocke from "../../assets/img/Team/coreLocke.png"
+import corePeter from "../../assets/img/Team/corePeter.png"
+import coreRicardo from "../../assets/img/Team/coreRicardo.png"
+import coreSang from "../../assets/img/Team/coreSang.png"
+import coreTung from "../../assets/img/Team/coreTung.png"
+import coreViet from "../../assets/img/Team/coreViet.png"
 import AvatarItem from "../AvatarItem"
 import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
@@ -26,52 +26,52 @@ const StyledBlockCoreTeam = styled.div`
 `
 const EXTENDED_TEAM = [
   {
-    src: extErik,
-    name: "ERIK CURRE",
-    job: "SPLINTERLANDS.COM | HIVE-ENGINE.COM",
-    desc: "B.S. in Computer Science from the University of Washington. After a lengthy career as a software developer in the finance industry, he fell down the blockchain rabbit hole. Currently he spends his days writing code for crypto projects based on the Hive blockchain, including the Hive Engine DEX & smart contracts platform, and popular Splinterlands digital trading card game.",
+    src: coreRicardo,
+    name: "RICARDO FERREIRA",
+    job: "CO-FOUNDER & TECHNICAL DIRECTOR",
+    desc: "Bachelor of Commerce thought leader, with wide entrepreneurial and business development experience in real estate, manufacturing, information technology, fintech, and blockchain social media sectors.",
   },
   {
-    src: extAdam,
-    name: "ADAM CHAPLIN",
-    job: "DEFIFORYOU.UK | DIGCHAIN.ORG",
-    desc: "CEO of DeFi For You, Dig Chain, and co-founder of Travala. Adam is a seasoned veteran with 30 years of business management experience.",
+    src: corePeter,
+    name: "PETER HJORTSOE",
+    job: "CO-FOUNDER",
+    desc: "M.Sc. International Business. Professional experience in real estate, FMCG, retail, renewable energy & finance. Serial entrepreneur, building and scaling businesses in Asia since 2014",
   },
   {
-    src: extWilliam,
-    name: "WILLIAM GRAY",
-    job: "DEFIFORYOU.UK | DIGCHAIN.ORG",
-    desc: "Digital marketing wiz and CMO at DeFi For You and Dig Chain. William’s background includes copywriting, journalism and SMM.",
+    src: coreKobus,
+    name: "KOBUS KOTZE",
+    job: "CREATIVE LEAD",
+    desc: "12 Years’ experience in broadcasting, branding, marketing, and strategy. Literary Theory and Writing graduate; currently a brand advisor to Bundesliga, Netflix, Discovery, and other major players.",
   },
   {
-    src: extJacob,
-    name: "JACOB GADIKIAN",
-    job: "NOTIONAL | BLURT.BLOG",
-    desc: "IT professional since 2003 and blockchains with emphasis on decentralized protocols since 2013. Jacob is a technical powerhouse in blockchain-based consumer facing mobile apps, economic exchanges between free-standing blockchain systems, edge-of-network validation and in designing open embedded systems.",
+    src: coreLocke,
+    name: "LOCKE KOSNOFF",
+    job: "MARKETING SPECIALIST & BIZ DEV",
+    desc: "BBA and PGCEi graduate with significant experience in the fields of blockchain marketing, project management, communications and advisory roles in various fintech start-ups. Locke is driven and passionate about changing the world by leveraging strong business and interpersonal relationships.",
   },
   {
-    src: extBrenn,
-    name: "BRENN HILL",
-    job: "NOTIONAL",
-    desc: "Engineering leader since 2009 focusing on media, sports, and marketing technology. In the blockchain space since 2015, Brenn is a published author with Packt on blockchain topics",
+    src: coreCong,
+    name: "CONG NGUYEN",
+    job: "CEO - BLOCKCHAIN DEVELOPER ASIA",
+    desc: "An experienced leader in modern technological innovation. Developed the DeFi For You platform and several ongoing blockchain projects for the Vietnamese government, banks, and local industries.",
   },
   {
-    src: extKhanh,
-    name: "KHANH NGUYEN",
-    job: "NOTIONAL",
-    desc: "Khanh is a skilled blockchain engineer with deep expertise in cross-chain technology. He has a Bachelors in Computer Science from Hanoi University of Science and Technology.",
+    src: coreTung,
+    name: "TUNG DUONG THANH",
+    job: "DEV. LEAD - BLOCKCHAIN DEVELOPER ASIA",
+    desc: "Project manager in multiple blockchain engineering teams, most recently, Travala and Defi For You. Tung is a leading-edge developer; constantly pushing the boundaries of modern technology.",
   },
   {
-    src: extAnkur,
-    name: "ANKUR BANERJEE",
-    job: "CTO - CHEQD.IO",
-    desc: "Engineering and digital identity project leader. Software development innovator, and co-inventor on multiple patent-pending solutions in blockchain and artificial intelligence systems.",
+    src: coreViet,
+    name: "VIET TUAN VU",
+    job: "VRTECH CEO",
+    desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
   {
-    src: extMarco,
-    name: "MARCO STAGLIANO",
-    job: "ANOTHER-1.IO | SNEAKERHEADZ",
-    desc: "Marco has extensive experience in Corporate Finance, M&A, Fintech, Real-estate, NFT’s and Metaverses. In recent years, he has developed business across Asia and Europe, acted as head of operations for AngelVest and founded a marketplace for digital fashion collectibles.",
+    src: coreSang,
+    name: "SANG THE DUONG",
+    job: "3D DESIGNER",
+    desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education",
   },
 ]
 const CoreTeam = () => {
@@ -79,9 +79,14 @@ const CoreTeam = () => {
     <StyledBlockCoreTeam>
       <Container>
         <Row>
-          <LabelSection label="CORE TEAM" note="MEET THE" />
+          <LabelSection
+            label="CORE TEAM"
+            note="MEET THE"
+            className="mt-120"
+            before
+          />
         </Row>
-        <Row className="mt-4">
+        <Row>
           {EXTENDED_TEAM.map((item, idx) => (
             <StyledItemCol lg={3} key={idx}>
               <AvatarItem item={item} />

@@ -70,7 +70,7 @@ const ExtendedTeam = () => {
   return (
     <Container>
       <Row>
-        <LabelSection label="EXTENDED TEAM / ADVISORS" note="MEET THE" />
+        <LabelSection label="EXTENDED TEAM / ADVISORS" note="MEET THE" className="mt-75"/>
       </Row>
       <Row className="mt-4">
         {EXTENDED_TEAM.map((item, idx) => (

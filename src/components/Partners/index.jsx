@@ -25,7 +25,7 @@ const Partners = () => {
   return (
     <Container>
       <Row>
-        <LabelSection label="SYNERGY PARTNERS" />
+        <LabelSection label="SYNERGY PARTNERS" topAuto="mt-auto" />
       </Row>
       <StyledBlockLogo className="align-items-center flex-wrap mt-5 mb-124">
         <StyledLogo width="141" height="141" src={logoDig} right="234" />

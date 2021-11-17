@@ -5,18 +5,18 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <>
-      <StyledNavbar collapseOnSelect fixed='top' expand='lg' variant='dark'>
+      <StyledNavbar collapseOnSelect fixed="top" expand="lg" variant="dark">
         <StyledContainer>
-          <Navbar.Brand href='#'>
-            <StyledImg src={Logo} alt='Logo' />
+          <Navbar.Brand href="#">
+            <StyledImg src={Logo} alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <StyledNav>
-              <StyledLitePaper href='#'>LITE PAPER</StyledLitePaper>
-              <StyledNFT href='#'>NFT's</StyledNFT>
-              <StyledStaking href='#'>STAKING</StyledStaking>
-              <StyledStarted href='#'>GET STARTED</StyledStarted>
+              <StyledLitePaper href="#">LITE PAPER</StyledLitePaper>
+              <StyledNFT href="#">NFT's</StyledNFT>
+              <StyledStaking href="#">STAKING</StyledStaking>
+              <StyledStarted href="#">GET STARTED</StyledStarted>
             </StyledNav>
           </Navbar.Collapse>
         </StyledContainer>
@@ -27,23 +27,23 @@ const Header = () => {
 export default Header;
 
 const A = styled.a`
-  min-height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 50px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
+  font: normal normal medium 16px/19px Whyte;
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
+  @media (min-width: 1400px) {
+    max-height: 41px;
+  }
 `;
 const StyledLitePaper = styled(A)`
-  padding: 10px 35px;
+  padding: 6px 28px;
   color: #ffffff;
   border: 3px solid #ffffff;
-  box-shadow: 0px 3px 6px #ffffff;
+  box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
   text-shadow: 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffffbe;
   &:hover {
     color: #ffffff;
@@ -53,7 +53,7 @@ const StyledNFT = styled(A)`
   padding: 10px 53px;
   color: #81efff;
   border: 3px solid #81efff;
-  box-shadow: 0px 0px 6px #406ef8;
+  box-shadow: 0px 3px 6px #406ef8;
   text-shadow: 0px 3px 6px #7ad3e0, 0px 3px 6px #81efff;
   &:hover {
     color: #81efff;
@@ -64,7 +64,7 @@ const StyledStaking = styled(A)`
   color: #1ad177;
   border: 3px solid #1ad177;
   text-shadow: 0px 3px 6px #20ac67, 0px 3px 6px #1ad178;
-  box-shadow: 0px 0px 6px #1dcc70;
+  box-shadow: 0px 3px 6px #1dcc70;
   &:hover {
     color: #1ad177;
   }
@@ -74,7 +74,7 @@ const StyledStarted = styled(A)`
   color: #e740f0;
   border: 3px solid #e740f0;
   text-shadow: 0px 3px 6px #9e50a2, 0px 3px 6px #e740f0;
-  box-shadow: 0px 0px 6px #e740f0;
+  box-shadow: 0px 3px 6px #e740f0;
   &:hover {
     color: #e740f0;
   }

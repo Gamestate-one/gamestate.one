@@ -16,20 +16,15 @@ const StyledAvatar = styled.div`
   align-items: flex-end;
 `
 const StyledCardInfo = styled(Card)`
-  /* background: #ffffff 0% 0% no-repeat padding-box; */
-  background: black;
+  background: rgba(0, 0, 0, 0.2) 0% 0% no-repeat padding-box;
   min-height: 214px;
   border-radius: 14px;
-  opacity: 1;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   width: 100%;
-  margin: 0 12px 24px 12px;
+  margin: 0 12px 22px 12px;
   text-align: center;
-  /* background: transparent
-    linear-gradient(147deg, #163f8c 0%, #c0d8db 52%, #9e08a6 100%) 0% 0%
-    no-repeat padding-box;
-  mix-blend-mode: color; */
+  border: none;
 `
 const StyledCardName = styled(Card.Title)`
   font: normal normal bold 24px/32px Whyte;
@@ -37,6 +32,10 @@ const StyledCardName = styled(Card.Title)`
   color: #ffffff;
   text-shadow: 0px 3px 6px #00000029;
   text-transform: uppercase;
+  margin-bottom: auto;
+  &.h5 {
+    margin-bottom: 6px;
+  }
 `
 const StyledCardJob = styled(Card.Text)`
   font: normal normal normal 18px/24px Whyte;
@@ -44,7 +43,7 @@ const StyledCardJob = styled(Card.Text)`
   color: #ffffff;
   text-decoration: underline;
 `
-const StledCardDesc = styled(Card.Text)`
+const StyledCardDesc = styled(Card.Text)`
   text-align: center;
   font: normal normal normal 16px/21px Whyte;
   letter-spacing: 0px;
@@ -60,10 +59,10 @@ const AvatarItem = ({ item }) => {
   return (
     <StyledAvatar image={item.src}>
       <StyledCardInfo border="primary">
-        <Card.Body>
+        <Card.Body className="d-flex flex-column px-1">
           <StyledCardName>{item.name}</StyledCardName>
           <StyledCardJob>{item.job}</StyledCardJob>
-          <StledCardDesc>{item.desc}</StledCardDesc>
+          <StyledCardDesc>{item.desc}</StyledCardDesc>
         </Card.Body>
       </StyledCardInfo>
     </StyledAvatar>
