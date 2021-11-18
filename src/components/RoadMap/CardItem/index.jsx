@@ -38,7 +38,7 @@ const StyledContent = styled.ul`
     padding-bottom: 0;
   }
   @media screen and (max-width: 991px) {
-    list-style: none;
+    /* list-style: none; */
     padding-bottom: 16px;
   }
 `
