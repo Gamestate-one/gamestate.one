@@ -33,6 +33,10 @@ const StyledContent = styled.ul`
   text-align: left;
   padding-bottom: 24px;
   padding-right: 10px;
+  @media screen and (max-width: 1200px) {
+    font-size: 20px;
+    padding-bottom: 0;
+  }
   @media screen and (max-width: 991px) {
     list-style: none;
   }

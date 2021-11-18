@@ -9,14 +9,33 @@ import q2 from "../../assets/img/RoadMap/q2.png"
 import q3 from "../../assets/img/RoadMap/q3.png"
 import q4 from "../../assets/img/RoadMap/q4.png"
 const StyledBlockRoadMap = styled.div`
-  height: 1280px;
+  height: 66vw;
   margin-top: 126px;
   margin-bottom: 200px;
-  @media screen and (min-width: 1921px) {
-    height: 1441px;
+
+  @media screen and (max-width: 1320px) {
+    & div.card_bottom_right {
+      bottom: 60px;
+    }
+  }
+  @media screen and (max-width: 1860px) {
+    & div.card_top_right {
+      right: 70px;
+      top: -70px;
+    }
+  }
+  @media screen and (max-width: 1399px) {
+    & div.card_bottom_right {
+      bottom: 70px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    & div.card_top_right {
+      right: 0px;
+    }
   }
   @media screen and (max-width: 1919px) {
-    height: 100vh;
     & div.card_top_left {
       top: -90px;
       left: 160px;
@@ -24,6 +43,11 @@ const StyledBlockRoadMap = styled.div`
     & div.card_bottom_right {
       right: 100px;
       bottom: 130px;
+    }
+  }
+  @media screen and (max-width: 1399px) {
+    & div.card_bottom_right {
+      bottom: 70px;
     }
   }
   @media screen and (max-width: 991px) {
@@ -40,7 +64,6 @@ const StyledBackgroundRoadMap = styled.div`
 `
 const StyledListCards = styled(Container)`
   position: relative;
-  max-width: 94%;
   height: 100%;
   & .card_top_left {
     position: absolute;
