@@ -181,13 +181,13 @@ const StyledSubUserTitle = styled(P)`
   }
 `;
 const StyledUserDescription = styled(P)`
-  font: normal normal bold 20px/28px Whyte;
+  font: normal normal normal 20px/28px Whyte;
   color: #d4d4d4;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 16px/28px Whyte;
+    font: normal normal normal 16px/28px Whyte;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 12px/28px Whyte;
+    font: normal normal normal 12px/28px Whyte;
   }
 `;
 // Game Content
@@ -269,15 +269,15 @@ const StyledGameSubTitle = styled(P)`
   }
 `;
 const StyledGameDescription = styled(P)`
-  font: normal normal bold 20px/28px Whyte;
+  font: normal normal normal 20px/28px Whyte;
   color: #d4d4d4;
-  max-width: 650px;
+  max-width: 569px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 16px/28px Whyte;
+    font: normal normal normal 16px/28px Whyte;
     max-width: 500px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 12px/28px Whyte;
+    font: normal normal normal 12px/28px Whyte;
     max-width: 300px;
   }
 `;

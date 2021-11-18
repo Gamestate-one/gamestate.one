@@ -1,5 +1,10 @@
 /* font */
 @font-face {
+  font-family: "Matrix";
+  src: url(./assets/fonts/LcdSolid-VPzB.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
   font-family: "Whyte";
   src: url(./assets/fonts/Whyte-Italic.woff2) format("woff2"),
     url(./assets/fonts/Whyte-Italic.woff) format("woff");
