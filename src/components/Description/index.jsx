@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Avatar from "../../assets/img/Description/avatar.png";
 import Banner from "../../assets/img/Description/banner.png";
 import GridBackground from "../../assets/img/Description/gridBackground.png";
-import UnifiledBackground from "../../assets/img/Description/unifiledBackground.png";
+import UnifiedBackground from "../../assets/img/Description/unifiedBackground.png";
 
 const Description = () => {
   return (
@@ -18,41 +18,43 @@ const Description = () => {
             <StyledUserTitle>User-generated</StyledUserTitle>
             <StyledSubUserTitle>CONTENT MONETISATION</StyledSubUserTitle>
             <StyledUserDescription>
-              Gamers can create avatars, skins, guides, artworks, and more.
+              Gamers can create avatars, wearables, guides, virtual objects and
+              artwork
             </StyledUserDescription>
           </StyledUserContent>
           <Col
-            className="text-center"
+            className='text-center'
             xs={{ span: 12, order: 1 }}
             sm={{ span: 12, order: 1 }}
             xxl={{ span: 6, order: 2 }}
           >
-            <StyledAvatar src={Avatar} alt="avatar" />
+            <StyledAvatar src={Avatar} alt='avatar' />
           </Col>
         </Row>
         <Row>
           <Col sm={12} xxl={6}>
-            <StyledBannerImage src={Banner} alt="Banner" />
+            <StyledBannerImage src={Banner} alt='Banner' />
           </Col>
           <StyledGameContent xxl={6}>
             <StyledGameTitle>UNIFIED GAME</StyledGameTitle>
             <StyledGameSubTitle>ACHIEVEMENTS PROFILES</StyledGameSubTitle>
             <StyledGameDescription>
-              Gamers' achievement profile includes collating experience, levels
-              and rank in a universal immutable profile
+              Collating experience, levels and rank in a universal, portable,
+              immutable, achievements-based blockchain digital identity profile
+              for the ultimate in flexing and bragging rights!
             </StyledGameDescription>
           </StyledGameContent>
         </Row>
       </StyledContainer>
       <img
-        className="gridBackground"
+        className='gridBackground'
         src={GridBackground}
-        alt="Grid Background"
+        alt='Grid Background'
       />
       <img
-        className="unifiledBackground"
-        src={UnifiledBackground}
-        alt="Unidiled Background"
+        className='unifiedBackground'
+        src={UnifiedBackground}
+        alt='Unidiled Background'
       />
     </Div>
   );
@@ -74,7 +76,7 @@ const Div = styled.div`
     z-index: -50;
     width: 100%;
   }
-  .unifiledBackground {
+  .unifiedBackground {
     position: absolute;
     bottom: 9%;
     left: 5%;
@@ -196,6 +198,9 @@ const StyledGameContent = styled(Col)`
   align-items: flex-end;
   padding-top: 120px;
   padding-right: 40px;
+  @media screen and (max-width: 1199px) {
+    padding-right: 10px;
+  }
 `;
 const StyledBannerImage = styled.img`
   padding-top: 100px;
@@ -266,14 +271,14 @@ const StyledGameSubTitle = styled(P)`
 const StyledGameDescription = styled(P)`
   font: normal normal bold 20px/28px Whyte;
   color: #d4d4d4;
-  max-width: 556px;
+  max-width: 650px;
   @media screen and (max-width: 1759px) {
     font: normal normal bold 16px/28px Whyte;
-    max-width: 460px;
+    max-width: 500px;
   }
   @media screen and (max-width: 654px) {
     font: normal normal bold 12px/28px Whyte;
-    max-width: 280px;
+    max-width: 300px;
   }
 `;
 export default Description;
