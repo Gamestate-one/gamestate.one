@@ -15,7 +15,7 @@ const Monitor = () => {
   useEffect(() => {
     const options = {
       strings: [
-        "Gamestate is a cross-chain, multi-world megaverse nexus, uniting gamers, fans, developers, creators, and merchants in a place of fun, discovery, and learning.<p></p><p>An open world platform, offering sales channels for games, apps, advertising, gaming equipment, music, media, and general merchandise, as well as a Rocket Launchpad accelerator for indie game startups.</p>",
+        "Gamestate is a cross-chain, multi-world megaverse nexus, uniting gamers, fans, developers, creators, and merchants in a place of fun, discovery, and learning.<p>An open world platform, offering sales channels for games, apps, advertising, gaming equipment, music, media, and general merchandise, as well as a Rocket Launchpad accelerator for indie game startups.</p>",
       ],
       typeSpeed: 10,
       backSpeed: 0,
@@ -56,16 +56,11 @@ const Monitor = () => {
 };
 
 const Div = styled.div`
-  min-height: 500px;
+  min-height: 800px;
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   text-align: left;
-  opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   padding: 90px 4% 0 4%;
   position: relative;
   .typingEffect {
@@ -93,6 +88,7 @@ const StyledImg = styled.img`
 const StyledListIcon = styled.img`
   display: none;
   position: absolute;
+
   @keyframes slideIcon {
     0% {
       left: 0px;
@@ -120,6 +116,7 @@ const StyledListIcon = styled.img`
   }
 `;
 const Header = styled.div`
+  position: relative;
   background-color: #121212;
   padding: 10px 3%;
   margin: 0 auto;

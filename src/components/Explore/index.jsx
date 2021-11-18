@@ -32,12 +32,8 @@ const Div = styled.div`
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   text-align: center;
   opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   padding-bottom: 110px;
   position: relative;
   @media (max-width: 767px) {
