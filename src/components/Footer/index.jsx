@@ -51,7 +51,7 @@ const Footer = () => {
         </Col>
         <Col md={8}>
           <StyledCopyrightFooter>
-            © Copyright Game state Ltd 2021, All Rights Reserved
+            Copyright Gamestate 2021. All Rights Reserved.
           </StyledCopyrightFooter>
         </Col>
       </StyledFooter>
