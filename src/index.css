@@ -1,0 +1,192 @@
+/* font */
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Italic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Italic.woff) format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-ExtraLightItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-ExtraLightItalic.woff) format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte Book";
+  src: url(./assets/fonts/Whyte-Book.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Book.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-HeavyItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-HeavyItalic.woff) format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Regular.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte Super";
+  src: url(./assets/fonts/Whyte-Super.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Super.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-LightItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte Book";
+  src: url(./assets/fonts/Whyte-BookItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-BookItalic.woff) format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Heavy.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Heavy.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte Super";
+  src: url(./assets/fonts/Whyte-SuperItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-SuperItalic.woff) format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-MediumItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-MediumItalic.woff) format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Bold.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Black.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-BlackItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-BlackItalic.woff) format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-ExtraLight.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-ExtraLight.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Light.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Medium.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-BoldItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-BoldItalic.woff) format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-ThinItalic.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-ThinItalic.woff) format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url(./assets/fonts/Whyte-Thin.woff2) format("woff2"),
+    url(./assets/fonts/Whyte-Thin.woff) format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Whyte";
+  background: #000000 0% 0% no-repeat padding-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1820px;
+  }
+}

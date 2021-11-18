@@ -1,0 +1,307 @@
+import React from "react"
+import { Col, Container, Row } from "react-bootstrap"
+import styled from "styled-components"
+import StakingNftImage from "../../assets/img/Staking/stakingNft.png"
+import StakingCupImage from "../../assets/img/Staking/stakingCup.png"
+import StakingGrid from "../../assets/img/Staking/stakingGrid.png"
+import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png"
+const StyledContainerFluid = styled.div`
+  background-image: url(${StakingGrid});
+  @media screen and (max-width: 991px) {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 40%;
+      left: 0;
+      background-image: url(${StakingUnifiled});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 63px;
+    }
+  }
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 315px;
+`
+const StyledStaking = styled(Container)`
+  min-height: 1247px;
+  .mt-156 {
+    padding-top: 156px;
+  }
+  .mt-350 {
+    margin-top: -350px;
+    @media screen and (max-width: 991px) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    .mt-156 {
+      padding-top: 0;
+    }
+    .row {
+      margin: 0;
+    }
+    .mt-170 {
+      margin-top: -150px;
+    }
+  }
+`
+const StyledStakingColLeft = styled(Col)`
+  padding-left: 112px;
+  @media screen and (max-width: 1399px) {
+    padding-left: 0;
+  }
+`
+const StyledStakingColRight = styled(Col)`
+  padding-right: 146px;
+  @media screen and (max-width: 1399px) {
+    padding-right: 0;
+  }
+`
+const StyledStakingTitleLeft = styled.p`
+  font-size: 77px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 60px;
+  color: #e740f0;
+  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: 135px;
+  margin-left: 4px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -22px;
+    left: -16px;
+    width: 44px;
+    height: 179px;
+    background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
+      0% no-repeat padding-box;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: -0;
+    left: -16px;
+    width: 50%;
+    height: 40px;
+    background: #e740f0 0% 0% no-repeat padding-box;
+    filter: blur(50px);
+    z-index: -1;
+  }
+  @media screen and (max-width: 991px) {
+    margin-top: -160px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 414px) {
+    padding-left: 10px;
+    &:before {
+      left: 3px;
+      height: 85px;
+      width: 20px;
+      top: -50%;
+    }
+  }
+`
+const StyledImgNft = styled.div`
+  background-image: url(${(props) => props.image});
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: ${(props) => props.height}px;
+  @media screen and (max-width: 1399px) {
+    margin-top: ${(props) => props.top}px;
+  }
+  @media screen and (max-width: 414px) {
+    &.mt-200 {
+      margin-top: -200px;
+      margin-bottom: -284px;
+    }
+  }
+`
+const StyledTitleLeft = styled.p`
+  font-size: 50px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-left: 4px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  @media screen and (max-width: 991px) {
+    font-size: 24px;
+    line-height: 22px;
+  }
+  @media screen and (max-width: 414px) {
+    margin-top: 18px;
+    margin-left: 14px;
+    position: relative;
+    z-index: 1;
+  }
+`
+const StyledDescLeft = styled.span`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #d4d4d4;
+  margin-left: 6px;
+  display: inline-block;
+  max-width: 420px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  @media screen and (max-width: 414px) {
+    margin-left: 14px;
+  }
+`
+
+const StyledStakingTitleRight = styled.span`
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+  font-size: 77px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 80px;
+  color: #6a9df9;
+  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: 135px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -14px;
+    right: -16px;
+    width: 44px;
+    height: 179px;
+    background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
+      0% no-repeat padding-box;
+    z-index: -1;
+  }
+  & span {
+    position: relative;
+  }
+  & span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    background: #6294ef 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(39px);
+    z-index: -1;
+  }
+  & span:nth-child(1)::before {
+    width: 66%;
+  }
+  & span:nth-child(2)::before {
+    width: 35%;
+    top: 10px;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 414px) {
+    &:after {
+      width: 20px;
+      height: 85px;
+      right: 0;
+    }
+    padding-right: 10px;
+  }
+`
+const StyledDescRight = styled.span`
+  display: block;
+  text-align: right;
+  float: right;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #d4d4d4;
+  margin-left: 100px;
+  width: 520px;
+  /* margin-right: -16px; */
+  margin-top: 26px;
+  @media screen and (max-width: 991px) {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  @media screen and (max-width: 414px) {
+    width: 397px;
+    margin-right: 0;
+  }
+`
+
+const Staking = () => {
+  return (
+    <>
+      <StyledStaking id="staking">
+        <Row className="mt-156">
+          <StyledStakingColLeft
+            lg={{ span: 6, order: 1 }}
+            xs={{ order: 2 }}
+            className="mt-170"
+          >
+            <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
+            <StyledTitleLeft>LOTTERY REWARDS</StyledTitleLeft>
+            <StyledDescLeft>
+              VIP card gives gamers ticket for staking and a chance to spin the
+              wheel and win rewards.
+            </StyledDescLeft>
+          </StyledStakingColLeft>
+          <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
+            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
+          </Col>
+        </Row>
+        <Row className="mt-350">
+          <Col lg={6}>
+            <StyledImgNft
+              image={StakingCupImage}
+              height={780}
+              top="165"
+              className="mt-200"
+            />
+          </Col>
+          <StyledStakingColRight lg={6}>
+            <StyledStakingTitleRight>
+              <span>TOURNAMENT</span>
+              <span>PRIZES</span>
+            </StyledStakingTitleRight>
+            <StyledDescRight>
+              Gamers can participate in tournaments on Gamestate and win prizes.
+            </StyledDescRight>
+          </StyledStakingColRight>
+        </Row>
+      </StyledStaking>
+      <StyledContainerFluid />
+    </>
+  )
+}
+
+export default Staking
