@@ -154,6 +154,7 @@ const CONTENT = [
     label: "Q1 2022",
     image: q1,
     description: [
+      "NFT collection design",
       "Metaverse development",
       "Launch NFT collection",
       "Unveil marketplace",
