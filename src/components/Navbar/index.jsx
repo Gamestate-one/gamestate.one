@@ -32,8 +32,8 @@ const Header = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
-              <StyledFirstButton href='#'>LITE PAPER</StyledFirstButton>
-              <StyledSecondButton href='#'>NFT's</StyledSecondButton>
+              <StyledFirstButton href='#'>PITCH DECK</StyledFirstButton>
+              <StyledSecondButton href='#'>LITE PAPER</StyledSecondButton>
               <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
               <StyledFourthButton href='#'>GET STARTED</StyledFourthButton>
             </StyledNav>
@@ -61,21 +61,12 @@ const A = styled.a`
     font: normal normal medium 12px/12px Whyte;
     min-width: 116px;
   }
-  @media (max-width: 992px) {
-    margin-bottom: 16px;
+  @media (max-width: 991px) {
+    min-width: 148px;
+    margin-bottom: 50px;
   }
 `;
 const StyledFirstButton = styled(A)`
-  color: #ffffff;
-  border: 3px solid #ffffff;
-  box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
-  text-shadow: 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffffbe;
-  &:hover {
-    color: #ffffff;
-    transform: scale(1.05);
-  }
-`;
-const StyledSecondButton = styled(A)`
   color: #81efff;
   border: 3px solid #81efff;
   box-shadow: 0px 3px 6px #406ef8;
@@ -85,6 +76,17 @@ const StyledSecondButton = styled(A)`
     transform: scale(1.05);
   }
 `;
+const StyledSecondButton = styled(A)`
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
+  text-shadow: 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffffbe;
+  &:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+`;
+
 const StyledThirdButton = styled(A)`
   color: #1ad177;
   border: 3px solid #1ad177;
