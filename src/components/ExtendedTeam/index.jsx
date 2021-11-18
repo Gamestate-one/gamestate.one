@@ -209,7 +209,7 @@ const ExtendedTeam = () => {
       </StyledMobileLabelRow>
       <StyledTeamRow>
         {EXTENDED_TEAM.map((item, idx) => (
-          <StyledItemCol md={6} xl={3} key={idx}>
+          <StyledItemCol md={6} xxl={3} key={idx}>
             <AvatarItem item={item} />
           </StyledItemCol>
         ))}
