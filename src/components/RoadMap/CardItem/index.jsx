@@ -39,6 +39,7 @@ const StyledContent = styled.ul`
   }
   @media screen and (max-width: 991px) {
     list-style: none;
+    padding-bottom: 16px;
   }
 `
 const CardItem = ({ label, content, color, className }) => {

@@ -40,7 +40,6 @@ const StyledDesc = styled.span`
 const StyledInput = styled(Form.Group)`
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 16px;
-  /* border: 1px solid #e740f0; */
   border-radius: 16px;
   font-size: 12px;
   line-height: 16px;
@@ -66,6 +65,7 @@ const StyledInput = styled(Form.Group)`
       box-shadow: unset;
     }
   }
+
   & textarea,
   & label {
     padding-left: 0 !important;
@@ -119,21 +119,24 @@ const ContactForm = () => {
     e.preventDefault()
   }
   const handleTextareaOnChange = (e) => {
-    console.log(e.target.value.length)
     setNumberChar(e.target.value.length)
   }
   return (
     <StyledContactForm>
       <StyledContactTitle className="text-uppercase">
-        SEND EMAIL
+        CONTACT US
       </StyledContactTitle>
       <StyledDesc>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu
+        Get in touch for Launchpad IGO's, Synergy Partnerships, Game
+        Development, Press, and co-branding.
       </StyledDesc>
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Row>
           <StyledColInput xxl={6}>
-            <StyledInput className="mb-3" controlId="formBasicFirstName">
+            <StyledInput
+              className="mb-3 input-form"
+              controlId="formBasicFirstName"
+            >
               <Form.Label>First Name *</Form.Label>
               <Form.Control type="text" />
               <StyledIconInput src={bookIcon} />

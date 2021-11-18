@@ -17,7 +17,7 @@ const StyledBlockLogo = styled(Row)`
   @media screen and (max-width: 1788px) {
     justify-content: center;
     & img {
-      margin-right: 0;
+      margin: 10px 35px;
     }
   }
   @media screen and (max-width: 414px) {
