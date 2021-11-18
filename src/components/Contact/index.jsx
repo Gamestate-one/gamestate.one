@@ -14,7 +14,8 @@ const StyledImageContact = styled(Col)`
   min-height: 702px;
   background-image: url(${girl});
   background-size: cover;
-  background-position: center center;
+  /* background-position: center center; */
+  background-position: 30%center;
   @media screen and (max-width: 768px) {
     min-height: 560px;
   }
@@ -37,7 +38,7 @@ const StyledBlockForm = styled(Col)`
     height: 100%;
   }
   @media screen and (max-width: 1399px) {
-    padding: 40px 0 40px 50px;
+    padding: 40px 40px 40px 50px;
   }
   @media screen and (max-width: 991px) {
     padding: 0;

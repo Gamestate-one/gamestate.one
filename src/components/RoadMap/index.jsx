@@ -9,23 +9,59 @@ import q2 from "../../assets/img/RoadMap/q2.png"
 import q3 from "../../assets/img/RoadMap/q3.png"
 import q4 from "../../assets/img/RoadMap/q4.png"
 const StyledBlockRoadMap = styled.div`
-  height: 1280px;
+  height: 66vw;
   margin-top: 126px;
-  margin-bottom: 200px;
-  @media screen and (min-width: 1921px) {
-    height: 1441px;
-  }
-  @media screen and (max-width: 1919px) {
-    height: 100vh;
-    & div.card_top_left {
-      top: -90px;
-      left: 160px;
+  margin-bottom: 286px;
+  @media screen and (min-width: 1920px) {
+    & div.card_top_right {
+      top: -60px;
     }
     & div.card_bottom_right {
-      right: 100px;
-      bottom: 130px;
+      bottom: 160px;
+    }
+    & div.card_bottom_left {
+      bottom: -190px;
     }
   }
+  @media screen and (max-width: 1919px) {
+    & div.card_top_right {
+      top: -60px;
+    }
+    & div.card_bottom_right {
+      bottom: 100px;
+    }
+    & div.card_bottom_left {
+      bottom: -190px;
+      left: 140px;
+    }
+  }
+  @media screen and (max-width: 1860px) {
+    & div.card_top_right {
+      right: 70px;
+      top: -70px;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    & div.card_top_right {
+      top: -140px;
+    }
+    & div.card_top_left {
+      top: -100px;
+    }
+  }
+  @media screen and (max-width: 1399px) {
+    & div.card_bottom_right {
+      bottom: 0px;
+      right: 200px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    & div.card_top_right {
+      right: 0px;
+    }
+  }
+
   @media screen and (max-width: 991px) {
     display: none;
   }
@@ -40,7 +76,6 @@ const StyledBackgroundRoadMap = styled.div`
 `
 const StyledListCards = styled(Container)`
   position: relative;
-  max-width: 94%;
   height: 100%;
   & .card_top_left {
     position: absolute;
@@ -68,6 +103,11 @@ const StyledRoadMapMobile = styled(Row)`
   @media screen and (max-width: 991px) {
     display: flex;
   }
+  @media screen and (max-width: 414px) {
+    & > div:first-child > div:first-child {
+      height: 62vw;
+    }
+  }
   @media screen and (min-width: 992px) {
     display: none;
   }
@@ -79,10 +119,11 @@ const StyledIconMobile = styled(Col)`
   background-repeat: no-repeat;
   width: 58%;
   height: 410px;
-  @media screen and (max-width: 768px) {
-    background-size: cover;
+  @media screen and (max-width: 767px) {
+    /* background-size: cover; */
     width: 100%;
-    height: 354px;
+    /* height: 354px; */
+    height: 70vw;
   }
 `
 const StyledItemMobile = styled(Col)`
@@ -90,7 +131,7 @@ const StyledItemMobile = styled(Col)`
   margin-bottom: 30px;
   display: flex;
   width: 100%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 `
@@ -101,17 +142,21 @@ const CONTENT = [
     label: "Q4 2021",
     image: q4,
     description: [
-      "Ethereum NFT sale",
-      "Metaverse architecture & economy design",
+      "Initial Partnerships",
+      "Community building",
+      "Hive-Engine IDO",
+      "Polygon main event IDO",
     ],
   },
   {
     className: "card_top_left",
     color: "#FA0E86",
-    label: "Q1 2021",
+    label: "Q1 2022",
     image: q1,
     description: [
-      "Launch own layer-1 NFT & E-commerce Nexus marketplace platform",
+      "Metaverse development",
+      "Launch NFT collection",
+      "Unveil marketplace",
     ],
   },
   {
@@ -119,7 +164,11 @@ const CONTENT = [
     color: "#560DB1",
     label: "Q2 2022",
     image: q2,
-    description: ["Launch Gamestate metaverse mvp"],
+    description: [
+      "Launch metaverse MVP",
+      "Community artist NFT collections",
+      "Multi-chain Integration",
+    ],
   },
 
   {
@@ -127,7 +176,12 @@ const CONTENT = [
     color: "#1F95FF",
     label: "Q3 2022",
     image: q3,
-    description: ["Expand Gamestate to include game world, economy, staking"],
+    description: [
+      "Introduce game world economy",
+      "Accelerate marketing",
+      "Increase onboarding",
+      "Expand integrations",
+    ],
   },
 ]
 const RoadMap = () => {
@@ -141,7 +195,7 @@ const RoadMap = () => {
           {CONTENT.map((card, idx) => (
             <StyledItemMobile key={idx} md={12}>
               <StyledIconMobile md={7} image={card.image} />
-              <Col md={5}>
+              <Col md={5} xs={12}>
                 <CardItem
                   key={idx}
                   className={card.className}
