@@ -21,21 +21,21 @@ const Header = () => {
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed="top"
-        expand="lg"
-        variant="dark"
+        fixed='top'
+        expand='lg'
+        variant='dark'
       >
         <StyledContainer>
-          <Navbar.Brand href="#">
-            <StyledImg src={Logo} alt="Logo" />
+          <Navbar.Brand href='#'>
+            <StyledImg src={Logo} alt='Logo' />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
-              <StyledFirstButton href="#">LITE PAPER</StyledFirstButton>
-              <StyledSecondButton href="#">NFT's</StyledSecondButton>
-              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
-              <StyledFourthButton href="#">GET STARTED</StyledFourthButton>
+              <StyledFirstButton href='#'>LITE PAPER</StyledFirstButton>
+              <StyledSecondButton href='#'>NFT's</StyledSecondButton>
+              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
+              <StyledFourthButton href='#'>GET STARTED</StyledFourthButton>
             </StyledNav>
           </Navbar.Collapse>
         </StyledContainer>
@@ -125,10 +125,10 @@ const StyledContainer = styled(Container)`
     max-width: 100%;
     padding: 0;
     .navbar-brand {
-      margin-left: 2%;
+      margin-left: 3%;
     }
     .navbar-toggler {
-      margin-right: 2%;
+      margin-right: 3%;
     }
   }
 `;
