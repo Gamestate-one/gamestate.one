@@ -25,6 +25,7 @@ const StyledAvatar = styled.div`
 const StyledCardInfo = styled(Card)`
   background: rgba(0, 0, 0, 0.2) 0% 0% no-repeat padding-box;
   min-height: 214px;
+  /* min-height: 234px; */
   border-radius: 14px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);

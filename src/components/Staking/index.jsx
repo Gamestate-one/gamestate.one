@@ -269,10 +269,12 @@ const Staking = () => {
             className="mt-170"
           >
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
-            <StyledTitleLeft>LOTTERY REWARDS</StyledTitleLeft>
+            <StyledTitleLeft>LIQUIDITY REWARDS</StyledTitleLeft>
             <StyledDescLeft>
-              VIP card gives gamers ticket for staking and a chance to spin the
-              wheel and win rewards.
+              Holders of the native STATE token will be able to stake or enter
+              into liquidity pools to earn rewards. Early adopters acquiring one
+              of the limited edition Quantum Accelerator NFTs get access to
+              exclusive content, enhanced rewards and multiplier bonuses.
             </StyledDescLeft>
           </StyledStakingColLeft>
           <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
@@ -294,7 +296,9 @@ const Staking = () => {
               <span>PRIZES</span>
             </StyledStakingTitleRight>
             <StyledDescRight>
-              Gamers can participate in tournaments on Gamestate and win prizes.
+              Gamestate will host community and partner-sponsored tournaments
+              and events in the WAGMI stadium with prizes and incentives for the
+              winners.
             </StyledDescRight>
           </StyledStakingColRight>
         </Row>

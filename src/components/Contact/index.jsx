@@ -1,14 +1,33 @@
 import React from "react"
-import { Col, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import styled from "styled-components"
 import girl from "../../assets/img/Contact/girl.png"
 import ContactForm from "./ContactForm"
+
+const StyledContainerContact = styled(Container)`
+  @media screen and (min-width: 1200px) {
+    max-width: 94%;
+  }
+`
 const StyledBlockContact = styled(Row)`
   display: flex;
   background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
     0% no-repeat padding-box;
-  border: 1px solid #707070;
-  margin-right: 0;
+  position: relative;
+  /* border: 1px solid #707070; */
+  /* margin-right: 0; */
+  &:before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: -28px;
+    left: -9px;
+    height: 40px;
+    -webkit-filter: blur(24px);
+    filter: blur(23 px);
+    background: #000;
+    z-index: 1;
+  }
 `
 const StyledImageContact = styled(Col)`
   min-height: 702px;
@@ -23,7 +42,7 @@ const StyledImageContact = styled(Col)`
 const StyledBlockForm = styled(Col)`
   background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
     0% no-repeat padding-box;
-  padding: 50px 84px 52px 243px;
+  padding: 50px 84px 52px 90px;
   position: relative;
   &:before {
     content: "";
@@ -42,7 +61,8 @@ const StyledBlockForm = styled(Col)`
   }
   @media screen and (max-width: 991px) {
     padding: 0;
-    padding: 20px 10px 40px 20px;
+    /* padding: 20px 10px 40px 20px; */
+    padding: 20px 20px 40px 20px;
     &:before {
       width: 100%;
       height: 76px;
@@ -54,12 +74,14 @@ const StyledBlockForm = styled(Col)`
 `
 const Contact = () => {
   return (
-    <StyledBlockContact>
-      <StyledImageContact md={12} lg={5} />
-      <StyledBlockForm md={12} lg={7}>
-        <ContactForm />
-      </StyledBlockForm>
-    </StyledBlockContact>
+    <StyledContainerContact fluid="xl">
+      <StyledBlockContact>
+        <StyledImageContact md={12} lg={5} />
+        <StyledBlockForm md={12} lg={7}>
+          <ContactForm />
+        </StyledBlockForm>
+      </StyledBlockContact>
+    </StyledContainerContact>
   )
 }
 
