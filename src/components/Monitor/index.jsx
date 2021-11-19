@@ -58,18 +58,19 @@ const Monitor = () => {
 
 const Div = styled.div`
   min-height: 600px;
-  @media screen and (max-width: 767px) {
-    min-height: 800px;
-  }
-  @media screen and (max-width: 467px) {
+  @media screen and (max-width: 991px) {
     min-height: 700px;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 850px;
   }
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
   text-align: left;
-  padding: 90px 3% 0 3%;
+  padding: 60px 0;
   position: relative;
+  max-width: 94%;
   .typingEffect {
     font-family: Matrix;
     font-size: 28px;
