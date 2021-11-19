@@ -19,7 +19,7 @@ const Description = () => {
             <StyledSubUserTitle>CONTENT MONETISATION</StyledSubUserTitle>
             <StyledUserDescription>
               Gamers can create avatars, wearables, guides, virtual objects and
-              artwork
+              artwork.
             </StyledUserDescription>
           </StyledUserContent>
           <Col
@@ -62,7 +62,7 @@ const Description = () => {
 // Styled Container
 const Div = styled.div`
   position: relative;
-  padding-bottom: 190px;
+  padding-bottom: 240px;
   z-index: -1;
   @media screen and (max-width: 1200px) {
     padding-bottom: 140px;
