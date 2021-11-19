@@ -42,13 +42,13 @@ const StyledBlockCoreTeam = styled.div`
       margin-right: auto;
       margin-left: auto;
     }
-  }
-  @media screen and (max-width: 414px) {
     & .row:first-child div:first-child {
       min-height: 0;
       margin-left: 0;
       margin-top: 6px;
     }
+  }
+  @media screen and (max-width: 414px) {
     & span:first-child {
       font-size: 16px;
       line-height: 19px;

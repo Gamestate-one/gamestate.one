@@ -4,11 +4,7 @@ import UserGenerated from "../../assets/img/TokenSale/User-generated.png"
 import HiveLogo from "../../assets/img/TokenSale/hivelogo.png"
 import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png"
 import { Container } from "react-bootstrap"
-import Countdown, {
-  zeroPad,
-  calcTimeDelta,
-  formatTimeDelta,
-} from "react-countdown"
+import Countdown, { zeroPad } from "react-countdown"
 const Rendered = ({ days, hours, minutes, seconds }) => (
   <div className="countdown">
     <div className="countdown__item">
