@@ -1,25 +1,21 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-
-import HeroImage from "../../assets/img/Explore/hero.png";
 import Background from "../../assets/img/Explore/background.png";
+import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
 
 const Explore = () => {
   return (
     <Div>
       <StyledContainer>
-        <div>
-          {/* <StyledHeroImage src={HeroImage} alt='Hero' /> */}
-          <StyledDescription>
-            EXPLORE, PLAY, EARN AND SOCIALISE IN THE DECENTRALIZED VIRTUAL
-            WORLD.
-            <p>start &nbsp;your metaverse gaming with vip card now!</p>
-          </StyledDescription>
-          <StyledButton>
-            <StyledSpan>BUY</StyledSpan>
-            <StyledSubSpan>NOW</StyledSubSpan>
-          </StyledButton>
-        </div>
+        <StyledHeroImage src={HeroBanner} alt='Hero' />
+        <StyledDescription>
+          Quantum Accelerator - Experience enhancing NFTs, reward holders with
+          airdrop opportunities, staking multipliers and early bird access!
+        </StyledDescription>
+        <StyledButton>
+          <StyledSpan>BUY</StyledSpan>
+          <StyledSubSpan>NOW</StyledSubSpan>
+        </StyledButton>
       </StyledContainer>
     </Div>
   );
@@ -40,15 +36,13 @@ const StyledContainer = styled(Container)`
     padding-bottom: 51px;
   }
 `;
-// const StyledHeroImage = styled.img`
-//   max-width: 1132px;
-//   margin-top: 60px;
-//   width: 100%;
-//   height: auto;
-//   @media screen and (max-width: 1199px) {
-//     margin-top: 150px;
-//   }
-// `;
+const StyledHeroImage = styled.img`
+  max-width: 783px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  width: 100%;
+  height: auto;
+`;
 const StyledDescription = styled.div`
   font-weight: bold;
   font-style: normal;
@@ -56,9 +50,8 @@ const StyledDescription = styled.div`
   color: #ffffff;
   line-height: 50px;
   padding-bottom: 70px;
-  padding-top: 800px;
   margin: 0 auto;
-  max-width: 1226px;
+  max-width: 1420px;
   text-transform: uppercase;
   p {
     margin-bottom: 0;

@@ -15,12 +15,13 @@ const Monitor = () => {
   useEffect(() => {
     const options = {
       strings: [
-        "Gamestate is a cross-chain, multi-world megaverse nexus, uniting gamers, fans, developers, creators, and merchants in a place of fun, discovery, and learning.<p>An open world platform, offering sales channels for games, apps, advertising, gaming equipment, music, media, and general merchandise, as well as a Rocket Launchpad accelerator for indie game startups.</p>",
+        "Gamestate is a cross-chain, multi-world megaverse nexus, uniting gamers, fans, developers, creators, and merchants in a place of fun, discovery, and learning.<br><br>An open world platform, offering sales channels for games, apps, advertising, gaming equipment, music, media, and general merchandise, as well as a Rocket Launchpad accelerator for indie game startups.</br>",
       ],
       typeSpeed: 10,
       backSpeed: 0,
       backDelay: 3000,
       loop: true,
+      showCursor: false,
       loopCount: Infinity,
       fadeOut: true,
     };
@@ -56,19 +57,25 @@ const Monitor = () => {
 };
 
 const Div = styled.div`
-  min-height: 800px;
+  min-height: 600px;
+  @media screen and (max-width: 767px) {
+    min-height: 800px;
+  }
+  @media screen and (max-width: 467px) {
+    min-height: 700px;
+  }
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
   text-align: left;
-  padding: 90px 4% 0 4%;
+  padding: 90px 3% 0 3%;
   position: relative;
   .typingEffect {
     font-family: Matrix;
-    font-size: 26px;
+    font-size: 28px;
     color: #1ad177;
-    .typed-cursor {
-      display: none;
+    @media screen and (max-width: 467px) {
+      font-size: 24px;
     }
   }
 `;
@@ -88,6 +95,7 @@ const StyledImg = styled.img`
 const StyledListIcon = styled.img`
   display: none;
   position: absolute;
+  background-color: #121212;
 
   @keyframes slideIcon {
     0% {
@@ -107,7 +115,6 @@ const StyledListIcon = styled.img`
     -webkit-animation: linear infinite;
     -moz-animation: linear infinite;
     -o-animation: linear infinite;
-
     animation-name: slideIcon;
     animation-duration: 60s;
   }
@@ -120,5 +127,12 @@ const Header = styled.div`
   background-color: #121212;
   padding: 10px 3%;
   margin: 0 auto;
+  @media screen and (max-width: 1199px) {
+    height: 95px;
+    padding: 0;
+  }
+  @media screen and (max-width: 576px) {
+    height: 66px;
+  }
 `;
 export default Monitor;

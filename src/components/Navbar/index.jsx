@@ -32,10 +32,20 @@ const Header = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
-              <StyledFirstButton href='#'>PITCH DECK</StyledFirstButton>
+              <StyledFirstButton
+                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
+                target='_blank'
+              >
+                PITCH DECK
+              </StyledFirstButton>
               <StyledSecondButton href='#'>LITE PAPER</StyledSecondButton>
               <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
-              <StyledFourthButton href='#'>GET STARTED</StyledFourthButton>
+              <StyledFourthButton
+                href='https://blurt.blog/@gamestate'
+                target='_blank'
+              >
+                GET STARTED
+              </StyledFourthButton>
             </StyledNav>
           </Navbar.Collapse>
         </StyledContainer>
@@ -123,6 +133,9 @@ const StyledImg = styled.img`
 const StyledContainer = styled(Container)`
   height: 100%;
   max-width: 94%;
+  @media screen and (min-width: 2440px) {
+    max-width: 1868px;
+  }
   @media screen and (max-width: 992px) {
     max-width: 100%;
     padding: 0;
