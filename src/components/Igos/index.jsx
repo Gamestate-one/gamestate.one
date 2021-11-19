@@ -14,9 +14,10 @@ const Igos = () => {
           >
             <StyledTitle>INITIAL GAME OFFERINGS (IGO's)</StyledTitle>
             <StyledDescription>
-              Provide individuals with an opportunity to invest in gaming
-              projects at an early stage that have the potential to offer huge
-              returns after their launch.
+              Indie developers can raise funds for games development and
+              bootstrap diverse communities of gamers and fans who in turn get
+              an early opportunity to become part of games in the early startup
+              phase.
             </StyledDescription>
             <StyledButton>
               <a
@@ -27,8 +28,14 @@ const Igos = () => {
                 Read more
               </a>
             </StyledButton>
+            <div className='progessBar'>
+              <div className='progessBar-fill'>
+                <div className='progessBar-fill-inner'></div>
+              </div>
+            </div>
           </StyledContent>
           <Col
+            className='pe-0'
             xs={{ span: 12, order: 2 }}
             sm={{ span: 12, order: 2 }}
             xl={{ span: 6, order: 2 }}
@@ -72,6 +79,39 @@ const StyledContent = styled(Col)`
   @media screen and (max-width: 1199px) {
     padding-top: 0px;
     text-align: center;
+  }
+  .progessBar {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    height: 96px;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 83%;
+    margin-top: 90px;
+    @media screen and (max-width: 1199px) {
+      margin: 60px auto 0 auto;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 40px auto 0 auto;
+    }
+    .progessBar-fill {
+      background-color: #fff;
+      width: 90%;
+      height: 28px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      .progessBar-fill-inner {
+        height: 14px;
+        margin-left: 10px;
+        border-radius: 8px;
+        box-shadow: 8px 0px 12px rgba(255, 0, 0, 0.6);
+        background-color: #ff0000;
+        width: 50%;
+      }
+    }
   }
 `;
 const Banner = styled.img`

@@ -1,18 +1,22 @@
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Banner from "../../assets/img/MarketPlace/banner.png";
 
 const MarketPlace = () => {
   return (
     <Div>
-      <img src={Banner} alt="banner" />
-      <div>
-        <StyledTitle>NFT</StyledTitle>
-        <StyledSubTitle>MARKETPLACE</StyledSubTitle>
-        <Description>
-          The assets created by gamers can be sold on NFT marrketplace to earn
-          royalties.
-        </Description>
-      </div>
+      <StyledContainer>
+        <img src={Banner} alt='banner' />
+        <div>
+          <StyledTitle>NFT</StyledTitle>
+          <StyledSubTitle>MARKETPLACE</StyledSubTitle>
+          <Description>
+            Users can create, mint and sell NFTs in the Gamestate marketplace,
+            opening up the economy to artists, content creators, musicians, game
+            developers and real-world shippable goods partners.
+          </Description>
+        </div>
+      </StyledContainer>
     </Div>
   );
 };
@@ -32,6 +36,9 @@ const Div = styled.div`
     padding-bottom: 30px;
     padding-top: 40px;
   }
+`;
+const StyledContainer = styled(Container)`
+  max-width: 94%;
 `;
 const Title = styled.span`
   font: normal normal bold 50px/60px Whyte;
@@ -88,7 +95,7 @@ const Description = styled.p`
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
-  max-width: 80%;
+  max-width: 762px;
   @media screen and (max-width: 564px) {
     font: normal normal normal 16px/28px Whyte;
     margin-top: 20px;
