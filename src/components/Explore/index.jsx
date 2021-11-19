@@ -1,44 +1,21 @@
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import Bird from "../../assets/img/Explore/bird.svg";
-import Discord from "../../assets/img/Explore/discord.svg";
-import Facebook from "../../assets/img/Explore/facebook.svg";
-import Medium from "../../assets/img/Explore/medium.svg";
-import Telegram from "../../assets/img/Explore/telegram.svg";
-import Twitter from "../../assets/img/Explore/twitter.svg";
-import HeroImage from "../../assets/img/Explore/hero.png";
 import Background from "../../assets/img/Explore/background.png";
-import ListIcon from "../../assets/img/Explore/listIcon.png";
+import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
+
 const Explore = () => {
   return (
     <Div>
       <StyledContainer>
-        <StyledHead>
-          <StyledImg width="239px" height="76px" src={Discord} alt="Discord" />
-          <StyledImg width="75px" height="75px" src={Telegram} alt="Telegram" />
-          <StyledImg width="170px" height="90px" src={Twitter} alt="Twitter" />
-          <StyledImg width="184px" height="77px" src={Medium} alt="Medium" />
-          <StyledImg width="84px" height="84px" src={Bird} alt="Bird" />
-          <StyledImg
-            width="224px"
-            height="65px"
-            src={Facebook}
-            alt="Facebook"
-          />
-        </StyledHead>
-        <StyledListIcon src={ListIcon} alt="ListIcon" />
-        <div>
-          <StyledHeroImage src={HeroImage} alt="Hero" />
-          <StyledDescription>
-            EXPLORE, PLAY, EARN AND SOCIALISE IN THE DECENTRALIZED VIRTUAL
-            WORLD.
-            <p>start &nbsp;your metaverse gaming with vip card now!</p>
-          </StyledDescription>
-          <StyledButton>
-            <StyledSpan>BUY</StyledSpan>
-            <StyledSubSpan>NOW</StyledSubSpan>
-          </StyledButton>
-        </div>
+        <StyledHeroImage src={HeroBanner} alt='Hero' />
+        <StyledDescription>
+          Quantum Accelerator - Experience enhancing NFTs, reward holders with
+          airdrop opportunities, staking multipliers and early bird access!
+        </StyledDescription>
+        <StyledButton>
+          <StyledSpan>BUY</StyledSpan>
+          <StyledSubSpan>NOW</StyledSubSpan>
+        </StyledButton>
       </StyledContainer>
     </Div>
   );
@@ -51,68 +28,20 @@ const Div = styled.div`
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   text-align: center;
   opacity: 1;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   padding-bottom: 110px;
   position: relative;
   @media (max-width: 767px) {
     padding-bottom: 51px;
   }
 `;
-const StyledHead = styled(Row)`
-  align-items: center;
-  height: 90px;
-  justify-content: space-between;
-  opacity: 0.37;
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-`;
-const StyledImg = styled.img`
-  height: ${(props) => props.height};
-  max-width: ${(props) => props.width};
-`;
-const StyledListIcon = styled.img`
-  display: none;
-  position: absolute;
-  @keyframes slideIcon {
-    0% {
-      left: 0px;
-    }
-    50% {
-      left: -1400px;
-    }
-    100% {
-      left: 0px;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    display: block;
-    width: 1400px;
-    animation: linear infinite;
-    -webkit-animation: linear infinite;
-    -moz-animation: linear infinite;
-    -o-animation: linear infinite;
-
-    animation-name: slideIcon;
-    animation-duration: 60s;
-  }
-  @media screen and (max-width: 576px) {
-    height: 66px;
-  }
-`;
 const StyledHeroImage = styled.img`
-  max-width: 1132px;
-  margin-top: 60px;
+  max-width: 783px;
+  margin-top: 80px;
+  margin-bottom: 60px;
   width: 100%;
   height: auto;
-  @media screen and (max-width: 1199px) {
-    margin-top: 150px;
-  }
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
@@ -122,7 +51,7 @@ const StyledDescription = styled.div`
   line-height: 50px;
   padding-bottom: 70px;
   margin: 0 auto;
-  max-width: 1226px;
+  max-width: 1420px;
   text-transform: uppercase;
   p {
     margin-bottom: 0;

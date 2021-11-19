@@ -32,10 +32,20 @@ const Header = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
-              <StyledFirstButton href='#'>LITE PAPER</StyledFirstButton>
-              <StyledSecondButton href='#'>NFT's</StyledSecondButton>
+              <StyledFirstButton
+                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
+                target='_blank'
+              >
+                PITCH DECK
+              </StyledFirstButton>
+              <StyledSecondButton href='#'>LITE PAPER</StyledSecondButton>
               <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
-              <StyledFourthButton href='#'>GET STARTED</StyledFourthButton>
+              <StyledFourthButton
+                href='https://blurt.blog/@gamestate'
+                target='_blank'
+              >
+                GET STARTED
+              </StyledFourthButton>
             </StyledNav>
           </Navbar.Collapse>
         </StyledContainer>
@@ -61,21 +71,13 @@ const A = styled.a`
     font: normal normal medium 12px/12px Whyte;
     min-width: 116px;
   }
-  @media (max-width: 992px) {
-    margin-bottom: 16px;
+  @media (max-width: 991px) {
+    min-width: 148px;
+    margin-bottom: 50px;
+    margin-left: 0;
   }
 `;
 const StyledFirstButton = styled(A)`
-  color: #ffffff;
-  border: 3px solid #ffffff;
-  box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
-  text-shadow: 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffffbe;
-  &:hover {
-    color: #ffffff;
-    transform: scale(1.05);
-  }
-`;
-const StyledSecondButton = styled(A)`
   color: #81efff;
   border: 3px solid #81efff;
   box-shadow: 0px 3px 6px #406ef8;
@@ -85,6 +87,17 @@ const StyledSecondButton = styled(A)`
     transform: scale(1.05);
   }
 `;
+const StyledSecondButton = styled(A)`
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffff;
+  text-shadow: 0px 3px 6px #aaa9a96c, 0px 3px 6px #ffffffbe;
+  &:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+`;
+
 const StyledThirdButton = styled(A)`
   color: #1ad177;
   border: 3px solid #1ad177;
@@ -121,6 +134,9 @@ const StyledImg = styled.img`
 const StyledContainer = styled(Container)`
   height: 100%;
   max-width: 94%;
+  @media screen and (min-width: 2440px) {
+    max-width: 1868px;
+  }
   @media screen and (max-width: 992px) {
     max-width: 100%;
     padding: 0;

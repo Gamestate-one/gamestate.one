@@ -4,15 +4,18 @@ import styled from "styled-components"
 import logo from "../../assets/img/Logo/logo.svg"
 const StyledBlockFooter = styled(Container)`
   max-width: 94%;
+  /* max-width: 1820px; */
   @media screen and (max-width: 991px) {
     & img {
-      max-width: 348px;
+      max-width: 264px;
       height: 86px;
     }
   }
   @media screen and (max-width: 768px) {
     & img {
       display: flex;
+      margin-left: auto;
+      margin-right: auto;
       justify-content: center;
       align-items: center;
     }
@@ -30,9 +33,15 @@ const StyledFooter = styled(Row)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  & .col-md-4 {
+    padding: 0;
+  }
+  & .col-md-8 {
+    padding: 0;
+  }
 `
 const StyledLogoFooter = styled.img`
-  max-width: 412px;
+  max-width: 274px;
   height: 103px;
   width: 100%;
 `
@@ -51,7 +60,7 @@ const Footer = () => {
         </Col>
         <Col md={8}>
           <StyledCopyrightFooter>
-            © Copyright Game state Ltd 2021, All Rights Reserved
+            © Copyright Gamestate 2021. All Rights Reserved.
           </StyledCopyrightFooter>
         </Col>
       </StyledFooter>
