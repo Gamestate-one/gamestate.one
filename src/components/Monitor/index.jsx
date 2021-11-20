@@ -35,35 +35,35 @@ const Monitor = () => {
     <Div>
       <Header>
         <StyledHead>
-          <StyledImg width='239px' height='76px' src={Discord} alt='Discord' />
-          <StyledImg width='75px' height='75px' src={Telegram} alt='Telegram' />
-          <StyledImg width='170px' height='90px' src={Twitter} alt='Twitter' />
-          <StyledImg width='184px' height='77px' src={Medium} alt='Medium' />
-          <StyledImg width='84px' height='84px' src={Bird} alt='Bird' />
+          <StyledImg width="239px" height="76px" src={Discord} alt="Discord" />
+          <StyledImg width="75px" height="75px" src={Telegram} alt="Telegram" />
+          <StyledImg width="170px" height="90px" src={Twitter} alt="Twitter" />
+          <StyledImg width="184px" height="77px" src={Medium} alt="Medium" />
+          <StyledImg width="84px" height="84px" src={Bird} alt="Bird" />
           <StyledImg
-            width='224px'
-            height='65px'
+            width="224px"
+            height="65px"
             src={Facebook}
-            alt='Facebook'
+            alt="Facebook"
           />
         </StyledHead>
-        <StyledListIcon src={ListIcon} alt='ListIcon' />
+        <StyledListIcon src={ListIcon} alt="ListIcon" />
       </Header>
       <StyledContainer>
-        <span className='typingEffect' ref={el} />
+        <span className="typingEffect" ref={el} />
       </StyledContainer>
     </Div>
   );
 };
 
 const Div = styled.div`
-  min-height: 600px;
+  /* min-height: 600px;
   @media screen and (max-width: 991px) {
     min-height: 700px;
   }
   @media screen and (max-width: 767px) {
     min-height: 850px;
-  }
+  } */
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
@@ -71,6 +71,25 @@ const StyledContainer = styled(Container)`
   padding: 60px 0;
   position: relative;
   max-width: 94%;
+  min-height: 420px;
+  @media (max-width: 1199px) {
+    min-height: 480px;
+  }
+  @media (max-width: 984px) {
+    min-height: 520px;
+  }
+  @media (max-width: 929px) {
+    min-height: 540px;
+  }
+  @media (max-width: 784px) {
+    min-height: 590px;
+  }
+  @media (max-width: 576px) {
+    min-height: 760px;
+  }
+  @media (max-width: 399px) {
+    min-height: 840px;
+  }
   .typingEffect {
     font-family: Matrix;
     font-size: 28px;
