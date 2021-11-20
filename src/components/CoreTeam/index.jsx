@@ -98,9 +98,18 @@ const StyledItemName = styled.h5`
 const StyledItemJob = styled.span`
   font: normal normal normal 14px/20px Whyte !important;
   letter-spacing: 0px;
+  min-height: 40px;
   color: #ffffff;
   display: inline-block;
+  margin-top: 1px;
   width: 190px;
+`
+const StyledItemDesc = styled.p`
+  font: normal normal normal 12px/16px Whyte;
+  letter-spacing: 0px;
+  color: #ededed;
+  flex: 1;
+  margin-top: 8px;
 `
 const CORE_TEAM = [
   {
@@ -141,7 +150,7 @@ const CORE_TEAM = [
   },
   {
     src: coreViet,
-    name: `VIET TUAN VU`,
+    name: `VIET &nbsp;TUAN VU`,
     job: "VR GAME SPECIALIST",
     desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
@@ -158,33 +167,49 @@ const MOBILE_CORE_TEAM = [
     image: mobileCoreRicardo,
     name: "RICARDO FERREIRA",
     job: "CO-FOUNDER & TECHNICAL DIRECTOR",
+    desc: "Bachelor of Commerce thought leader, with wide entrepreneurial and business development experience in real estate, manufacturing, information technology, fintech, and blockchain social media sectors.",
   },
-  { image: mobileCorePeter, name: "PETER HJORTSOE", job: "CO-FOUNDER" },
-  { image: mobileCoreKobus, name: "KOBUS KOTZE", job: "CREATIVE LEAD" },
+  {
+    image: mobileCorePeter,
+    name: "PETER HJORTSOE",
+    job: "CO-FOUNDER",
+    desc: "M.Sc. International Business. Professional experience in real estate, FMCG, retail, renewable energy & finance. Serial entrepreneur, building and scaling businesses in Asia since 2014.",
+  },
+  {
+    image: mobileCoreKobus,
+    name: "KOBUS KOTZE",
+    job: "CREATIVE LEAD",
+    desc: "12 Years’ experience in broadcasting, branding, marketing, and strategy. Literary Theory and Writing graduate; currently a brand advisor to Bundesliga, Netflix, Discovery, and other major players.",
+  },
   {
     image: mobileCoreLocke,
     name: "LOCKE KOSNOFF",
     job: "MARKETING SPECIALIST & BIZ DEV",
+    desc: "BBA and PGCEi graduate, experienced in the fields of blockchain marketing, project management, communications, and advisory in various fintech start-ups.",
   },
   {
     image: mobileCoreCong,
     name: "CONG NGUYEN",
     job: "CEO - BLOCKCHAIN DEVELOPER ASIA",
+    desc: "An experienced leader in modern technological innovation. Developed the DeFi For You platform and several ongoing blockchain projects for the Vietnamese government, banks, and local industries.",
   },
   {
     image: mobileCoreTung,
     name: "TUNG DUONG THANH",
     job: "DEV. LEAD - BLOCKCHAIN DEVELOPER ASIA",
+    desc: "Project manager in multiple blockchain engineering teams, most recently, Travala and Defi For You. Tung is a leading-edge developer; constantly pushing the boundaries of modern technology.",
   },
   {
     image: mobileCoreViet,
-    name: `VIET TUAN VU`,
+    name: `VIET  TUAN VU`,
     job: "VR GAME SPECIALIST",
+    desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
   {
     image: mobileCoreSang,
     name: "SANG THE DUONG",
     job: "3D DESIGNER",
+    desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education.",
   },
 ]
 const CoreTeam = () => {
@@ -212,6 +237,7 @@ const CoreTeam = () => {
               <StyledItemImage image={item.image} />
               <StyledItemName>{item.name}</StyledItemName>
               <StyledItemJob>{item.job}</StyledItemJob>
+              <StyledItemDesc>{item.desc}</StyledItemDesc>
             </StyledItemColMobile>
           ))}
         </StyledMobileTeamRow>

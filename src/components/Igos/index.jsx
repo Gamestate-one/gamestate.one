@@ -21,26 +21,26 @@ const Igos = () => {
             </StyledDescription>
             <StyledButton>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8"
               >
                 Read more
               </a>
             </StyledButton>
-            <div className='progessBar'>
+            {/* <div className='progessBar'>
               <div className='progessBar-fill'>
                 <div className='progessBar-fill-inner'></div>
               </div>
-            </div>
+            </div> */}
           </StyledContent>
           <Col
-            className='pe-0'
+            className="pe-0"
             xs={{ span: 12, order: 2 }}
             sm={{ span: 12, order: 2 }}
             xl={{ span: 6, order: 2 }}
           >
-            <Banner src={BannerImage} alt='banner' />
+            <Banner src={BannerImage} alt="banner" />
           </Col>
         </StyledRow>
       </StyledContainer>
@@ -174,8 +174,8 @@ const StyledButton = styled.button`
   min-height: 60px;
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
-
   border-radius: 16px;
+
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;

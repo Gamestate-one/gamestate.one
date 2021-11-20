@@ -6,25 +6,25 @@ import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
 import { Container } from "react-bootstrap";
 import Countdown, { zeroPad } from "react-countdown";
 const Rendered = ({ days, hours, minutes, seconds }) => (
-  <div className='countdown'>
-    <div className='countdown__group'>
-      <div className='countdown__item'>
-        <span className='countdown__time'>{zeroPad(days)}</span>
-        <span className='countdown__label'>Days</span>
+  <div className="countdown">
+    <div className="countdown__group">
+      <div className="countdown__item">
+        <span className="countdown__time">{zeroPad(days)}</span>
+        <span className="countdown__label">Days</span>
       </div>
-      <div className='countdown__item'>
-        <span className='countdown__time'>{zeroPad(hours)}</span>
-        <span className='countdown__label'>Hours</span>
+      <div className="countdown__item">
+        <span className="countdown__time">{zeroPad(hours)}</span>
+        <span className="countdown__label">Hours</span>
       </div>
     </div>
-    <div className='countdown__group'>
-      <div className='countdown__item'>
-        <span className='countdown__time'>{zeroPad(minutes)}</span>
-        <span className='countdown__label'>Minutes</span>
+    <div className="countdown__group">
+      <div className="countdown__item">
+        <span className="countdown__time">{zeroPad(minutes)}</span>
+        <span className="countdown__label">Minutes</span>
       </div>
-      <div className='countdown__item'>
-        <span className='countdown__time'>{zeroPad(seconds)}</span>
-        <span className='countdown__label'>Seconds</span>
+      <div className="countdown__item">
+        <span className="countdown__time">{zeroPad(seconds)}</span>
+        <span className="countdown__label">Seconds</span>
       </div>
     </div>
   </div>
@@ -33,15 +33,15 @@ const TokenSale = () => {
   return (
     <Div>
       <StyledTokenSales>
-        <div className='title-main'>
+        <div className="title-main">
           <StyledTitle>Token</StyledTitle>
           <StyledSubTitle>Sale</StyledSubTitle>
         </div>
         <StyledBar>
           <HiveProgessBar fluid>
             <Bar>
-              <img src={HiveLogo} alt='Hive Logo' />
-              <span className='title'>HIVE-ENGINE IDO</span>
+              <img src={HiveLogo} alt="Hive Logo" />
+              <span className="title">HIVE-ENGINE IDO</span>
               {/* <div className="progessBar">
               <div className="progessBar-fill">
                 <div className="progessBar-fill-inner"></div>
@@ -55,8 +55,8 @@ const TokenSale = () => {
           </HiveProgessBar>
           <PolygonProgessBar fluid>
             <Bar>
-              <img src={PolygonLogo} alt='Polygon Logo' />
-              <span className='title'>Polygon IDO</span>
+              <img src={PolygonLogo} alt="Polygon Logo" />
+              <span className="title">Polygon IDO</span>
               {/* <div className="progessBar">
               <div className="progessBar-fill">
                 <div className="progessBar-fill-inner"></div>
@@ -103,11 +103,11 @@ const TokenSale = () => {
           </PolygonProgessBarMobile>
         </StyledBarMobile> */}
         <StyledButton>
-          <a href='/#' onClick={(e) => e.preventDefault()}>
+          <a href="/#" onClick={(e) => e.preventDefault()}>
             Read more
           </a>
         </StyledButton>
-        <StyledUserGenerated src={UserGenerated} alt='User' />
+        <StyledUserGenerated src={UserGenerated} alt="User" />
       </StyledTokenSales>
     </Div>
   );
@@ -116,6 +116,7 @@ const TokenSale = () => {
 const Div = styled.div`
   background: url(${CoinBackground}) no-repeat;
   background-position: top center;
+  background-size: cover;
 `;
 const StyledTokenSales = styled(Container)`
   position: relative;
