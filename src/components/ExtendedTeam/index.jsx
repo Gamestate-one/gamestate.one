@@ -66,12 +66,20 @@ const StyledItemName = styled.h5`
 `
 const StyledItemJob = styled.span`
   font: normal normal normal 14px/20px Whyte !important;
+  min-height: 40px;
   letter-spacing: 0px;
   color: #ffffff;
   display: inline-block;
+  margin-top: 3px;
   width: 190px;
 `
-
+const StyledItemDesc = styled.p`
+  font: normal normal normal 12px/16px Whyte;
+  letter-spacing: 0px;
+  color: #ededed;
+  flex: 1;
+  margin-top: 8px;
+`
 const StyledLabelSectionRow = styled(Row)`
   @media screen and (max-width: 415px) {
     display: none;
@@ -100,6 +108,7 @@ const StyledMobileLabelRow = styled(Row)`
     display: none;
   }
 `
+
 const EXTENDED_TEAM = [
   {
     src: extErik,
@@ -156,41 +165,49 @@ const MOBILE_EXTENDED_TEAM = [
     image: mobileExtErik,
     name: "ERIK CURRE",
     job: "SPLINTERLANDS.COM | HIVE-ENGINE.COM",
+    desc: "University of Washington B.S.C. Banking industry developer turned code-slinger for Hive Engine smart contract DEX, and the popular Splinterlands digital trading card game.",
   },
   {
     image: mobileExtAdam,
     name: "ADAM CHAPLIN",
     job: "DEFIFORYOU.UK | DIGCHAIN.ORG",
+    desc: "CEO of DeFi For You, Dig Chain, and co-founder of Travala. Adam is a seasoned veteran with 30 years of business management experience.",
   },
   {
     image: mobileExtWilliam,
     name: "WILLIAM GRAY",
     job: "DEFIFORYOU.UK | DIGCHAIN.ORG",
+    desc: "Digital marketing expert and Chief Marketing Officer at DeFi For You and Dig Chain. William’s background includes copywriting, journalism and social media management.",
   },
   {
     image: mobileExtJacob,
     name: "JACOB GADIKIAN",
     job: "NOTIONAL | BLURT.BLOG",
+    desc: "Decentralised protocol developer since 2013, and a technical powerhouse in edge-of-network validation, blockchain interoperability, and open embedded systems design.",
   },
   {
     image: mobileExtBrenn,
     name: "BRENN HILL",
     job: "NOTIONAL",
+    desc: "Engineering leader since 2009 focusing on media, sports, and marketing technology. In the blockchain space since 2015, Brenn is a published author with Packt on blockchain topics.",
   },
   {
     image: mobileExtKhanh,
     name: "KHANH NGUYEN",
     job: "NOTIONAL",
+    desc: "Khanh is a skilled blockchain engineer with deep expertise in cross-chain technology. He has a Bachelors in Computer Science from Hanoi University of Science and Technology.",
   },
   {
     image: mobileExtAnkur,
     name: "ANKUR BANERJEE",
     job: "CTO - CHEQD.IO",
+    desc: "Engineering and digital identity project leader. Software development innovator, and co-inventor on multiple patent-pending solutions in blockchain and artificial intelligence systems.",
   },
   {
     image: mobileExtMarco,
     name: "MARCO STAGLIANO'",
     job: "ANOTHER-1.IO | SNEAKERHEADZ",
+    desc: "Digital fashion collectibles marketplace founder, experienced in Corporate Finance, M&A, Fintech, Real-estate, NFT’s and Metaverses. Developed business across Asia and Europe, and acted as head of operations for AngelVest.",
   },
 ]
 const ExtendedTeam = () => {
@@ -220,6 +237,7 @@ const ExtendedTeam = () => {
             <StyledItemImage image={item.image} />
             <StyledItemName>{item.name}</StyledItemName>
             <StyledItemJob>{item.job}</StyledItemJob>
+            <StyledItemDesc>{item.desc}</StyledItemDesc>
           </StyledItemColMobile>
         ))}
       </StyledMobileTeamRow>

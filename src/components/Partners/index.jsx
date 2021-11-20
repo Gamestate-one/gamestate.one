@@ -1,21 +1,22 @@
-import { Container, Row } from "react-bootstrap";
-import styled from "styled-components";
-import LabelSection from "../LabelSection";
-import logoDig from "../../assets/img/Logo/logoDig.svg";
-import logoDefi from "../../assets/img/Logo/logoDefi.svg";
-import logoAnother from "../../assets/img/Logo/logoAnother.svg";
-import logoSplin from "../../assets/img/Logo/logoSplin.svg";
-import logoHive from "../../assets/img/Logo/logoHive.svg";
-import logoN from "../../assets/img/Logo/logoN.svg";
-import logoVR from "../../assets/img/Logo/logoVR.svg";
-import logoBirt from "../../assets/img/Logo/logoBirt.svg";
-import logoBlockchain from "../../assets/img/Logo/logoBlockchain.svg";
-import logoEdso from "../../assets/img/Logo/logoEdso.svg";
+import { Container, Row } from "react-bootstrap"
+import styled from "styled-components"
+import LabelSection from "../LabelSection"
+import logoDig from "../../assets/img/Logo/logoDig.svg"
+import logoDefi from "../../assets/img/Logo/logoDefi.svg"
+import logoAnother from "../../assets/img/Logo/logoAnother.svg"
+import logoSplin from "../../assets/img/Logo/logoSplin.svg"
+import logoHive from "../../assets/img/Logo/logoHive.svg"
+import logoN from "../../assets/img/Logo/logoN.svg"
+// import logoVR from "../../assets/img/Logo/logoVR.svg";
+import logoBirt from "../../assets/img/Logo/logoBirt.svg"
+import logoBlockchain from "../../assets/img/Logo/logoBlockchain.svg"
+import logoEdso from "../../assets/img/Logo/logoEdso.svg"
 
 const StyledBlockLogo = styled(Row)`
   margin-bottom: 124px;
+  justify-content: center;
+
   @media screen and (max-width: 1788px) {
-    justify-content: center;
     & img {
       margin: 10px 35px;
     }
@@ -26,13 +27,13 @@ const StyledBlockLogo = styled(Row)`
       margin-bottom: 120px;
     }
   }
-`;
+`
 
 const StyledLogo = styled.img`
   max-width: ${(props) => props.width}px;
   max-height: ${(props) => props.height}px;
   margin-right: ${(props) => props.right}px;
-`;
+`
 const Partners = () => {
   return (
     <Container>
@@ -40,7 +41,7 @@ const Partners = () => {
         <LabelSection label="SYNERGY PARTNERS" topAuto="mt-auto" />
       </Row>
       <StyledBlockLogo className="align-items-center flex-wrap mt-5 mb-124">
-        <StyledLogo width="141" height="141" src={logoDig} right="234" />
+        <StyledLogo width="141" height="141" src={logoDig} right="150" />
         <StyledLogo width="600" height="128" src={logoDefi} right="113" />
         <StyledLogo width="264" height="264" src={logoAnother} right="117" />
         <StyledLogo width="260" height="128" src={logoSplin} right="60" />
@@ -52,7 +53,7 @@ const Partners = () => {
         <StyledLogo width="314" height="54" src={logoEdso} />
       </StyledBlockLogo>
     </Container>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

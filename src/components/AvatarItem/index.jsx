@@ -76,7 +76,7 @@ const AvatarItem = ({ item }) => {
     <StyledAvatar image={item.src}>
       <StyledCardInfo border="primary">
         <Card.Body className="d-flex flex-column px-1">
-          <StyledCardName>{item.name}</StyledCardName>
+          <StyledCardName dangerouslySetInnerHTML={{ __html: item.name }} />
           <StyledCardJob>{item.job}</StyledCardJob>
           <StyledCardDesc>{item.desc}</StyledCardDesc>
         </Card.Body>
