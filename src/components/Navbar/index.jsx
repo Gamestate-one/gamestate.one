@@ -79,6 +79,11 @@ const A = styled.a`
   }
   @media (max-width: 991px) {
     min-width: 148px;
+    margin-bottom: 22px;
+    margin-left: 0;
+  }
+  @media (max-width: 414px) {
+    min-width: 148px;
     margin-bottom: 50px;
     margin-left: 0;
   }
@@ -172,6 +177,7 @@ const StyledNavbar = styled(Navbar)`
     justify-content: flex-end;
     @media screen and (max-width: 991px) {
       margin-top: 16px;
+      padding-bottom: 20px;
     }
   }
 `;
