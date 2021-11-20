@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-
+  const [text, setText] = useState("LITE PAPER");
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
@@ -21,28 +21,34 @@ const Header = () => {
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed='top'
-        expand='lg'
-        variant='dark'
+        fixed="top"
+        expand="lg"
+        variant="dark"
       >
         <StyledContainer>
-          <Navbar.Brand href='#'>
-            <StyledImg src={Logo} alt='Logo' />
+          <Navbar.Brand href="#">
+            <StyledImg src={Logo} alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <StyledNav>
               <StyledFirstButton
-                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
-                target='_blank'
+                href="https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1"
+                target="_blank"
               >
                 PITCH DECK
               </StyledFirstButton>
-              <StyledSecondButton href='#'>LITE PAPER</StyledSecondButton>
-              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
+              <StyledSecondButton
+                href="#"
+                onMouseEnter={() => setText("COMING SOON")}
+                onMouseLeave={() => setText("LITE PAPER")}
+              >
+                {text}
+              </StyledSecondButton>
+              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
               <StyledFourthButton
-                href='https://blurt.blog/@gamestate'
-                target='_blank'
+                href="https://blurt.blog/@gamestate"
+                target="_blank"
               >
                 GET STARTED
               </StyledFourthButton>
