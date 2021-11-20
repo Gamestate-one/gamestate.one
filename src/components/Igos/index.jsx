@@ -174,8 +174,8 @@ const StyledButton = styled.button`
   min-height: 60px;
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
-
   border-radius: 16px;
+
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;

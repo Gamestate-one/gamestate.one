@@ -1,10 +1,10 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import styled from "styled-components"
-import StakingNftImage from "../../assets/img/Staking/stakingNft.png"
-import StakingCupImage from "../../assets/img/Staking/stakingCup.png"
-import StakingGrid from "../../assets/img/Staking/stakingGrid.png"
-import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import styled from "styled-components";
+import StakingNftImage from "../../assets/img/Staking/stakingNft.png";
+import StakingCupImage from "../../assets/img/Staking/stakingCup.png";
+import StakingGrid from "../../assets/img/Staking/stakingGrid.png";
+import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png";
 const StyledContainerFluid = styled.div`
   background-image: url(${StakingGrid});
   @media screen and (max-width: 991px) {
@@ -27,7 +27,7 @@ const StyledContainerFluid = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: 315px;
-`
+`;
 const StyledStaking = styled(Container)`
   min-height: 1247px;
   .mt-156 {
@@ -55,7 +55,7 @@ const StyledStaking = styled(Container)`
       margin-top: -400px;
     }
   }
-`
+`;
 const StyledStakingColLeft = styled(Col)`
   padding-left: 112px;
   @media screen and (max-width: 1399px) {
@@ -67,7 +67,7 @@ const StyledStakingColLeft = styled(Col)`
   @media screen and (max-width: 576px) {
     padding-left: 14px;
   }
-`
+`;
 const StyledStakingColRight = styled(Col)`
   padding-right: 146px;
   @media screen and (max-width: 1399px) {
@@ -76,7 +76,7 @@ const StyledStakingColRight = styled(Col)`
   @media screen and (max-width: 576px) {
     padding-right: 26px;
   }
-`
+`;
 const StyledStakingTitleLeft = styled.p`
   font-size: 77px;
   font-weight: bold;
@@ -145,7 +145,7 @@ const StyledStakingTitleLeft = styled.p`
       top: -50%;
     }
   } */
-`
+`;
 const StyledImgNft = styled.div`
   background-image: url(${(props) => props.image});
   background-size: contain;
@@ -162,7 +162,7 @@ const StyledImgNft = styled.div`
       margin-bottom: -200px;
     }
   }
-`
+`;
 const StyledTitleLeft = styled.p`
   font-size: 50px;
   font-weight: normal;
@@ -175,9 +175,10 @@ const StyledTitleLeft = styled.p`
   margin-top: 20px;
   position: relative;
   z-index: 1;
+
   @media screen and (max-width: 991px) {
     font-size: 24px;
-    line-height: 22px;
+    line-height: 30px;
   }
   @media screen and (max-width: 576px) {
     margin-top: 18px;
@@ -191,7 +192,7 @@ const StyledTitleLeft = styled.p`
     position: relative;
     z-index: 5;
   } */
-`
+`;
 const StyledDescLeft = styled.span`
   font-style: normal;
   font-weight: normal;
@@ -211,7 +212,7 @@ const StyledDescLeft = styled.span`
   /* @media screen and (max-width: 576px) {
     margin-left: 14px;
   } */
-`
+`;
 
 const StyledStakingTitleRight = styled.span`
   display: flex;
@@ -278,7 +279,7 @@ const StyledStakingTitleRight = styled.span`
     }
     /* padding-right: 10px; */
   }
-`
+`;
 const StyledDescRight = styled.span`
   display: block;
   text-align: right;
@@ -302,7 +303,7 @@ const StyledDescRight = styled.span`
     width: 397px;
     margin-right: 0;
   }
-`
+`;
 // test
 const P = styled.p`
   letter-spacing: 0px;
@@ -316,7 +317,7 @@ const P = styled.p`
   @media (max-width: 654px) {
     margin-bottom: 6px;
   }
-`
+`;
 const StyledUserTitle = styled(P)`
   position: relative;
   font: normal normal bold 77px/60px Whyte;
@@ -363,12 +364,13 @@ const StyledUserTitle = styled(P)`
       height: 24px;
     }
   }
-`
+`;
 const StyledSubUserTitle = styled(P)`
   font: normal normal normal 50px/22px Whyte;
   color: #ffffff;
   text-transform: uppercase;
   height: 50px;
+  z-index: 5;
   @media screen and (max-width: 1759px) {
     font: normal normal normal 40px/22px Whyte;
   }
@@ -376,7 +378,7 @@ const StyledSubUserTitle = styled(P)`
     font: normal normal normal 24px/22px Whyte;
     height: 24px;
   }
-`
+`;
 const StyledUserDescription = styled(P)`
   font: normal normal normal 20px/28px Whyte;
   color: #d4d4d4;
@@ -386,7 +388,7 @@ const StyledUserDescription = styled(P)`
   @media screen and (max-width: 654px) {
     font: normal normal normal 12px/28px Whyte;
   }
-`
+`;
 const Staking = () => {
   return (
     <>
@@ -442,7 +444,7 @@ const Staking = () => {
       </StyledStaking>
       <StyledContainerFluid />
     </>
-  )
-}
+  );
+};
 
-export default Staking
+export default Staking;
