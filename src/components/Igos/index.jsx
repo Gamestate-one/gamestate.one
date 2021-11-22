@@ -21,9 +21,9 @@ const Igos = () => {
             </StyledDescription>
             <StyledButton>
               <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8"
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8'
               >
                 Read more
               </a>
@@ -35,12 +35,12 @@ const Igos = () => {
             </div> */}
           </StyledContent>
           <Col
-            className="pe-0"
+            className='pe-0'
             xs={{ span: 12, order: 2 }}
             sm={{ span: 12, order: 2 }}
             xl={{ span: 6, order: 2 }}
           >
-            <Banner src={BannerImage} alt="banner" />
+            <Banner src={BannerImage} alt='banner' />
           </Col>
         </StyledRow>
       </StyledContainer>
