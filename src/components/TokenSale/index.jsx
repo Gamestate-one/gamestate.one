@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import CoinBackground from "../../assets/img/TokenSale/coinbackground.png";
-import UserGenerated from "../../assets/img/TokenSale/User-generated.png";
-import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
-import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
-import { Container } from "react-bootstrap";
-import Countdown, { zeroPad } from "react-countdown";
+import styled from "styled-components"
+import CoinBackground from "../../assets/img/TokenSale/coinbackground.png"
+import UserGenerated from "../../assets/img/TokenSale/User-generated.png"
+import HiveLogo from "../../assets/img/TokenSale/hivelogo.png"
+import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png"
+import { Container } from "react-bootstrap"
+import Countdown, { zeroPad } from "react-countdown"
 const Rendered = ({ days, hours, minutes, seconds }) => (
   <div className="countdown">
     <div className="countdown__group">
@@ -28,7 +28,7 @@ const Rendered = ({ days, hours, minutes, seconds }) => (
       </div>
     </div>
   </div>
-);
+)
 const TokenSale = () => {
   return (
     <Div>
@@ -110,14 +110,14 @@ const TokenSale = () => {
         <StyledUserGenerated src={UserGenerated} alt="User" />
       </StyledTokenSales>
     </Div>
-  );
-};
+  )
+}
 
 const Div = styled.div`
   background: url(${CoinBackground}) no-repeat;
   background-position: top center;
   background-size: cover;
-`;
+`
 const StyledTokenSales = styled(Container)`
   position: relative;
   text-align: center;
@@ -138,7 +138,7 @@ const StyledTokenSales = styled(Container)`
   @media screen and (max-width: 768px) {
     max-width: 94%;
   }
-`;
+`
 const Title = styled.span`
   font: normal normal bold 77px/60px Whyte;
   letter-spacing: 0px;
@@ -150,7 +150,7 @@ const Title = styled.span`
   @media (max-width: 768px) {
     font: normal normal bold 32px/60px Whyte;
   }
-`;
+`
 const StyledTitle = styled(Title)`
   color: #6a9df9;
   padding-right: 20px;
@@ -169,7 +169,7 @@ const StyledTitle = styled(Title)`
       top: 0px;
     }
   }
-`;
+`
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
   position: relative;
@@ -187,7 +187,7 @@ const StyledSubTitle = styled(Title)`
       top: 0px;
     }
   }
-`;
+`
 // const StyledTokenImage = styled.img`
 //   position: absolute;
 //   top: 134px;
@@ -224,11 +224,11 @@ const StyledUserGenerated = styled.img`
       left: -60px;
     }
   }
-`;
+`
 
 const StyledBar = styled.div`
   margin-top: 63px;
-`;
+`
 const ProgessBar = styled(Container)`
   background: #262626 0% 0% no-repeat padding-box;
   margin: 0 auto;
@@ -245,7 +245,7 @@ const ProgessBar = styled(Container)`
   @media screen and (max-width: 1400px) {
     max-width: unset;
   }
-`;
+`
 const HiveProgessBar = styled(ProgessBar)`
   margin-bottom: 60px;
   display: flex;
@@ -253,14 +253,14 @@ const HiveProgessBar = styled(ProgessBar)`
     background-color: #ff0000;
     width: 50%;
   }
-`;
+`
 const PolygonProgessBar = styled(ProgessBar)`
   display: flex;
   .progessBar-fill-inner {
     background-color: #1969ff;
     width: 35%;
   }
-`;
+`
 // const HiveProgessBarMobile = styled(ProgessBar)`
 //   margin-bottom: 70px;
 //   display: flex;
@@ -379,28 +379,8 @@ const Bar = styled.div`
         margin: 17px 15px;
       }
     }
-    /* & .countdown {
-      width: 100%;
-      padding: 34px 52px 45px;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      margin-left: 0;
-      &__item {
-        margin: 17px 15px;
-        min-width: 34%;
-        height: 124px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      &__time {
-        display: block;
-      }
-    } */
   }
-`;
+`
 // const BarMobile = styled.div`
 //   position: relative;
 //   display: flex;
@@ -480,5 +460,5 @@ const StyledButton = styled.button`
       font: normal normal medium 12px/28px Whyte;
     }
   }
-`;
-export default TokenSale;
+`
+export default TokenSale
