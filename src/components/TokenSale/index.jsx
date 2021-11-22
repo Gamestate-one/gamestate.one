@@ -76,7 +76,6 @@ const Div = styled.div`
 const StyledTokenSales = styled(Container)`
   position: relative;
   text-align: center;
-  /* padding-top: 100px; */
   padding-top: 40px;
   padding-bottom: 220px;
   & .title-main {
@@ -95,16 +94,20 @@ const StyledTokenSales = styled(Container)`
   }
 `;
 const Title = styled.span`
-  font: normal normal bold 77px/60px Poppins;
+  font-weight: bold;
+  font-size: 77px;
+  line-height: 60px;
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
   z-index: 999;
   @media screen and (max-width: 991px) {
-    font: normal normal bold 46px/60px Poppins;
+    font-size: 46px;
+    line-height: 60px;
   }
   @media (max-width: 768px) {
-    font: normal normal bold 32px/60px Poppins;
+    font-size: 32px;
+    line-height: 60px;
   }
 `;
 const StyledTitle = styled(Title)`
@@ -227,15 +230,18 @@ const Bar = styled.div`
     }
   }
   .title {
-    font: normal normal normal 24px/32px Poppins;
-    letter-spacing: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
     color: #ffffff;
     text-transform: uppercase;
     opacity: 1;
     margin-right: 22px;
     min-width: 212px;
     @media (max-width: 1199px) {
-      font: normal normal normal 20px/28px Poppins;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
       min-width: 180px;
     }
   }
@@ -252,7 +258,6 @@ const Bar = styled.div`
       display: flex;
       align-items: center;
       flex-direction: column;
-      /* width: calc(25% - 10px); */
       max-width: 123px;
       margin-left: 30px;
       background: #13151f 0% 0% no-repeat padding-box;
@@ -260,13 +265,15 @@ const Bar = styled.div`
       padding: 25px 40px;
     }
     &__time {
-      font: normal normal bold 42px/50px Poppins;
-      letter-spacing: 0px;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: bold;
       color: #ffffff;
     }
     &__label {
-      font: normal normal normal 17px/20px Poppins;
-      letter-spacing: 0px;
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: bold;
       color: #d9d9d9;
     }
     @media screen and (max-width: 919px) {
@@ -309,17 +316,23 @@ const StyledButton = styled.button`
   color: #ffffff;
   text-shadow: 2px 4px 6px #ffffffbe;
   text-decoration: none;
-  font: normal normal normal 18px/42px Poppins;
+  font-size: 18px;
+  line-height: 42px;
+  font-weight: 500;
   text-transform: uppercase;
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
-    font: normal normal normal 14px/34px Poppins;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 500;
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
     height: 40px;
-    font: normal normal normal 12px/34px Poppins;
+    font-size: 12px;
+    line-height: 34px;
+    font-weight: 500;
   }
 `;
 export default TokenSale;

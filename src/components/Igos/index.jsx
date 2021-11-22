@@ -118,20 +118,28 @@ const Banner = styled.img`
 `;
 const StyledTitle = styled(P)`
   position: relative;
-  font: normal normal bold 50px/60px Poppins;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
   color: #ffffff;
   height: 77px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/40px Poppins;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
   }
   @media screen and (max-width: 1513px) {
-    font: normal normal bold 36px/40px Poppins;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
   }
   @media screen and (max-width: 1199px) {
     justify-content: center;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/38px Poppins;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
     height: auto;
   }
   &::before {
@@ -153,14 +161,20 @@ const StyledTitle = styled(P)`
   }
 `;
 const StyledDescription = styled(P)`
-  font: normal normal normal 20px/27px Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
   color: #d4d4d4;
   padding-bottom: 20px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 18px/19px Poppins;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 16px/19px Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 `;
 const StyledButton = styled.button`
@@ -173,7 +187,9 @@ const StyledButton = styled.button`
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/42px Poppins;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 42px;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -181,14 +197,18 @@ const StyledButton = styled.button`
     min-width: 140px;
     height: 40px;
     a {
-      font: normal normal normal 14px/34px Poppins;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 34px;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
     height: 40px;
     a {
-      font: normal normal normal 12px/34px Poppins;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 34px;
     }
   }
 `;

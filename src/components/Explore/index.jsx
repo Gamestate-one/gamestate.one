@@ -46,7 +46,6 @@ const StyledHeroImage = styled.img`
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
-  font-style: normal;
   font-size: 40px;
   color: #ffffff;
   line-height: 50px;
@@ -59,10 +58,12 @@ const StyledDescription = styled.div`
     margin-bottom: 0;
   }
   @media screen and (max-width: 991px) {
-    font: normal normal bold 20px/32px Poppins;
+    font-size: 20px;
+    line-height: 32px;
   }
   @media screen and (max-width: 767px) {
-    font: normal normal bold 16px/28px Poppins;
+    font-size: 16px;
+    line-height: 28px;
     padding-bottom: 40px;
   }
 `;
@@ -119,11 +120,13 @@ const StyledButton = styled.button`
   }
 `;
 const Span = styled.span`
-  font: normal normal normal 23px/66px Poppins;
-  letter-spacing: 0px;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 66px;
   opacity: 1;
   @media screen and (max-width: 576px) {
-    font: normal normal normal 14px/37px Poppins;
+    font-size: 14px;
+    line-height: 37px;
   }
 `;
 const StyledSpan = styled(Span)`
@@ -145,7 +148,6 @@ const SpanPurple = styled.span`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    /* max-width: 278px; */
     height: 33px;
     @media screen and (max-width: 991px) {
       height: 22px;

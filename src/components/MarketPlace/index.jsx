@@ -41,15 +41,20 @@ const StyledContainer = styled(Container)`
   max-width: 94%;
 `;
 const Title = styled.span`
-  font: normal normal bold 50px/60px Poppins;
-  letter-spacing: 0px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
   text-transform: uppercase;
   opacity: 1;
   @media (max-width: 768px) {
-    font: normal normal bold 40px/40px Poppins;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
   }
   @media (max-width: 564px) {
-    font: normal normal bold 32px/32px Poppins;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
   }
 `;
 const StyledTitle = styled(Title)`
@@ -91,13 +96,17 @@ const StyledSubTitle = styled(Title)`
 const Description = styled.p`
   margin: 38px auto 0 auto;
   text-align: center;
-  font: normal normal normal 20px/28px Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
   max-width: 762px;
   @media screen and (max-width: 564px) {
-    font: normal normal normal 16px/28px Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
     margin-top: 20px;
   }
 `;

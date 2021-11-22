@@ -15,6 +15,9 @@ const StyledBlockContact = styled(Row)`
     0% no-repeat padding-box;
   position: relative;
   border-radius: 34px;
+  @media screen and (max-width: 991px) {
+    border-radius: 0;
+  }
   /* border: 1px solid #707070; */
   /* margin-right: 0; */
   &:before {
@@ -38,6 +41,9 @@ const StyledImageContact = styled(Col)`
   background-position: 30%center;
   border-top-left-radius: 34px;
   border-bottom-left-radius: 34px;
+  @media screen and (max-width: 991px) {
+    border-radius: 0;
+  }
   @media screen and (max-width: 768px) {
     min-height: 560px;
   }
@@ -68,6 +74,7 @@ const StyledBlockForm = styled(Col)`
     padding: 0;
     /* padding: 20px 10px 40px 20px; */
     padding: 20px 20px 40px 20px;
+    border-radius: 0;
     &:before {
       width: 100%;
       height: 76px;
