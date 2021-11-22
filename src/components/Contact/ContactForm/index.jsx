@@ -231,6 +231,7 @@ const ContactForm = () => {
                 name='name'
                 className='text'
                 tabIndex='500'
+                required
               />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
@@ -243,6 +244,7 @@ const ContactForm = () => {
                 className='text'
                 name='custom Social URL'
                 tabIndex='501'
+                required
               />
               <StyledIconInput src={urlIcon} alt='' />
             </StyledInput>
@@ -255,6 +257,7 @@ const ContactForm = () => {
                 className='text'
                 name='custom Organization'
                 tabIndex='502'
+                required
               />
               <StyledIconInput src={organizationIcon} width='20px' />
             </StyledInput>
@@ -267,6 +270,7 @@ const ContactForm = () => {
                 type='email'
                 name='email'
                 tabIndex='503'
+                required
               />
               <StyledIconInput src={emailIcon} />
             </StyledInput>
@@ -281,6 +285,7 @@ const ContactForm = () => {
                   onChange={handleTextareaOnChange}
                   tabIndex='504'
                   name='custom Message'
+                  required
                 />
               </FloatingLabel>
               <StyledCountTextarea>{numberChar}/1000</StyledCountTextarea>

@@ -1,20 +1,20 @@
 // import HeroImage from "../../assets/img/HeroBanner/hero.svg"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
-import game from "../../assets/videos/game.mp4"
+import styled from "styled-components";
+import { Container } from "react-bootstrap";
+import game from "../../assets/videos/game.mp4";
 const Hero = () => {
   return (
     <Div>
       <Container>
         {/* <StyledImg src={HeroImage} alt='Hero' /> */}
-        <video width="100%" height="80%" autoPlay muted loop>
-          <source src={game} type="video/mp4" />
+        <video width='100%' height='80%' autoPlay muted loop playsinline>
+          <source src={game} type='video/mp4' />
         </video>
       </Container>
     </Div>
-  )
-}
-export default Hero
+  );
+};
+export default Hero;
 
 const Div = styled.div`
   /* padding-bottom: 100px; */
@@ -28,7 +28,7 @@ const Div = styled.div`
   @media screen and (max-width: 1399px) {
     padding-top: 128px;
   }
-`
+`;
 // const StyledImg = styled.img`
 //   object-fit: cover;
 //   width: 100%;
