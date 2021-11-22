@@ -9,8 +9,9 @@ const Explore = () => {
       <StyledContainer>
         <StyledHeroImage src={HeroBanner} alt='Hero' />
         <StyledDescription>
-          Quantum Accelerator - Experience enhancing NFTs, reward holders with
-          airdrop opportunities, staking multipliers and early bird access!
+          <SpanPurple>Quantum Accelerator</SpanPurple> - Experience enhancing
+          NFTs, reward holders with airdrop opportunities, staking multipliers
+          and early bird access!
         </StyledDescription>
         <StyledButton>
           <StyledSpan>BUY</StyledSpan>
@@ -120,8 +121,10 @@ const Span = styled.span`
   font: normal normal normal 23px/28px Whyte;
   letter-spacing: 0px;
   opacity: 1;
+  line-height: 66px;
   @media screen and (max-width: 576px) {
     font: normal normal normal 14px/17px Whyte;
+    line-height: 37px;
   }
 `;
 const StyledSpan = styled(Span)`
@@ -132,5 +135,23 @@ const StyledSpan = styled(Span)`
 const StyledSubSpan = styled(Span)`
   text-shadow: 0px 3px 6px #da87de, 0px 3px 6px #e740f0;
   color: #e740f0;
+`;
+const SpanPurple = styled.span`
+  color: #e740f0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #e740f0 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(41px);
+    width: 100%;
+    /* max-width: 278px; */
+    height: 33px;
+    @media screen and (max-width: 991px) {
+      height: 22px;
+      top: 0px;
+    }
+  }
 `;
 export default Explore;

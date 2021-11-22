@@ -71,15 +71,16 @@ const Header = () => {
 export default Header;
 
 const A = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  text-align: center;
+  line-height: 41px;
   margin-left: 50px;
   font: normal normal medium 16px/19px Whyte;
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
-  height: 41px;
   min-width: 148px;
   max-width: 150px;
   transition: 0.2s;

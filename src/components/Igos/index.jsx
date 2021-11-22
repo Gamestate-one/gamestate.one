@@ -28,11 +28,6 @@ const Igos = () => {
                 Read more
               </a>
             </StyledButton>
-            {/* <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
-              </div>
-            </div> */}
           </StyledContent>
           <Col
             className='pe-0'
@@ -171,32 +166,26 @@ const StyledDescription = styled(P)`
 const StyledButton = styled.button`
   min-width: 160px;
   background-color: transparent;
-  min-height: 60px;
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
-  border-radius: 16px;
-
+  border-radius: 48px;
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal medium 25px/30px Whyte;
+    font: normal normal normal 18px/60px Whyte;
     text-decoration: none;
     text-transform: uppercase;
   }
-  @media screen and (max-width: 1759px) {
-  }
   @media screen and (max-width: 654px) {
     min-width: 140px;
-    min-height: 50px;
     a {
-      font: normal normal medium 14px/28px Whyte;
+      font: normal normal normal 14px/50px Whyte;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
-    min-height: 40px;
     a {
-      font: normal normal medium 12px/28px Whyte;
+      font: normal normal normal 12px/40px Whyte;
     }
   }
 `;
