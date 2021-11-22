@@ -172,20 +172,20 @@ const StyledButton = styled.button`
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/60px Whyte;
+    font: normal normal normal 18px/50px Whyte;
     text-decoration: none;
     text-transform: uppercase;
   }
   @media screen and (max-width: 654px) {
     min-width: 140px;
     a {
-      font: normal normal normal 14px/50px Whyte;
+      font: normal normal normal 14px/40px Whyte;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
     a {
-      font: normal normal normal 12px/40px Whyte;
+      font: normal normal normal 12px/30px Whyte;
     }
   }
 `;
