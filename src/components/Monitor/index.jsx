@@ -1,11 +1,10 @@
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Bird from "../../assets/img/Explore/bird.svg";
 import Discord from "../../assets/img/Explore/discord.svg";
 import Facebook from "../../assets/img/Explore/facebook.svg";
 import Medium from "../../assets/img/Explore/medium.svg";
 import Telegram from "../../assets/img/Explore/telegram.svg";
 import Twitter from "../../assets/img/Explore/twitter.svg";
-import ListIcon from "../../assets/img/Explore/listIcon.png";
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
@@ -35,19 +34,50 @@ const Monitor = () => {
     <Div>
       <Header>
         <StyledHead>
-          <StyledImg width='239px' height='76px' src={Discord} alt='Discord' />
-          <StyledImg width='75px' height='75px' src={Telegram} alt='Telegram' />
-          <StyledImg width='170px' height='90px' src={Twitter} alt='Twitter' />
-          <StyledImg width='184px' height='77px' src={Medium} alt='Medium' />
-          <StyledImg width='84px' height='84px' src={Bird} alt='Bird' />
           <StyledImg
-            width='224px'
-            height='65px'
-            src={Facebook}
-            alt='Facebook'
-          />
+            width='239px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://discord.gamestate.one'
+          >
+            <img src={Discord} alt='Discord' />
+          </StyledImg>
+          <StyledImg
+            width='75px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://t.me/GamestateOfficial'
+          >
+            <img src={Telegram} alt='Telegram' />
+          </StyledImg>
+          <StyledImg
+            width='170px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://twitter.com/gamestate_one'
+          >
+            <img src={Twitter} alt='Twitter' />
+          </StyledImg>
+          <StyledImg
+            width='184px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://medium.com/@gamestate'
+          >
+            <img src={Medium} alt='Medium' />
+          </StyledImg>
+          <StyledImg
+            width='84px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://blurt.blog/@gamestate'
+          >
+            <img src={Bird} alt='Bird' />
+          </StyledImg>
+          <StyledImg width='224px' target='_blank' rel='noreferrer' href='/#'>
+            <img src={Facebook} alt='Facebook' />
+          </StyledImg>
         </StyledHead>
-        <StyledListIcon src={ListIcon} alt='ListIcon' />
       </Header>
       <StyledContainer>
         <span className='typingEffect' ref={el} />
@@ -91,24 +121,12 @@ const StyledContainer = styled(Container)`
     }
   }
 `;
-const StyledHead = styled(Row)`
+const StyledHead = styled.div`
+  display: flex;
   align-items: center;
   height: 90px;
   justify-content: space-between;
   opacity: 0.37;
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-`;
-const StyledImg = styled.img`
-  height: ${(props) => props.height};
-  max-width: ${(props) => props.width};
-`;
-const StyledListIcon = styled.img`
-  display: none;
-  position: absolute;
-  background-color: #121212;
-
   @keyframes slideIcon {
     0% {
       left: 0px;
@@ -121,7 +139,7 @@ const StyledListIcon = styled.img`
     }
   }
   @media screen and (max-width: 1199px) {
-    display: block;
+    position: absolute;
     width: 1400px;
     animation: linear infinite;
     -webkit-animation: linear infinite;
@@ -131,9 +149,18 @@ const StyledListIcon = styled.img`
     animation-duration: 60s;
   }
   @media screen and (max-width: 576px) {
-    height: 66px;
+    max-height: 66px;
   }
 `;
+const StyledImg = styled.a`
+  max-width: ${(props) => props.width};
+  @media screen and (max-width: 576px) {
+    img {
+      max-height: 60px;
+    }
+  }
+`;
+
 const Header = styled.div`
   position: relative;
   background-color: #121212;
