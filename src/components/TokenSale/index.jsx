@@ -299,28 +299,9 @@ const Bar = styled.div`
         margin: 17px 15px;
       }
     }
-    /* & .countdown {
-      width: 100%;
-      padding: 34px 52px 45px;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      margin-left: 0;
-      &__item {
-        margin: 17px 15px;
-        min-width: 34%;
-        height: 124px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      &__time {
-        display: block;
-      }
-    } */
   }
 `;
+
 const StyledButton = styled.button`
   min-width: 160px;
   margin-top: 60px;

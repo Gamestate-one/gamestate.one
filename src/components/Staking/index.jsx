@@ -304,6 +304,7 @@ const StyledDescRight = styled.span`
     margin-right: 0;
   }
 `;
+
 const Staking = () => {
   return (
     <>

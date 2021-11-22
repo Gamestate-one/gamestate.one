@@ -192,10 +192,9 @@ const ContactForm = () => {
       </StyledDesc>
       <Form
         method='post'
-        className='af-form-wrapper'
-        accept-charset='UTF-8'
+        className='af-form-wrapper mt-4'
+        acceptCharset='UTF-8'
         action='https://www.aweber.com/scripts/addlead.pl'
-        className='mt-4'
       >
         <div style={{ display: "none" }}>
           <input type='hidden' name='meta_web_form_id' value='934404387' />
@@ -225,46 +224,37 @@ const ContactForm = () => {
             </div>
           </div>
           <StyledColInput xxl={12}>
-            <StyledInput className='mb-3' controlId='formBasicFirstName'>
+            <StyledInput className='mb-3' controlId='formBasicName'>
               <Form.Label>Name *</Form.Label>
               <Form.Control
-                id='formBasicFirstName'
                 type='text'
                 name='name'
                 className='text'
-                onfocus=" if (this.value == '') { this.value = ''; }"
-                onblur="if (this.value == '') { this.value='';} "
-                tabindex='500'
+                tabIndex='500'
               />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
           </StyledColInput>
           <StyledColInput xxl={12}>
             <StyledInput className='mb-3' controlId='formBasicSocial'>
-              <Form.Label>Social URL :</Form.Label>
+              <Form.Label>Social URL *</Form.Label>
               <Form.Control
                 type='text'
-                id='formBasicSocial'
                 className='text'
                 name='custom Social URL'
-                onfocus=" if (this.value == '') { this.value = ''; }"
-                onblur="if (this.value == '') { this.value='';} "
-                tabindex='501'
+                tabIndex='501'
               />
               <StyledIconInput src={urlIcon} alt='' />
             </StyledInput>
           </StyledColInput>
           <StyledColInput xxl={12}>
-            <StyledInput className='mb-3' controlId='formBasicOrganisation'>
-              <Form.Label>Organisation :</Form.Label>
+            <StyledInput className='mb-3' controlId='formBasicOrganization'>
+              <Form.Label>Organization *</Form.Label>
               <Form.Control
                 type='text'
-                id='formBasicOrganisation'
                 className='text'
-                name='custom Organisation'
-                onfocus=" if (this.value == '') { this.value = ''; }"
-                onblur="if (this.value == '') { this.value='';} "
-                tabindex='502'
+                name='custom Organization'
+                tabIndex='502'
               />
               <StyledIconInput src={organizationIcon} width='20px' />
             </StyledInput>
@@ -274,27 +264,22 @@ const ContactForm = () => {
               <Form.Label>Email *</Form.Label>
               <Form.Control
                 className='text'
-                id='formBasicEmail'
                 type='email'
                 name='email'
-                tabindex='503'
-                onfocus=" if (this.value == '') { this.value = ''; }"
-                onblur="if (this.value == '') { this.value='';} "
+                tabIndex='503'
               />
               <StyledIconInput src={emailIcon} />
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledInput className='mb-3' controlId='formBasicPassword'>
-              <FloatingLabel controlId='floatingTextarea2' label='Message :'>
+            <StyledInput className='mb-3' controlId='formBasicMessage'>
+              <FloatingLabel controlId='formBasicMessage' label='Message'>
                 <Form.Control
                   as='textarea'
                   style={{ height: "198px" }}
                   maxLength='1000'
                   onChange={handleTextareaOnChange}
-                  tabindex='504'
-                  onfocus="if (this.value == '') { this.value = ''; }"
-                  onblur="if (this.value == '') { this.value='';}"
+                  tabIndex='504'
                   name='custom Message'
                 />
               </FloatingLabel>
