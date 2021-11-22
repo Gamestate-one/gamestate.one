@@ -89,14 +89,17 @@ const StyledItemImage = styled.div`
   border-radius: 8px;
 `
 const StyledItemName = styled.h5`
-  font: normal normal bold 16px/19px Whyte;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #ffffff;
   text-shadow: 0px 3px 6px #00000029;
   margin-top: 12px;
 `
 const StyledItemJob = styled.span`
-  font: normal normal normal 14px/20px Whyte !important;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0px;
   min-height: 40px;
   color: #ffffff;
@@ -105,7 +108,8 @@ const StyledItemJob = styled.span`
   width: 190px;
 `
 const StyledItemDesc = styled.p`
-  font: normal normal normal 12px/16px Whyte;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 0px;
   color: #ededed;
   flex: 1;

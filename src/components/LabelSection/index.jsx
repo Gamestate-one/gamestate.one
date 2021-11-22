@@ -40,7 +40,8 @@ const StyledLabelSection = styled.div`
     display: ${(props) => props.before && "none"};
   }
   & .note {
-    font: normal normal normal 16px/21px Whyte;
+    font-size: 16px;
+    line-height: 21px;
     letter-spacing: 0px;
     color: #ffffff;
     margin-bottom: 16px;

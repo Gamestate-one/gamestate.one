@@ -41,6 +41,7 @@ const StyledBlockRoadMap = styled.div`
       top: -70px;
     }
   }
+
   @media screen and (max-width: 1600px) {
     & div.card_top_right {
       top: -140px;
@@ -50,9 +51,19 @@ const StyledBlockRoadMap = styled.div`
     }
   }
   @media screen and (max-width: 1399px) {
+    & div.card_top_right {
+      right: 0px;
+    }
     & div.card_bottom_right {
+      right: 20px;
       bottom: 0px;
-      right: 200px;
+    }
+    & div.card_top_left {
+      left: 0;
+      top: -140px;
+    }
+    & div.card_bottom_left {
+      left: 0;
     }
   }
 
@@ -79,13 +90,13 @@ const StyledListCards = styled(Container)`
   height: 100%;
   & .card_top_left {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 184px;
   }
   & .card_top_right {
     position: absolute;
     top: 0;
-    right: -13px;
+    right: 50px;
   }
   & .card_bottom_left {
     position: absolute;
@@ -94,7 +105,7 @@ const StyledListCards = styled(Container)`
   }
   & .card_bottom_right {
     position: absolute;
-    right: 398px;
+    right: 325px;
     bottom: 245px;
   }
 `
