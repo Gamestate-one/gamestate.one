@@ -71,20 +71,18 @@ const Header = () => {
 export default Header;
 
 const A = styled.a`
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
   text-align: center;
   margin-left: 50px;
-  font: normal normal normal 16px/41px Whyte;
+  font: normal normal normal 16px/36px Whyte;
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
   min-width: 148px;
   max-width: 150px;
   transition: 0.2s;
+  height: 41px;
   @media screen and (min-width: 992px) and (max-width: 1310px) {
-    font: normal normal normal 12px/41px Whyte;
+    font: normal normal normal 12px/36px Whyte;
     min-width: 116px;
   }
   @media (max-width: 991px) {

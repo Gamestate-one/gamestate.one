@@ -118,13 +118,11 @@ const StyledButton = styled.button`
   }
 `;
 const Span = styled.span`
-  font: normal normal normal 23px/28px Whyte;
+  font: normal normal normal 23px/66px Whyte;
   letter-spacing: 0px;
   opacity: 1;
-  line-height: 66px;
   @media screen and (max-width: 576px) {
-    font: normal normal normal 14px/17px Whyte;
-    line-height: 37px;
+    font: normal normal normal 14px/37px Whyte;
   }
 `;
 const StyledSpan = styled(Span)`

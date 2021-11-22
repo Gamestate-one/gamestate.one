@@ -60,11 +60,7 @@ const TokenSale = () => {
             </Bar>
           </PolygonProgessBar>
         </StyledBar>
-        <StyledButton>
-          <a href='/#' onClick={(e) => e.preventDefault()}>
-            Read more
-          </a>
-        </StyledButton>
+        <StyledButton>Read more</StyledButton>
         <StyledTokenImage src={TokenBackground} alt='Token Background' />
         <StyledUserGenerated src={UserGenerated} alt='User' />
       </StyledTokenSales>
@@ -309,24 +305,21 @@ const StyledButton = styled.button`
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
-  a {
-    color: #ffffff;
-    text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/50px Whyte;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+  height: 50px;
+  color: #ffffff;
+  text-shadow: 2px 4px 6px #ffffffbe;
+  text-decoration: none;
+  font: normal normal normal 18px/42px Whyte;
+  text-transform: uppercase;
   @media screen and (max-width: 654px) {
     min-width: 140px;
-    a {
-      font: normal normal normal 14px/40px Whyte;
-    }
+    height: 40px;
+    font: normal normal normal 14px/34px Whyte;
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
-    a {
-      font: normal normal normal 12px/30px Whyte;
-    }
+    height: 30px;
+    font: normal normal normal 12px/24px Whyte;
   }
 `;
 export default TokenSale;

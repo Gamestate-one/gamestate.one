@@ -169,23 +169,26 @@ const StyledButton = styled.button`
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
+  height: 50px;
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/50px Whyte;
+    font: normal normal normal 18px/42px Whyte;
     text-decoration: none;
     text-transform: uppercase;
   }
   @media screen and (max-width: 654px) {
     min-width: 140px;
+    height: 40px;
     a {
-      font: normal normal normal 14px/40px Whyte;
+      font: normal normal normal 14px/34px Whyte;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
+    height: 30px;
     a {
-      font: normal normal normal 12px/30px Whyte;
+      font: normal normal normal 12px/24px Whyte;
     }
   }
 `;
