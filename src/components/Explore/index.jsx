@@ -1,13 +1,16 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Background from "../../assets/img/Explore/background.png";
-import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
+// import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
+import ChipEffect from "../../assets/videos/Chip_Effect.mp4";
 
 const Explore = () => {
   return (
     <Div>
       <StyledContainer>
-        <StyledHeroImage src={HeroBanner} alt='Hero' />
+        <StyledHeroVideo autoPlay loop muted playsInline>
+          <source src={ChipEffect} type='video/mp4' />
+        </StyledHeroVideo>
         <StyledDescription>
           <SpanPurple>Quantum Accelerator</SpanPurple> - Experience enhancing
           NFTs, reward holders with airdrop opportunities, staking multipliers
@@ -26,6 +29,7 @@ const Div = styled.div`
   /* background-image: url(${Background}); */
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #05080a;
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
@@ -37,12 +41,12 @@ const StyledContainer = styled(Container)`
     padding-bottom: 51px;
   }
 `;
-const StyledHeroImage = styled.img`
-  max-width: 783px;
-  margin-top: 80px;
-  margin-bottom: 60px;
+const StyledHeroVideo = styled.video`
+  /* max-width: 783px; */
+  /* margin-top: 80px; */
+  margin-bottom: 40px;
   width: 100%;
-  height: auto;
+  max-height: 800px;
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
@@ -148,7 +152,9 @@ const SpanPurple = styled.span`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    height: 33px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
     @media screen and (max-width: 991px) {
       height: 22px;
       top: 0px;

@@ -128,6 +128,8 @@ const StyledUserTitle = styled(P)`
   color: #e740f0;
   text-transform: uppercase;
   height: 77px;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
+  -webkit-text-stroke: 1px #e740f0;
   @media screen and (max-width: 1759px) {
     font-size: 57px;
     line-height: 40px;
@@ -236,6 +238,8 @@ const StyledGameTitle = styled(P)`
   text-transform: uppercase;
   height: 77px;
   position: relative;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
+  -webkit-text-stroke: 1px #3178ff;
   @media screen and (max-width: 1759px) {
     font-weight: bold;
     font-size: 57px;

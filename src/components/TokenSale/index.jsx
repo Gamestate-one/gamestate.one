@@ -115,6 +115,7 @@ const StyledTitle = styled(Title)`
   color: #6a9df9;
   padding-right: 20px;
   position: relative;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
   &::before {
     content: "";
     position: absolute;
@@ -132,6 +133,7 @@ const StyledTitle = styled(Title)`
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
   position: relative;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
   &::before {
     content: "";
     position: absolute;
