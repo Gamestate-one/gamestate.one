@@ -41,15 +41,15 @@ const StyledContainer = styled(Container)`
   max-width: 94%;
 `;
 const Title = styled.span`
-  font: normal normal bold 50px/60px Whyte;
+  font: normal normal bold 50px/60px Poppins;
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
   @media (max-width: 768px) {
-    font: normal normal bold 40px/40px Whyte;
+    font: normal normal bold 40px/40px Poppins;
   }
   @media (max-width: 564px) {
-    font: normal normal bold 32px/32px Whyte;
+    font: normal normal bold 32px/32px Poppins;
   }
 `;
 const StyledTitle = styled(Title)`
@@ -91,13 +91,13 @@ const StyledSubTitle = styled(Title)`
 const Description = styled.p`
   margin: 38px auto 0 auto;
   text-align: center;
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal normal 20px/28px Poppins;
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
   max-width: 762px;
   @media screen and (max-width: 564px) {
-    font: normal normal normal 16px/28px Whyte;
+    font: normal normal normal 16px/28px Poppins;
     margin-top: 20px;
   }
 `;

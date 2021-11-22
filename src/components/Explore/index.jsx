@@ -54,14 +54,15 @@ const StyledDescription = styled.div`
   margin: 0 auto;
   max-width: 1420px;
   text-transform: uppercase;
+  z-index: 999;
   p {
     margin-bottom: 0;
   }
   @media screen and (max-width: 991px) {
-    font: normal normal bold 20px/32px Whyte;
+    font: normal normal bold 20px/32px Poppins;
   }
   @media screen and (max-width: 767px) {
-    font: normal normal bold 16px/28px Whyte;
+    font: normal normal bold 16px/28px Poppins;
     padding-bottom: 40px;
   }
 `;
@@ -118,11 +119,11 @@ const StyledButton = styled.button`
   }
 `;
 const Span = styled.span`
-  font: normal normal normal 23px/66px Whyte;
+  font: normal normal normal 23px/66px Poppins;
   letter-spacing: 0px;
   opacity: 1;
   @media screen and (max-width: 576px) {
-    font: normal normal normal 14px/37px Whyte;
+    font: normal normal normal 14px/37px Poppins;
   }
 `;
 const StyledSpan = styled(Span)`

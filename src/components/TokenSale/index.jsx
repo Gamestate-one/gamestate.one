@@ -95,15 +95,16 @@ const StyledTokenSales = styled(Container)`
   }
 `;
 const Title = styled.span`
-  font: normal normal bold 77px/60px Whyte;
+  font: normal normal bold 77px/60px Poppins;
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
+  z-index: 999;
   @media screen and (max-width: 991px) {
-    font: normal normal bold 46px/60px Whyte;
+    font: normal normal bold 46px/60px Poppins;
   }
   @media (max-width: 768px) {
-    font: normal normal bold 32px/60px Whyte;
+    font: normal normal bold 32px/60px Poppins;
   }
 `;
 const StyledTitle = styled(Title)`
@@ -117,7 +118,6 @@ const StyledTitle = styled(Title)`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    max-width: 278px;
     height: 33px;
     @media screen and (max-width: 991px) {
       height: 22px;
@@ -135,8 +135,8 @@ const StyledSubTitle = styled(Title)`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    max-width: 278px;
     height: 33px;
+
     @media screen and (max-width: 991px) {
       height: 22px;
       top: 0px;
@@ -227,7 +227,7 @@ const Bar = styled.div`
     }
   }
   .title {
-    font: normal normal normal 24px/32px Whyte;
+    font: normal normal normal 24px/32px Poppins;
     letter-spacing: 0px;
     color: #ffffff;
     text-transform: uppercase;
@@ -235,7 +235,7 @@ const Bar = styled.div`
     margin-right: 22px;
     min-width: 212px;
     @media (max-width: 1199px) {
-      font: normal normal normal 20px/28px Whyte;
+      font: normal normal normal 20px/28px Poppins;
       min-width: 180px;
     }
   }
@@ -260,12 +260,12 @@ const Bar = styled.div`
       padding: 25px 40px;
     }
     &__time {
-      font: normal normal bold 42px/50px Whyte;
+      font: normal normal bold 42px/50px Poppins;
       letter-spacing: 0px;
       color: #ffffff;
     }
     &__label {
-      font: normal normal normal 17px/20px Whyte;
+      font: normal normal normal 17px/20px Poppins;
       letter-spacing: 0px;
       color: #d9d9d9;
     }
@@ -309,17 +309,17 @@ const StyledButton = styled.button`
   color: #ffffff;
   text-shadow: 2px 4px 6px #ffffffbe;
   text-decoration: none;
-  font: normal normal normal 18px/42px Whyte;
+  font: normal normal normal 18px/42px Poppins;
   text-transform: uppercase;
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
-    font: normal normal normal 14px/34px Whyte;
+    font: normal normal normal 14px/34px Poppins;
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
-    height: 30px;
-    font: normal normal normal 12px/24px Whyte;
+    height: 40px;
+    font: normal normal normal 12px/34px Poppins;
   }
 `;
 export default TokenSale;

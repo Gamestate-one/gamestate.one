@@ -122,15 +122,15 @@ const StyledAvatar = styled.img`
 `;
 const StyledUserTitle = styled(P)`
   position: relative;
-  font: normal normal bold 77px/60px Whyte;
+  font: normal normal bold 77px/60px Poppins;
   color: #e740f0;
   text-transform: uppercase;
   height: 77px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
+    font: normal normal bold 57px/40px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
+    font: normal normal bold 32px/60px Poppins;
     height: 30px;
   }
   &::before {
@@ -168,26 +168,26 @@ const StyledUserTitle = styled(P)`
   }
 `;
 const StyledSubUserTitle = styled(P)`
-  font: normal normal normal 50px/22px Whyte;
+  font: normal normal normal 50px/22px Poppins;
   color: #ffffff;
   text-transform: uppercase;
   height: 50px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
+    font: normal normal normal 40px/22px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/22px Whyte;
+    font: normal normal normal 24px/22px Poppins;
     height: 24px;
   }
 `;
 const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal normal 20px/28px Poppins;
   color: #d4d4d4;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
+    font: normal normal normal 16px/28px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
+    font: normal normal normal 12px/28px Poppins;
   }
 `;
 // Game Content
@@ -211,16 +211,16 @@ const StyledBannerImage = styled.img`
   }
 `;
 const StyledGameTitle = styled(P)`
-  font: normal normal bold 77px/60px Whyte;
+  font: normal normal bold 77px/60px Poppins;
   color: #6a9df9;
   text-transform: uppercase;
   height: 77px;
   position: relative;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
+    font: normal normal bold 57px/40px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
+    font: normal normal bold 32px/60px Poppins;
     height: 30px;
   }
   &::before {
@@ -242,12 +242,12 @@ const StyledGameSubTitle = styled(P)`
   text-shadow: 0px 11px 4px #00000029;
   text-transform: uppercase;
   height: 50px;
-  font: normal normal normal 50px/60px Whyte;
+  font: normal normal normal 50px/60px Poppins;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
+    font: normal normal normal 40px/22px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/60px Whyte;
+    font: normal normal normal 24px/60px Poppins;
     height: 24px;
   }
   &::before {
@@ -269,15 +269,15 @@ const StyledGameSubTitle = styled(P)`
   }
 `;
 const StyledGameDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font: normal normal normal 20px/28px Poppins;
   color: #d4d4d4;
   max-width: 569px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
+    font: normal normal normal 16px/28px Poppins;
     max-width: 500px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
+    font: normal normal normal 12px/28px Poppins;
     max-width: 300px;
   }
 `;

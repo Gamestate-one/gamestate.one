@@ -73,7 +73,9 @@ export default Header;
 const A = styled.a`
   text-align: center;
   margin-left: 50px;
-  font: normal normal normal 16px/36px Whyte;
+  font: normal normal normal 16px/36px Poppins;
+  font-size: 16px;
+  line-height: 36px;
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
@@ -82,7 +84,7 @@ const A = styled.a`
   transition: 0.2s;
   height: 41px;
   @media screen and (min-width: 992px) and (max-width: 1310px) {
-    font: normal normal normal 12px/36px Whyte;
+    font: normal normal normal 12px/36px Poppins;
     min-width: 116px;
   }
   @media (max-width: 991px) {
