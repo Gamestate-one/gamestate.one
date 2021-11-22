@@ -305,90 +305,90 @@ const StyledDescRight = styled.span`
   }
 `;
 // test
-const P = styled.p`
-  letter-spacing: 0px;
-  display: flex;
-  opacity: 1;
-  align-items: center;
-  margin-bottom: 28px;
-  @media (max-width: 1759px) {
-    margin-bottom: 20px;
-  }
-  @media (max-width: 654px) {
-    margin-bottom: 6px;
-  }
-`;
-const StyledUserTitle = styled(P)`
-  position: relative;
-  font: normal normal bold 77px/60px Whyte;
-  color: #e740f0;
-  text-transform: uppercase;
-  height: 77px;
-  @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
-    height: 30px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    max-width: 44px;
-    height: 179px;
-    left: -6px;
-    top: -58px;
-    background: linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0% 0%
-      no-repeat padding-box;
-    @media screen and (max-width: 654px) {
-      max-width: 20px;
-      height: 88px;
-      top: -40px;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    background: #e740f0 0% 0% no-repeat padding-box;
-    filter: blur(50px);
-    width: 100%;
-    max-width: 728px;
-    height: 45px;
-    @media screen and (max-width: 1759px) {
-      max-width: 550px;
-    }
-    @media screen and (max-width: 654px) {
-      max-width: 300px;
-      height: 24px;
-    }
-  }
-`;
-const StyledSubUserTitle = styled(P)`
-  font: normal normal normal 50px/22px Whyte;
-  color: #ffffff;
-  text-transform: uppercase;
-  height: 50px;
-  z-index: 5;
-  @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/22px Whyte;
-    height: 24px;
-  }
-`;
-const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
-  color: #d4d4d4;
-  @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
-  }
-`;
+// const P = styled.p`
+//   letter-spacing: 0px;
+//   display: flex;
+//   opacity: 1;
+//   align-items: center;
+//   margin-bottom: 28px;
+//   @media (max-width: 1759px) {
+//     margin-bottom: 20px;
+//   }
+//   @media (max-width: 654px) {
+//     margin-bottom: 6px;
+//   }
+// `;
+// const StyledUserTitle = styled(P)`
+//   position: relative;
+//   font: normal normal bold 77px/60px Whyte;
+//   color: #e740f0;
+//   text-transform: uppercase;
+//   height: 77px;
+//   @media screen and (max-width: 1759px) {
+//     font: normal normal bold 57px/40px Whyte;
+//   }
+//   @media screen and (max-width: 654px) {
+//     font: normal normal bold 32px/60px Whyte;
+//     height: 30px;
+//   }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     width: 100%;
+//     max-width: 44px;
+//     height: 179px;
+//     left: -6px;
+//     top: -58px;
+//     background: linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0% 0%
+//       no-repeat padding-box;
+//     @media screen and (max-width: 654px) {
+//       max-width: 20px;
+//       height: 88px;
+//       top: -40px;
+//     }
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     background: #e740f0 0% 0% no-repeat padding-box;
+//     filter: blur(50px);
+//     width: 100%;
+//     max-width: 728px;
+//     height: 45px;
+//     @media screen and (max-width: 1759px) {
+//       max-width: 550px;
+//     }
+//     @media screen and (max-width: 654px) {
+//       max-width: 300px;
+//       height: 24px;
+//     }
+//   }
+// `;
+// const StyledSubUserTitle = styled(P)`
+//   font: normal normal normal 50px/22px Whyte;
+//   color: #ffffff;
+//   text-transform: uppercase;
+//   height: 50px;
+//   z-index: 5;
+//   @media screen and (max-width: 1759px) {
+//     font: normal normal normal 40px/22px Whyte;
+//   }
+//   @media screen and (max-width: 654px) {
+//     font: normal normal normal 24px/22px Whyte;
+//     height: 24px;
+//   }
+// `;
+// const StyledUserDescription = styled(P)`
+//   font: normal normal normal 20px/28px Whyte;
+//   color: #d4d4d4;
+//   @media screen and (max-width: 1759px) {
+//     font: normal normal normal 16px/28px Whyte;
+//   }
+//   @media screen and (max-width: 654px) {
+//     font: normal normal normal 12px/28px Whyte;
+//   }
+// `;
 const Staking = () => {
   return (
     <>
