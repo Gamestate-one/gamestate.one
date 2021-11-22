@@ -21,26 +21,21 @@ const Igos = () => {
             </StyledDescription>
             <StyledButton>
               <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8"
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8'
               >
                 Read more
               </a>
             </StyledButton>
-            {/* <div className='progessBar'>
-              <div className='progessBar-fill'>
-                <div className='progessBar-fill-inner'></div>
-              </div>
-            </div> */}
           </StyledContent>
           <Col
-            className="pe-0"
+            className='pe-0'
             xs={{ span: 12, order: 2 }}
             sm={{ span: 12, order: 2 }}
             xl={{ span: 6, order: 2 }}
           >
-            <Banner src={BannerImage} alt="banner" />
+            <Banner src={BannerImage} alt='banner' />
           </Col>
         </StyledRow>
       </StyledContainer>
@@ -123,20 +118,28 @@ const Banner = styled.img`
 `;
 const StyledTitle = styled(P)`
   position: relative;
-  font: normal normal bold 50px/60px Whyte;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
   color: #ffffff;
   height: 77px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/40px Whyte;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
   }
   @media screen and (max-width: 1513px) {
-    font: normal normal bold 36px/40px Whyte;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
   }
   @media screen and (max-width: 1199px) {
     justify-content: center;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/38px Whyte;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
     height: auto;
   }
   &::before {
@@ -158,45 +161,54 @@ const StyledTitle = styled(P)`
   }
 `;
 const StyledDescription = styled(P)`
-  font: normal normal normal 20px/27px Whyte;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
   color: #d4d4d4;
   padding-bottom: 20px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 18px/19px Whyte;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 16px/19px Whyte;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 `;
 const StyledButton = styled.button`
   min-width: 160px;
   background-color: transparent;
-  min-height: 60px;
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
-  border-radius: 16px;
-
+  border-radius: 48px;
+  height: 50px;
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal medium 25px/30px Whyte;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 42px;
     text-decoration: none;
     text-transform: uppercase;
   }
-  @media screen and (max-width: 1759px) {
-  }
   @media screen and (max-width: 654px) {
     min-width: 140px;
-    min-height: 50px;
+    height: 40px;
     a {
-      font: normal normal medium 14px/28px Whyte;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 34px;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
-    min-height: 40px;
+    height: 40px;
     a {
-      font: normal normal medium 12px/28px Whyte;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 34px;
     }
   }
 `;

@@ -122,15 +122,23 @@ const StyledAvatar = styled.img`
 `;
 const StyledUserTitle = styled(P)`
   position: relative;
-  font: normal normal bold 77px/60px Whyte;
+  font-size: 77px;
+  line-height: 60px;
+  font-weight: bold;
   color: #e740f0;
   text-transform: uppercase;
   height: 77px;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
+  -webkit-text-stroke: 1px #e740f0;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
+    font-size: 57px;
+    line-height: 40px;
+    font-weight: bold;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
+    font-size: 32px;
+    line-height: 60px;
+    font-weight: bold;
     height: 30px;
   }
   &::before {
@@ -168,26 +176,38 @@ const StyledUserTitle = styled(P)`
   }
 `;
 const StyledSubUserTitle = styled(P)`
-  font: normal normal normal 50px/22px Whyte;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 22px;
   color: #ffffff;
   text-transform: uppercase;
   height: 50px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 22px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/22px Whyte;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
     height: 24px;
   }
 `;
 const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
   color: #d4d4d4;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
   }
 `;
 // Game Content
@@ -211,16 +231,24 @@ const StyledBannerImage = styled.img`
   }
 `;
 const StyledGameTitle = styled(P)`
-  font: normal normal bold 77px/60px Whyte;
+  font-weight: bold;
+  font-size: 77px;
+  line-height: 60px;
   color: #6a9df9;
   text-transform: uppercase;
   height: 77px;
   position: relative;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
+  -webkit-text-stroke: 1px #3178ff;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 40px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 60px;
     height: 30px;
   }
   &::before {
@@ -242,12 +270,18 @@ const StyledGameSubTitle = styled(P)`
   text-shadow: 0px 11px 4px #00000029;
   text-transform: uppercase;
   height: 50px;
-  font: normal normal normal 50px/60px Whyte;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 22px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/60px Whyte;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 60px;
     height: 24px;
   }
   &::before {
@@ -269,15 +303,21 @@ const StyledGameSubTitle = styled(P)`
   }
 `;
 const StyledGameDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
   color: #d4d4d4;
   max-width: 569px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
     max-width: 500px;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
     max-width: 300px;
   }
 `;

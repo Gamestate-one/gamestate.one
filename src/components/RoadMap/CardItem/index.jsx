@@ -13,12 +13,20 @@ const StyledLabelCard = styled.span`
   display: inline-block;
 `
 const StyledCardItem = styled.div`
-  max-width: 382px;
+  /* max-width: 382px; */
+  width: 436px;
+  min-height: 226px;
   background: #262626;
   border-radius: 15px;
   opacity: 1;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
+  @media screen and (max-width: 1199px) {
+    width: 370px;
+  }
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
   @media screen and (max-width: 768px) {
     max-width: unset;
     margin-top: 50px;
@@ -33,6 +41,7 @@ const StyledContent = styled.ul`
   text-align: left;
   padding-bottom: 24px;
   padding-right: 10px;
+  margin-bottom: 0;
   @media screen and (max-width: 1200px) {
     font-size: 20px;
     padding-bottom: 0;

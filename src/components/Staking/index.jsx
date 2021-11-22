@@ -84,7 +84,8 @@ const StyledStakingTitleLeft = styled.p`
   letter-spacing: 0;
   line-height: 60px;
   color: #e740f0;
-  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
+  -webkit-text-stroke: 1px #e740f0;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -225,7 +226,8 @@ const StyledStakingTitleRight = styled.span`
   letter-spacing: 0;
   line-height: 80px;
   color: #6a9df9;
-  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
+  -webkit-text-stroke: 1px #3178ff;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -290,7 +292,7 @@ const StyledDescRight = styled.span`
   line-height: 28px;
   color: #d4d4d4;
   margin-left: 100px;
-  width: 520px;
+  /* width: 520px; */
   /* margin-right: -16px; */
   margin-top: 26px;
   @media screen and (max-width: 991px) {
@@ -304,109 +306,17 @@ const StyledDescRight = styled.span`
     margin-right: 0;
   }
 `;
-// test
-const P = styled.p`
-  letter-spacing: 0px;
-  display: flex;
-  opacity: 1;
-  align-items: center;
-  margin-bottom: 28px;
-  @media (max-width: 1759px) {
-    margin-bottom: 20px;
-  }
-  @media (max-width: 654px) {
-    margin-bottom: 6px;
-  }
-`;
-const StyledUserTitle = styled(P)`
-  position: relative;
-  font: normal normal bold 77px/60px Whyte;
-  color: #e740f0;
-  text-transform: uppercase;
-  height: 77px;
-  @media screen and (max-width: 1759px) {
-    font: normal normal bold 57px/40px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/60px Whyte;
-    height: 30px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    max-width: 44px;
-    height: 179px;
-    left: -6px;
-    top: -58px;
-    background: linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0% 0%
-      no-repeat padding-box;
-    @media screen and (max-width: 654px) {
-      max-width: 20px;
-      height: 88px;
-      top: -40px;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    background: #e740f0 0% 0% no-repeat padding-box;
-    filter: blur(50px);
-    width: 100%;
-    max-width: 728px;
-    height: 45px;
-    @media screen and (max-width: 1759px) {
-      max-width: 550px;
-    }
-    @media screen and (max-width: 654px) {
-      max-width: 300px;
-      height: 24px;
-    }
-  }
-`;
-const StyledSubUserTitle = styled(P)`
-  font: normal normal normal 50px/22px Whyte;
-  color: #ffffff;
-  text-transform: uppercase;
-  height: 50px;
-  z-index: 5;
-  @media screen and (max-width: 1759px) {
-    font: normal normal normal 40px/22px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal normal 24px/22px Whyte;
-    height: 24px;
-  }
-`;
-const StyledUserDescription = styled(P)`
-  font: normal normal normal 20px/28px Whyte;
-  color: #d4d4d4;
-  @media screen and (max-width: 1759px) {
-    font: normal normal normal 16px/28px Whyte;
-  }
-  @media screen and (max-width: 654px) {
-    font: normal normal normal 12px/28px Whyte;
-  }
-`;
+
 const Staking = () => {
   return (
     <>
-      <StyledStaking id="staking">
-        <Row className="mt-156">
+      <StyledStaking id='staking'>
+        <Row className='mt-156'>
           <StyledStakingColLeft
             lg={{ span: 6, order: 1 }}
             xs={{ order: 2 }}
-            className="mt-170"
+            className='mt-170'
           >
-            {/* <StyledUserTitle>STAKING &</StyledUserTitle>
-            <StyledSubUserTitle>LIQUIDITY REWARDS</StyledSubUserTitle>
-            <StyledUserDescription>
-              Holders of the native STATE token will be able to stake or enter
-              into liquidity pools to earn rewards. Early adopters acquiring one
-              of the limited edition Quantum Accelerator NFTs get access to
-              exclusive content, enhanced rewards and multiplier bonuses.
-            </StyledUserDescription> */}
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LIQUIDITY REWARDS</StyledTitleLeft>
             <StyledDescLeft>
@@ -417,16 +327,16 @@ const Staking = () => {
             </StyledDescLeft>
           </StyledStakingColLeft>
           <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
-            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
+            <StyledImgNft image={StakingNftImage} height={1186} top='-100' />
           </Col>
         </Row>
-        <Row className="mt-350">
+        <Row className='mt-350'>
           <Col lg={6}>
             <StyledImgNft
               image={StakingCupImage}
               height={780}
               // top="165"
-              className="mt-200"
+              className='mt-200'
             />
           </Col>
           <StyledStakingColRight lg={6}>

@@ -41,21 +41,28 @@ const StyledContainer = styled(Container)`
   max-width: 94%;
 `;
 const Title = styled.span`
-  font: normal normal bold 50px/60px Whyte;
-  letter-spacing: 0px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
   text-transform: uppercase;
   opacity: 1;
   @media (max-width: 768px) {
-    font: normal normal bold 40px/40px Whyte;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
   }
   @media (max-width: 564px) {
-    font: normal normal bold 32px/32px Whyte;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
   }
 `;
 const StyledTitle = styled(Title)`
   color: #6a9df9;
   padding-right: 14px;
   position: relative;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
+  -webkit-text-stroke: 1px #3178ff;
   &::before {
     content: "";
     position: absolute;
@@ -71,7 +78,7 @@ const StyledTitle = styled(Title)`
 `;
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
-  /* text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4; */
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
   position: relative;
   &::before {
     content: "";
@@ -91,13 +98,17 @@ const StyledSubTitle = styled(Title)`
 const Description = styled.p`
   margin: 38px auto 0 auto;
   text-align: center;
-  font: normal normal normal 20px/28px Whyte;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: 0px;
   color: #d4d4d4;
   opacity: 1;
   max-width: 762px;
   @media screen and (max-width: 564px) {
-    font: normal normal normal 16px/28px Whyte;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
     margin-top: 20px;
   }
 `;

@@ -1,16 +1,20 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Background from "../../assets/img/Explore/background.png";
-import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
+// import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
+import ChipEffect from "../../assets/videos/Chip_Effect.mp4";
 
 const Explore = () => {
   return (
     <Div>
       <StyledContainer>
-        <StyledHeroImage src={HeroBanner} alt='Hero' />
+        <StyledHeroVideo autoPlay loop muted playsInline>
+          <source src={ChipEffect} type='video/mp4' />
+        </StyledHeroVideo>
         <StyledDescription>
-          Quantum Accelerator - Experience enhancing NFTs, reward holders with
-          airdrop opportunities, staking multipliers and early bird access!
+          <SpanPurple>Quantum Accelerator</SpanPurple> - Experience enhancing
+          NFTs, reward holders with airdrop opportunities, staking multipliers
+          and early bird access!
         </StyledDescription>
         <StyledButton>
           <StyledSpan>BUY</StyledSpan>
@@ -22,9 +26,10 @@ const Explore = () => {
 };
 
 const Div = styled.div`
-  background-image: url(${Background});
+  /* background-image: url(${Background}); */
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #05080a;
 `;
 const StyledContainer = styled(Container)`
   opacity: 1;
@@ -36,31 +41,33 @@ const StyledContainer = styled(Container)`
     padding-bottom: 51px;
   }
 `;
-const StyledHeroImage = styled.img`
-  max-width: 783px;
-  margin-top: 80px;
-  margin-bottom: 60px;
+const StyledHeroVideo = styled.video`
+  /* max-width: 783px; */
+  /* margin-top: 80px; */
+  margin-bottom: 40px;
   width: 100%;
-  height: auto;
+  max-height: 800px;
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
-  font-style: normal;
-  font-size: 40px;
+  font-size: 46px;
   color: #ffffff;
-  line-height: 50px;
+  line-height: 1.2;
   padding-bottom: 70px;
   margin: 0 auto;
   max-width: 1420px;
   text-transform: uppercase;
+  z-index: 999;
   p {
     margin-bottom: 0;
   }
   @media screen and (max-width: 991px) {
-    font: normal normal bold 20px/32px Whyte;
+    font-size: 20px;
+    line-height: 32px;
   }
   @media screen and (max-width: 767px) {
-    font: normal normal bold 16px/28px Whyte;
+    font-size: 16px;
+    line-height: 28px;
     padding-bottom: 40px;
   }
 `;
@@ -117,11 +124,13 @@ const StyledButton = styled.button`
   }
 `;
 const Span = styled.span`
-  font: normal normal normal 23px/28px Whyte;
-  letter-spacing: 0px;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 66px;
   opacity: 1;
   @media screen and (max-width: 576px) {
-    font: normal normal normal 14px/17px Whyte;
+    font-size: 14px;
+    line-height: 37px;
   }
 `;
 const StyledSpan = styled(Span)`
@@ -132,5 +141,24 @@ const StyledSpan = styled(Span)`
 const StyledSubSpan = styled(Span)`
   text-shadow: 0px 3px 6px #da87de, 0px 3px 6px #e740f0;
   color: #e740f0;
+`;
+const SpanPurple = styled.span`
+  color: #e740f0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #e740f0 0% 0% no-repeat padding-box;
+    opacity: 1;
+    filter: blur(41px);
+    width: 100%;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media screen and (max-width: 991px) {
+      height: 22px;
+      top: 0px;
+    }
+  }
 `;
 export default Explore;

@@ -106,6 +106,8 @@ const StyledBackTop = styled.div`
     right: 0.5em;
   }
   @media (max-width: 767px) {
+    bottom: 0.2em;
+    right: 0;
   }
 `;
 export default App;

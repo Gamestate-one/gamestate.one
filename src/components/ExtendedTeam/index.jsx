@@ -58,14 +58,17 @@ const StyledItemImage = styled.div`
   border-radius: 8px;
 `
 const StyledItemName = styled.h5`
-  font: normal normal bold 16px/19px Whyte;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #ffffff;
   text-shadow: 0px 3px 6px #00000029;
   margin-top: 12px;
 `
 const StyledItemJob = styled.span`
-  font: normal normal normal 14px/20px Whyte !important;
+  font-size: 14px;
+  line-height: 20px;
   min-height: 40px;
   letter-spacing: 0px;
   color: #ffffff;
@@ -74,7 +77,8 @@ const StyledItemJob = styled.span`
   width: 190px;
 `
 const StyledItemDesc = styled.p`
-  font: normal normal normal 12px/16px Whyte;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 0px;
   color: #ededed;
   flex: 1;
@@ -92,12 +96,16 @@ const StyledMobileLabelRow = styled(Row)`
     text-align: center;
     margin-top: 45px;
     & span {
-      font: normal normal 700 16px/19px Whyte;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
       letter-spacing: 0px;
       color: #ffffff;
     }
     & h3 {
-      font: normal normal bold 32px/36px Whyte;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: bold;
       letter-spacing: 0px;
       color: #ffffff;
       width: 77%;

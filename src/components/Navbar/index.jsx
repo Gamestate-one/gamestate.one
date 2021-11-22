@@ -6,6 +6,7 @@ import styled from "styled-components";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [text, setText] = useState("LITE PAPER");
+  // const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
@@ -15,40 +16,48 @@ const Header = () => {
       }
     };
   }, []);
-
+  // isShowMenuMobile
+  //   ? (document.getElementsByTagName("body")[0].style.position = "fixed")
+  //   : (document.getElementsByTagName("body")[0].style.position = "static");
+  // const handleClickIconMenu = (e) => {
+  //   setIsShowMenuMobile(!isShowMenuMobile);
+  // };
   return (
     <Div>
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed="top"
-        expand="lg"
-        variant="dark"
+        fixed='top'
+        expand='lg'
+        variant='dark'
       >
         <StyledContainer>
-          <Navbar.Brand href="#">
-            <StyledImg src={Logo} alt="Logo" />
+          <Navbar.Brand href='#'>
+            <StyledImg src={Logo} alt='Logo' />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Toggle
+            aria-controls='responsive-navbar-nav'
+            // onClick={handleClickIconMenu}
+          />
+          <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
               <StyledFirstButton
-                href="https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1"
-                target="_blank"
+                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
+                target='_blank'
               >
                 PITCH DECK
               </StyledFirstButton>
               <StyledSecondButton
-                href="#"
+                href='#'
                 onMouseEnter={() => setText("COMING SOON")}
                 onMouseLeave={() => setText("LITE PAPER")}
               >
                 {text}
               </StyledSecondButton>
-              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
+              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
               <StyledFourthButton
-                href="https://blurt.blog/@gamestate"
-                target="_blank"
+                href='https://blurt.blog/@gamestate'
+                target='_blank'
               >
                 GET STARTED
               </StyledFourthButton>
@@ -62,19 +71,22 @@ const Header = () => {
 export default Header;
 
 const A = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   margin-left: 50px;
-  font: normal normal medium 16px/19px Whyte;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
   border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
-  height: 41px;
   min-width: 148px;
   max-width: 150px;
+  transition: 0.2s;
+  height: 41px;
   @media screen and (min-width: 992px) and (max-width: 1310px) {
-    font: normal normal medium 12px/12px Whyte;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
     min-width: 116px;
   }
   @media (max-width: 991px) {
