@@ -45,7 +45,7 @@ const TokenSale = () => {
               <img src={HiveLogo} alt="Hive Logo" />
               <span className="title">HIVE-ENGINE IDO</span>
               <Countdown
-                date={new Date("Nov 25 2021").getTime()}
+                date={new Date("Nov 26 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
               />
             </Bar>
@@ -55,17 +55,13 @@ const TokenSale = () => {
               <img src={PolygonLogo} alt="Polygon Logo" />
               <span className="title">Polygon IDO</span>
               <Countdown
-                date={new Date("Dec 7 2021").getTime()}
+                date={new Date("Dec 7 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
               />
             </Bar>
           </PolygonProgessBar>
         </StyledBar>
-        <StyledButton>
-          <a href="/#" onClick={(e) => e.preventDefault()}>
-            Read more
-          </a>
-        </StyledButton>
+        <StyledButton>Read more</StyledButton>
         <StyledTokenImage src={TokenBackground} alt="Token Background" />
         <StyledUserGenerated src={UserGenerated} alt="User" />
       </StyledTokenSales>
@@ -100,15 +96,16 @@ const StyledTokenSales = styled(Container)`
   }
 `
 const Title = styled.span`
-  font: normal normal bold 77px/60px Whyte;
+  font: normal normal bold 77px/60px Poppins;
   letter-spacing: 0px;
   text-transform: uppercase;
   opacity: 1;
+  z-index: 999;
   @media screen and (max-width: 991px) {
-    font: normal normal bold 46px/60px Whyte;
+    font: normal normal bold 46px/60px Poppins;
   }
   @media (max-width: 768px) {
-    font: normal normal bold 32px/60px Whyte;
+    font: normal normal bold 32px/60px Poppins;
   }
 `
 const StyledTitle = styled(Title)`
@@ -122,7 +119,6 @@ const StyledTitle = styled(Title)`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    max-width: 278px;
     height: 33px;
     @media screen and (max-width: 991px) {
       height: 22px;
@@ -140,8 +136,8 @@ const StyledSubTitle = styled(Title)`
     opacity: 1;
     filter: blur(41px);
     width: 100%;
-    max-width: 278px;
     height: 33px;
+
     @media screen and (max-width: 991px) {
       height: 22px;
       top: 0px;
@@ -232,7 +228,7 @@ const Bar = styled.div`
     }
   }
   .title {
-    font: normal normal normal 24px/32px Whyte;
+    font: normal normal normal 24px/32px Poppins;
     letter-spacing: 0px;
     color: #ffffff;
     text-transform: uppercase;
@@ -240,7 +236,7 @@ const Bar = styled.div`
     margin-right: 22px;
     min-width: 212px;
     @media (max-width: 1199px) {
-      font: normal normal normal 20px/28px Whyte;
+      font: normal normal normal 20px/28px Poppins;
       min-width: 180px;
     }
   }
@@ -265,12 +261,12 @@ const Bar = styled.div`
       padding: 25px 40px;
     }
     &__time {
-      font: normal normal bold 42px/50px Whyte;
+      font: normal normal bold 42px/50px Poppins;
       letter-spacing: 0px;
       color: #ffffff;
     }
     &__label {
-      font: normal normal normal 17px/20px Whyte;
+      font: normal normal normal 17px/20px Poppins;
       letter-spacing: 0px;
       color: #d9d9d9;
     }
@@ -311,24 +307,21 @@ const StyledButton = styled.button`
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
-  a {
-    color: #ffffff;
-    text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/60px Whyte;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+  height: 50px;
+  color: #ffffff;
+  text-shadow: 2px 4px 6px #ffffffbe;
+  text-decoration: none;
+  font: normal normal normal 18px/42px Poppins;
+  text-transform: uppercase;
   @media screen and (max-width: 654px) {
     min-width: 140px;
-    a {
-      font: normal normal normal 14px/50px Whyte;
-    }
+    height: 40px;
+    font: normal normal normal 14px/34px Poppins;
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
-    a {
-      font: normal normal normal 12px/40px Whyte;
-    }
+    height: 40px;
+    font: normal normal normal 12px/34px Poppins;
   }
 `
 export default TokenSale

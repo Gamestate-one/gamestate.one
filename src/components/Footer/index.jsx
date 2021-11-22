@@ -46,7 +46,9 @@ const StyledLogoFooter = styled.img`
   width: 100%;
 `
 const StyledCopyrightFooter = styled.span`
-  font: normal normal 700 16px/19px Whyte;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
   display: block;
   text-align: right;
   color: #ffffff;

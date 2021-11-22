@@ -54,7 +54,8 @@ const StyledCardInfo = styled(Card)`
   }
 `
 const StyledCardName = styled(Card.Title)`
-  font: normal normal bold 24px/32px Whyte;
+  font-size: 24px;
+  line-height: 32px;
   letter-spacing: 0px;
   color: #ffffff;
   text-shadow: 0px 3px 6px #00000029;
@@ -65,23 +66,21 @@ const StyledCardName = styled(Card.Title)`
   }
 `
 const StyledCardJob = styled(Card.Text)`
-  font: normal normal normal 18px/24px Whyte;
+  font-size: 18px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: #ffffff;
   @media screen and (max-width: 1791px) {
-    /* font-size: 16px;
-    margin-bottom: 0; */
     min-height: 48px;
   }
   @media screen and (max-width: 1399px) {
-    /* font-size: 16px;
-    margin-bottom: 0; */
     min-height: 0px;
   }
 `
 const StyledCardDesc = styled(Card.Text)`
   text-align: center;
-  font: normal normal normal 16px/21px Whyte;
+  font-size: 16px;
+  line-height: 21px;
   letter-spacing: 0px;
   color: #ededed;
   flex: 1;

@@ -1,22 +1,21 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import styled from "styled-components";
-import girl from "../../assets/img/Contact/girl.png";
-import ContactForm from "./ContactForm";
+import React from "react"
+import { Col, Container, Row } from "react-bootstrap"
+import styled from "styled-components"
+import girl from "../../assets/img/Contact/girl.png"
+import ContactForm from "./ContactForm"
 
 const StyledContainerContact = styled(Container)`
   @media screen and (min-width: 1200px) {
     max-width: 94%;
   }
-`;
+`
 const StyledBlockContact = styled(Row)`
   display: flex;
   background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
     0% no-repeat padding-box;
   position: relative;
   border-radius: 34px;
-  /* border: 1px solid #707070; */
-  /* margin-right: 0; */
+
   &:before {
     content: "";
     position: absolute;
@@ -29,7 +28,7 @@ const StyledBlockContact = styled(Row)`
     background: #000;
     z-index: 1;
   }
-`;
+`
 const StyledImageContact = styled(Col)`
   min-height: 702px;
   background-image: url(${girl});
@@ -41,7 +40,7 @@ const StyledImageContact = styled(Col)`
   @media screen and (max-width: 768px) {
     min-height: 560px;
   }
-`;
+`
 const StyledBlockForm = styled(Col)`
   background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
     0% no-repeat padding-box;
@@ -76,10 +75,10 @@ const StyledBlockForm = styled(Col)`
       right: 0;
     }
   }
-`;
+`
 const Contact = () => {
   return (
-    <StyledContainerContact fluid='xl'>
+    <StyledContainerContact fluid="xl">
       <StyledBlockContact>
         <StyledImageContact md={12} lg={6} />
         <StyledBlockForm md={12} lg={6}>
@@ -87,7 +86,7 @@ const Contact = () => {
         </StyledBlockForm>
       </StyledBlockContact>
     </StyledContainerContact>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

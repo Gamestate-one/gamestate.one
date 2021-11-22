@@ -118,20 +118,20 @@ const Banner = styled.img`
 `;
 const StyledTitle = styled(P)`
   position: relative;
-  font: normal normal bold 50px/60px Whyte;
+  font: normal normal bold 50px/60px Poppins;
   color: #ffffff;
   height: 77px;
   @media screen and (max-width: 1759px) {
-    font: normal normal bold 40px/40px Whyte;
+    font: normal normal bold 40px/40px Poppins;
   }
   @media screen and (max-width: 1513px) {
-    font: normal normal bold 36px/40px Whyte;
+    font: normal normal bold 36px/40px Poppins;
   }
   @media screen and (max-width: 1199px) {
     justify-content: center;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal bold 32px/38px Whyte;
+    font: normal normal bold 32px/38px Poppins;
     height: auto;
   }
   &::before {
@@ -153,14 +153,14 @@ const StyledTitle = styled(P)`
   }
 `;
 const StyledDescription = styled(P)`
-  font: normal normal normal 20px/27px Whyte;
+  font: normal normal normal 20px/27px Poppins;
   color: #d4d4d4;
   padding-bottom: 20px;
   @media screen and (max-width: 1759px) {
-    font: normal normal normal 18px/19px Whyte;
+    font: normal normal normal 18px/19px Poppins;
   }
   @media screen and (max-width: 654px) {
-    font: normal normal normal 16px/19px Whyte;
+    font: normal normal normal 16px/19px Poppins;
   }
 `;
 const StyledButton = styled.button`
@@ -169,23 +169,26 @@ const StyledButton = styled.button`
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
+  height: 50px;
   a {
     color: #ffffff;
     text-shadow: 2px 4px 6px #ffffffbe;
-    font: normal normal normal 18px/60px Whyte;
+    font: normal normal normal 18px/42px Poppins;
     text-decoration: none;
     text-transform: uppercase;
   }
   @media screen and (max-width: 654px) {
     min-width: 140px;
+    height: 40px;
     a {
-      font: normal normal normal 14px/50px Whyte;
+      font: normal normal normal 14px/34px Poppins;
     }
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
+    height: 40px;
     a {
-      font: normal normal normal 12px/40px Whyte;
+      font: normal normal normal 12px/34px Poppins;
     }
   }
 `;
