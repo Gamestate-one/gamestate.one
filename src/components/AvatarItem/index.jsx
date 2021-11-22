@@ -33,10 +33,22 @@ const StyledCardInfo = styled(Card)`
   margin: 0 12px 12px 12px;
   text-align: center;
   border: none;
-  @media screen and (max-width: 1660px) {
-    min-height: 228px;
-    margin: 0 6px 6px 6px;
+  @media screen and (max-width: 1791px) {
+    min-height: 239px;
   }
+  @media screen and (max-width: 1572px) {
+    min-height: 260px;
+  }
+  @media screen and (max-width: 1399px) {
+    min-height: 194px;
+  }
+  @media screen and (max-width: 1199px) {
+    min-height: 215px;
+  }
+  @media screen and (max-width: 991px) {
+    min-height: 236px;
+  }
+
   @media screen and (max-width: 767px) {
     min-height: 200px;
   }
@@ -56,10 +68,15 @@ const StyledCardJob = styled(Card.Text)`
   font: normal normal normal 18px/24px Whyte;
   letter-spacing: 0px;
   color: #ffffff;
-  @media screen and (max-width: 1919px) {
-    font-size: 16px;
+  @media screen and (max-width: 1791px) {
+    /* font-size: 16px;
+    margin-bottom: 0; */
     min-height: 48px;
-    margin-bottom: 0;
+  }
+  @media screen and (max-width: 1399px) {
+    /* font-size: 16px;
+    margin-bottom: 0; */
+    min-height: 0px;
   }
 `
 const StyledCardDesc = styled(Card.Text)`

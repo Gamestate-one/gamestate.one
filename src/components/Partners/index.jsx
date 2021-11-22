@@ -7,11 +7,9 @@ import logoAnother from "../../assets/img/Logo/logoAnother.svg"
 import logoSplin from "../../assets/img/Logo/logoSplin.svg"
 import logoHive from "../../assets/img/Logo/logoHive.svg"
 import logoN from "../../assets/img/Logo/logoN.svg"
-// import logoVR from "../../assets/img/Logo/logoVR.svg";
 import logoBirt from "../../assets/img/Logo/logoBirt.svg"
-import logoBlockchain from "../../assets/img/Logo/logoBlockchain.png"
 import logoEdso from "../../assets/img/Logo/logoEdso.svg"
-
+import logoBlockchain from "../../assets/img/Logo/logoDemo.svg"
 const StyledBlockLogo = styled(Row)`
   margin-bottom: 124px;
   justify-content: center;

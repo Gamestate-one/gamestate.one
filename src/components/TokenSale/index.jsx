@@ -31,6 +31,7 @@ const Rendered = ({ days, hours, minutes, seconds }) => (
   </div>
 )
 const TokenSale = () => {
+  // friday 26th UTC 2am
   return (
     <Div>
       <StyledTokenSales>
@@ -194,7 +195,7 @@ const ProgessBar = styled(Container)`
   max-width: 60%;
   /* height: 122px; */
   min-height: 157px;
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1700px) {
     max-width: 80%;
   }
   @media screen and (max-width: 1400px) {
