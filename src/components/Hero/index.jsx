@@ -7,7 +7,7 @@ const Hero = () => {
     <Div>
       <Container>
         {/* <StyledImg src={HeroImage} alt='Hero' /> */}
-        <video width="100%" height="80%" autoPlay muted loop>
+        <video width="100%" height="80%" autoPlay muted playsinline loop>
           <source src={game} type="video/mp4" />
         </video>
       </Container>
