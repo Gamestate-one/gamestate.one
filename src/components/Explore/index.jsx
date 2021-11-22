@@ -22,7 +22,7 @@ const Explore = () => {
 };
 
 const Div = styled.div`
-  background-image: url(${Background});
+  /* background-image: url(${Background}); */
   background-repeat: no-repeat;
   background-size: cover;
 `;

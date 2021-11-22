@@ -192,7 +192,7 @@ const ContactForm = () => {
       </StyledDesc>
       <Form
         method='post'
-        class='af-form-wrapper'
+        className='af-form-wrapper'
         accept-charset='UTF-8'
         action='https://www.aweber.com/scripts/addlead.pl'
         className='mt-4'
@@ -219,8 +219,8 @@ const ContactForm = () => {
           <input type='hidden' name='meta_tooltip' value='' />
         </div>
         <Row className='af-form' id='af-form-934404387'>
-          <div id='af-header-934404387' class='af-header'>
-            <div class='bodyText'>
+          <div id='af-header-934404387' className='af-header'>
+            <div className='bodyText'>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -231,7 +231,7 @@ const ContactForm = () => {
                 id='formBasicFirstName'
                 type='text'
                 name='name'
-                class='text'
+                className='text'
                 onfocus=" if (this.value == '') { this.value = ''; }"
                 onblur="if (this.value == '') { this.value='';} "
                 tabindex='500'
@@ -245,7 +245,7 @@ const ContactForm = () => {
               <Form.Control
                 type='text'
                 id='formBasicSocial'
-                class='text'
+                className='text'
                 name='custom Social URL'
                 onfocus=" if (this.value == '') { this.value = ''; }"
                 onblur="if (this.value == '') { this.value='';} "
@@ -260,7 +260,7 @@ const ContactForm = () => {
               <Form.Control
                 type='text'
                 id='formBasicOrganisation'
-                class='text'
+                className='text'
                 name='custom Organisation'
                 onfocus=" if (this.value == '') { this.value = ''; }"
                 onblur="if (this.value == '') { this.value='';} "
@@ -273,7 +273,7 @@ const ContactForm = () => {
             <StyledInput className='mb-3' controlId='formBasicEmail'>
               <Form.Label>Email *</Form.Label>
               <Form.Control
-                class='text'
+                className='text'
                 id='formBasicEmail'
                 type='email'
                 name='email'
@@ -306,8 +306,8 @@ const ContactForm = () => {
               SEND NOW
             </StyledButton>
           </StyledColInput>
-          <div id='af-footer-934404387' class='af-footer'>
-            <div class='bodyText'>
+          <div id='af-footer-934404387' className='af-footer'>
+            <div className='bodyText'>
               <p>&nbsp;</p>
             </div>
           </div>
