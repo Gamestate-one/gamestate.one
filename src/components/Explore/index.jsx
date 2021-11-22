@@ -46,9 +46,9 @@ const StyledHeroImage = styled.img`
 `;
 const StyledDescription = styled.div`
   font-weight: bold;
-  font-size: 40px;
+  font-size: 46px;
   color: #ffffff;
-  line-height: 50px;
+  line-height: 1.2;
   padding-bottom: 70px;
   margin: 0 auto;
   max-width: 1420px;

@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [text, setText] = useState("LITE PAPER");
-  const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
+  // const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
@@ -16,12 +16,12 @@ const Header = () => {
       }
     };
   }, []);
-  isShowMenuMobile
-    ? (document.getElementsByTagName("body")[0].style.position = "fixed")
-    : (document.getElementsByTagName("body")[0].style.position = "static");
-  const handleClickIconMenu = (e) => {
-    setIsShowMenuMobile(!isShowMenuMobile);
-  };
+  // isShowMenuMobile
+  //   ? (document.getElementsByTagName("body")[0].style.position = "fixed")
+  //   : (document.getElementsByTagName("body")[0].style.position = "static");
+  // const handleClickIconMenu = (e) => {
+  //   setIsShowMenuMobile(!isShowMenuMobile);
+  // };
   return (
     <Div>
       <StyledNavbar
@@ -37,7 +37,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls='responsive-navbar-nav'
-            onClick={handleClickIconMenu}
+            // onClick={handleClickIconMenu}
           />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
