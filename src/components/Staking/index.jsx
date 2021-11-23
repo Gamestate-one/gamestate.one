@@ -84,14 +84,17 @@ const StyledStakingTitleLeft = styled.p`
   letter-spacing: 0;
   line-height: 60px;
   color: #e740f0;
-  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
-  -webkit-text-stroke: 1px #e740f0;
+  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 20;
   margin-top: 135px;
   margin-left: 4px;
   display: inline-block;
+  /* color: transparent;
+  text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef; */
+  -webkit-text-stroke: 1px #e740f0;
+
   &::before {
     position: absolute;
     content: "";
@@ -111,8 +114,8 @@ const StyledStakingTitleLeft = styled.p`
     width: 100%;
     height: 20px;
     background: #e740f0 0% 0% no-repeat padding-box;
-    filter: blur(40px);
-    z-index: -1;
+    filter: blur(41px);
+    z-index: 19;
   }
   @media screen and (max-width: 991px) {
     /* margin-top: -160px; */
@@ -137,15 +140,6 @@ const StyledStakingTitleLeft = styled.p`
       left: -8px;
     }
   }
-  /* @media screen and (max-width: 414px) {
-    padding-left: 10px;
-    &:before {
-      left: 3px;
-      height: 85px;
-      width: 20px;
-      top: -50%;
-    }
-  } */
 `;
 const StyledImgNft = styled.div`
   background-image: url(${(props) => props.image});
@@ -175,7 +169,7 @@ const StyledTitleLeft = styled.p`
   margin-left: 4px;
   margin-top: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 20;
 
   @media screen and (max-width: 991px) {
     font-size: 24px;
@@ -226,11 +220,10 @@ const StyledStakingTitleRight = styled.span`
   letter-spacing: 0;
   line-height: 80px;
   color: #6a9df9;
-  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
-  -webkit-text-stroke: 1px #3178ff;
+  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 50;
   margin-top: 135px;
   &::after {
     position: absolute;

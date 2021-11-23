@@ -21,7 +21,7 @@ import Monitor from "./components/Monitor";
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
-    if (window.pageYOffset > 250) {
+    if (window.pageYOffset > 680) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -42,8 +42,8 @@ const App = () => {
       <StyledMain>
         <Hero />
         <Monitor />
-        <Explore />
         <TokenSale />
+        <Explore />
         <Description />
         <MarketPlace />
         <Igos />

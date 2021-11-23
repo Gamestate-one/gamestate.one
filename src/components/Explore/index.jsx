@@ -3,8 +3,11 @@ import styled from "styled-components";
 import Background from "../../assets/img/Explore/background.png";
 // import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
 import ChipEffect from "../../assets/videos/Chip_Effect.mp4";
+import { useState } from "react";
 
 const Explore = () => {
+  const [text, setText] = useState("BUY");
+  const [textsd, setTextsd] = useState("NOW");
   return (
     <Div>
       <StyledContainer>
@@ -16,9 +19,18 @@ const Explore = () => {
           NFTs, reward holders with airdrop opportunities, staking multipliers
           and early bird access!
         </StyledDescription>
-        <StyledButton>
-          <StyledSpan>BUY</StyledSpan>
-          <StyledSubSpan>NOW</StyledSubSpan>
+        <StyledButton
+          onMouseEnter={() => {
+            setText("COMING");
+            setTextsd("SOON");
+          }}
+          onMouseLeave={() => {
+            setText("BUY");
+            setTextsd("NOW");
+          }}
+        >
+          <StyledSpan>{text}</StyledSpan>
+          <StyledSubSpan>{textsd}</StyledSubSpan>
         </StyledButton>
       </StyledContainer>
     </Div>
@@ -145,6 +157,7 @@ const StyledSubSpan = styled(Span)`
 const SpanPurple = styled.span`
   color: #e740f0;
   position: relative;
+  z-index: 99;
   &::before {
     content: "";
     position: absolute;
