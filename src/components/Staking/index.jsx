@@ -69,7 +69,7 @@ const StyledStakingColRight = styled(Col)`
     padding-right: 0;
   }
   @media screen and (max-width: 576px) {
-    padding-right: 26px;
+    padding-right: 20px;
   }
 `
 const StyledStakingTitleLeft = styled.p`
@@ -259,12 +259,15 @@ const StyledStakingTitleRight = styled.span`
       height: 15px;
       filter: blur(30px);
     }
+    &:after {
+      right: -8px;
+    }
   }
   @media screen and (max-width: 414px) {
     &:after {
       width: 20px;
       height: 85px;
-      right: 0;
+      /* right: 0; */
     }
     /* padding-right: 10px; */
   }

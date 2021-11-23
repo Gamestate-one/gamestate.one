@@ -101,6 +101,7 @@ const StyledMobileLabelRow = styled(Row)`
       font-weight: 700;
       letter-spacing: 0px;
       color: #ffffff;
+      width: 100%;
     }
     & h3 {
       font-size: 32px;
