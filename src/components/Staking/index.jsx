@@ -39,10 +39,18 @@ const StyledStaking = styled(Container)`
       margin-top: 0;
     }
   }
+  @media screen and (max-width: 576px) {
+    .row {
+      /* margin: 0; */
+    }
+  }
   @media screen and (max-width: 767px) {
     .mt-156 {
       padding-top: 0;
     }
+    /* .row {
+      margin: 0;
+    } */
     .mt-170 {
       margin-top: -400px;
     }
@@ -76,8 +84,7 @@ const StyledStakingTitleLeft = styled.p`
   letter-spacing: 0;
   line-height: 60px;
   color: #e740f0;
-  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
-  -webkit-text-stroke: 1px #e740f0;
+  text-shadow: 0px 3px 6px #9e08a6, 0px 0px 98px #e740f0c4;
   text-transform: uppercase;
   position: relative;
   z-index: 20;
@@ -85,8 +92,8 @@ const StyledStakingTitleLeft = styled.p`
   margin-left: 4px;
   display: inline-block;
   /* color: transparent;
-  text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef;
-  -webkit-text-stroke: 0.9px #e740f0; */
+  text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef; */
+  -webkit-text-stroke: 1px #e740f0;
 
   &::before {
     position: absolute;
@@ -105,10 +112,10 @@ const StyledStakingTitleLeft = styled.p`
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: 20px;
     background: #e740f0 0% 0% no-repeat padding-box;
     filter: blur(41px);
-    z-index: -1;
+    z-index: 19;
   }
   @media screen and (max-width: 991px) {
     /* margin-top: -160px; */
@@ -213,12 +220,7 @@ const StyledStakingTitleRight = styled.span`
   letter-spacing: 0;
   line-height: 80px;
   color: #6a9df9;
-  /* color: transparent; */
-  /* -webkit-text-stroke: 1px #3178ff; */
-  /* text-shadow: 0 0 98px rgb(102, 153, 245), 0 3px 6px #3178ff; */
   text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
-  /* text-shadow: 0px 1px 3px #4785f9, 0px 0px 6px #163f8c; */
-  /* color: #6a9df9; */
   text-transform: uppercase;
   position: relative;
   z-index: 50;
@@ -246,9 +248,7 @@ const StyledStakingTitleRight = styled.span`
     background: #6294ef 0% 0% no-repeat padding-box;
     opacity: 1;
     filter: blur(39px);
-    /* z-index: 40; */
-    -webkit-text-stroke: 1px #3178ff;
-    color: #6a9df9;
+    z-index: -1;
   }
   & span:nth-child(1)::before {
     width: 100%;
