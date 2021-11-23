@@ -106,6 +106,9 @@ const StyledItemJob = styled.span`
   display: inline-block;
   margin-top: 1px;
   width: 190px;
+  @media screen and (max-width: 414px) {
+    width: 100%;
+  }
 `
 const StyledItemDesc = styled.p`
   font-size: 12px;

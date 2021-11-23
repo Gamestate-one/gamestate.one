@@ -51,6 +51,8 @@ const StyledBlockForm = styled(Col)`
     0% no-repeat padding-box;
   padding: 50px 84px 52px 90px;
   position: relative;
+  z-index: 1;
+
   border-top-right-radius: 34px;
   border-bottom-right-radius: 34px;
   /* z-index: 300; */
@@ -64,7 +66,7 @@ const StyledBlockForm = styled(Col)`
       0% no-repeat padding-box;
     opacity: 0.91;
     filter: blur(16px);
-    -o-filter: blur(10px);
+    -o-filter: blur(16px);
     -webkit-filter: blur(16px);
     -moz-filter: blur(16px);
     -ms-filter: blur(16px);
@@ -85,6 +87,8 @@ const StyledBlockForm = styled(Col)`
       top: -50px;
       left: 0;
       right: 0;
+      filter: blur(14px);
+      z-index: 33;
     }
   }
 `
