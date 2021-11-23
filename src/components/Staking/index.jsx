@@ -134,6 +134,13 @@ const StyledStakingTitleLeft = styled.p`
       top: -50%;
       left: -8px;
     }
+    &:after {
+      filter: unset;
+      width: 69%;
+      z-index: -1;
+      height: 0;
+      box-shadow: 20px 5px 28px 8px #e740f0;
+    }
   }
 `
 const StyledImgNft = styled.div`
@@ -176,12 +183,6 @@ const StyledTitleLeft = styled.p`
     position: relative;
     z-index: 5;
   }
-  /* @media screen and (max-width: 414px) {
-    margin-top: 18px;
-    margin-left: 14px;
-    position: relative;
-    z-index: 5;
-  } */
 `
 const StyledDescLeft = styled.span`
   font-style: normal;

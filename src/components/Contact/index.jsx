@@ -29,6 +29,9 @@ const StyledBlockContact = styled(Row)`
     filter: blur(23 px);
     background: #000;
     z-index: 1;
+    @media screen and (max-width: 414px) {
+      z-index: -1;
+    }
   }
 `
 const StyledImageContact = styled(Col)`
@@ -77,18 +80,19 @@ const StyledBlockForm = styled(Col)`
     padding: 40px 40px 40px 50px;
   }
   @media screen and (max-width: 991px) {
-    padding: 0;
-    /* padding: 20px 10px 40px 20px; */
     padding: 20px 20px 40px 20px;
     border-radius: 0;
+    z-index: 1;
     &:before {
       width: 100%;
-      height: 76px;
-      top: -50px;
+      height: 1px;
+      top: -1px;
       left: 0;
       right: 0;
-      filter: blur(14px);
-      z-index: 33;
+      /* -webkit-filter: unset; */
+      filter: unset;
+      z-index: 3;
+      box-shadow: 0px -4px 18px 20px #163f8c;
     }
   }
 `
