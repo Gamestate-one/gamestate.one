@@ -11,6 +11,7 @@ import Typed from "typed.js";
 const Monitor = () => {
   const el = useRef(null);
   const typed = useRef(null);
+
   useEffect(() => {
     const options = {
       strings: [
@@ -25,7 +26,17 @@ const Monitor = () => {
       fadeOut: true,
     };
     typed.current = new Typed(el.current, options);
-
+    var observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          typed.current.start();
+        } else {
+          typed.current.stop();
+        }
+      },
+      { threshold: 1.0 }
+    );
+    observer.observe(el.current);
     return () => {
       typed.current.destroy();
     };
@@ -74,13 +85,18 @@ const Monitor = () => {
           >
             <img src={Bird} alt='Bird' />
           </StyledImg>
-          <StyledImg width='224px' target='_blank' rel='noreferrer' href='/#'>
+          <StyledImg
+            width='224px'
+            target='_blank'
+            rel='noreferrer'
+            href='https://www.facebook.com/groups/6424015211002271'
+          >
             <img src={Facebook} alt='Facebook' />
           </StyledImg>
         </StyledHead>
       </Header>
       <StyledContainer>
-        <span className='typingEffect' ref={el} />
+        <span id='typed-span' className='typingEffect' ref={el}></span>
       </StyledContainer>
     </Div>
   );

@@ -1,10 +1,10 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import styled from "styled-components"
-import StakingNftImage from "../../assets/img/Staking/stakingNft.png"
-import StakingCupImage from "../../assets/img/Staking/stakingCup.png"
-import StakingGrid from "../../assets/img/Staking/stakingGrid.png"
-import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import styled from "styled-components";
+import StakingNftImage from "../../assets/img/Staking/stakingNft.png";
+import StakingCupImage from "../../assets/img/Staking/stakingCup.png";
+import StakingGrid from "../../assets/img/Staking/stakingGrid.png";
+import StakingUnifiled from "../../assets/img/Staking/stakingUnifiled.png";
 const StyledContainerFluid = styled.div`
   background-image: url(${StakingGrid});
   @media screen and (max-width: 991px) {
@@ -27,7 +27,7 @@ const StyledContainerFluid = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: 315px;
-`
+`;
 const StyledStaking = styled(Container)`
   min-height: 1247px;
   .mt-156 {
@@ -47,7 +47,7 @@ const StyledStaking = styled(Container)`
       margin-top: -400px;
     }
   }
-`
+`;
 const StyledStakingColLeft = styled(Col)`
   padding-left: 112px;
   @media screen and (max-width: 1399px) {
@@ -59,7 +59,7 @@ const StyledStakingColLeft = styled(Col)`
   @media screen and (max-width: 576px) {
     padding-left: 14px;
   }
-`
+`;
 const StyledStakingColRight = styled(Col)`
   padding-right: 146px;
   @media screen and (max-width: 1399px) {
@@ -68,7 +68,7 @@ const StyledStakingColRight = styled(Col)`
   @media screen and (max-width: 576px) {
     padding-right: 26px;
   }
-`
+`;
 const StyledStakingTitleLeft = styled.p`
   font-size: 77px;
   font-weight: bold;
@@ -80,13 +80,13 @@ const StyledStakingTitleLeft = styled.p`
   -webkit-text-stroke: 1px #e740f0;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 20;
   margin-top: 135px;
   margin-left: 4px;
   display: inline-block;
-  color: transparent;
+  /* color: transparent;
   text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef;
-  -webkit-text-stroke: 0.9px #e740f0;
+  -webkit-text-stroke: 0.9px #e740f0; */
 
   &::before {
     position: absolute;
@@ -105,9 +105,9 @@ const StyledStakingTitleLeft = styled.p`
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: #e740f0 0% 0% no-repeat padding-box;
-    filter: blur(33px);
+    filter: blur(41px);
     z-index: -1;
   }
   @media screen and (max-width: 991px) {
@@ -133,7 +133,7 @@ const StyledStakingTitleLeft = styled.p`
       left: -8px;
     }
   }
-`
+`;
 const StyledImgNft = styled.div`
   background-image: url(${(props) => props.image});
   background-size: contain;
@@ -150,7 +150,7 @@ const StyledImgNft = styled.div`
       margin-bottom: -200px;
     }
   }
-`
+`;
 const StyledTitleLeft = styled.p`
   font-size: 50px;
   font-weight: normal;
@@ -162,7 +162,7 @@ const StyledTitleLeft = styled.p`
   margin-left: 4px;
   margin-top: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 20;
 
   @media screen and (max-width: 991px) {
     font-size: 24px;
@@ -180,7 +180,7 @@ const StyledTitleLeft = styled.p`
     position: relative;
     z-index: 5;
   } */
-`
+`;
 const StyledDescLeft = styled.span`
   font-style: normal;
   font-weight: normal;
@@ -200,7 +200,7 @@ const StyledDescLeft = styled.span`
   /* @media screen and (max-width: 576px) {
     margin-left: 14px;
   } */
-`
+`;
 
 const StyledStakingTitleRight = styled.span`
   display: flex;
@@ -212,15 +212,16 @@ const StyledStakingTitleRight = styled.span`
   font-style: normal;
   letter-spacing: 0;
   line-height: 80px;
-  /* color: #6a9df9; */
-  color: transparent;
-  -webkit-text-stroke: 1px #3178ff;
-  /* text-shadow: 0 0 4px rgb(102, 153, 245), 0 3px 6px #3178ff; */
-  text-shadow: 0px 1px 3px #4785f9, 0px 0px 7px #163f8c;
+  color: #6a9df9;
+  /* color: transparent; */
+  /* -webkit-text-stroke: 1px #3178ff; */
+  /* text-shadow: 0 0 98px rgb(102, 153, 245), 0 3px 6px #3178ff; */
+  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  /* text-shadow: 0px 1px 3px #4785f9, 0px 0px 6px #163f8c; */
   /* color: #6a9df9; */
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 50;
   margin-top: 135px;
   &::after {
     position: absolute;
@@ -245,7 +246,7 @@ const StyledStakingTitleRight = styled.span`
     background: #6294ef 0% 0% no-repeat padding-box;
     opacity: 1;
     filter: blur(39px);
-    z-index: -1;
+    /* z-index: 40; */
     -webkit-text-stroke: 1px #3178ff;
     color: #6a9df9;
   }
@@ -273,7 +274,7 @@ const StyledStakingTitleRight = styled.span`
     }
     /* padding-right: 10px; */
   }
-`
+`;
 const StyledDescRight = styled.span`
   display: block;
   text-align: right;
@@ -297,17 +298,17 @@ const StyledDescRight = styled.span`
     width: 397px;
     margin-right: 0;
   }
-`
+`;
 
 const Staking = () => {
   return (
     <>
-      <StyledStaking id="staking">
-        <Row className="mt-156">
+      <StyledStaking id='staking'>
+        <Row className='mt-156'>
           <StyledStakingColLeft
             lg={{ span: 6, order: 1 }}
             xs={{ order: 2 }}
-            className="mt-170"
+            className='mt-170'
           >
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LIQUIDITY REWARDS</StyledTitleLeft>
@@ -319,16 +320,16 @@ const Staking = () => {
             </StyledDescLeft>
           </StyledStakingColLeft>
           <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
-            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
+            <StyledImgNft image={StakingNftImage} height={1186} top='-100' />
           </Col>
         </Row>
-        <Row className="mt-350">
+        <Row className='mt-350'>
           <Col lg={6}>
             <StyledImgNft
               image={StakingCupImage}
               height={780}
               // top="165"
-              className="mt-200"
+              className='mt-200'
             />
           </Col>
           <StyledStakingColRight lg={6}>
@@ -346,7 +347,7 @@ const Staking = () => {
       </StyledStaking>
       <StyledContainerFluid />
     </>
-  )
-}
+  );
+};
 
-export default Staking
+export default Staking;
