@@ -344,16 +344,16 @@ const StyledUserGenerated = styled.img`
   -moz-animation: linear infinite;
   -o-animation: linear infinite;
   animation-name: run;
-  animation-duration: 40s;
+  animation-duration: 60s;
   @keyframes run {
     0% {
-      left: -60px;
+      left: -240px;
     }
     50% {
-      left: 50%;
+      left: 60px;
     }
     100% {
-      left: -60px;
+      left: -240px;
     }
   }
 `;
