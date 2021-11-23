@@ -134,11 +134,12 @@ const StyledUserTitle = styled(P)`
   font-size: 77px;
   line-height: 60px;
   font-weight: bold;
-  color: #e740f0;
+  /* color: #e740f0; */
   text-transform: uppercase;
   height: 77px;
-  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
-  -webkit-text-stroke: 1px #e740f0;
+  color: transparent;
+  text-shadow: 0 0 98px #e740f0c4, 0 1px 3px #9e08a6;
+  -webkit-text-stroke: 0.5px #e740f0;
   @media screen and (max-width: 1759px) {
     font-size: 57px;
     line-height: 40px;
@@ -248,7 +249,7 @@ const StyledGameTitle = styled(P)`
   height: 77px;
   position: relative;
   color: transparent;
-  text-shadow: 0px 0px 98px rgba(22, 63, 140, 0.1), 0 1px 3px #3178ff;
+  text-shadow: 0px 0px 98px #163f8c, 0 1px 3px #3178ff;
   -webkit-text-stroke: 0.5px #3178ff;
   @media screen and (max-width: 1759px) {
     font-weight: bold;
