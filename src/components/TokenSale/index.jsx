@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import CoinBackground from "../../assets/img/TokenSale/coinbackground.png";
-import UserGenerated from "../../assets/img/TokenSale/User-generated.png";
 import TokenBackground from "../../assets/img/TokenSale/token.png";
 import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
 import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
@@ -31,7 +30,6 @@ const Rendered = ({ days, hours, minutes, seconds }) => (
   </div>
 );
 const TokenSale = () => {
-  // friday 26th UTC 2am
   return (
     <Div>
       <StyledTokenSales>
@@ -63,7 +61,6 @@ const TokenSale = () => {
         </StyledBar>
         <StyledButton>Read more</StyledButton>
         <StyledTokenImage src={TokenBackground} alt='Token Background' />
-        <StyledUserGenerated src={UserGenerated} alt='User' />
       </StyledTokenSales>
     </Div>
   );
@@ -78,13 +75,12 @@ const StyledTokenSales = styled(Container)`
   position: relative;
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 220px;
+  padding-bottom: 100px;
   & .title-main {
     margin-top: 118px;
   }
   @media screen and (max-width: 991px) {
     padding-top: 42px;
-    padding-bottom: 160px;
     & .title-main {
       margin-top: 10px;
       margin-bottom: 107px;
@@ -156,31 +152,6 @@ const StyledTokenImage = styled.img`
   max-width: 664px;
   max-height: 566px;
   z-index: -10;
-`;
-const StyledUserGenerated = styled.img`
-  position: absolute;
-  display: block;
-  left: -60px;
-  bottom: 0;
-  width: 106%;
-  max-height: 211px;
-  animation: linear infinite;
-  -webkit-animation: linear infinite;
-  -moz-animation: linear infinite;
-  -o-animation: linear infinite;
-  animation-name: run;
-  animation-duration: 40s;
-  @keyframes run {
-    0% {
-      left: -60px;
-    }
-    50% {
-      left: 50%;
-    }
-    100% {
-      left: -60px;
-    }
-  }
 `;
 
 const StyledBar = styled.div`
