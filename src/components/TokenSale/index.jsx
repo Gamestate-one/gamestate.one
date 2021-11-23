@@ -1,49 +1,49 @@
-import styled from "styled-components"
-import CoinBackground from "../../assets/img/TokenSale/coinbackground.png"
-import UserGenerated from "../../assets/img/TokenSale/User-generated.png"
-import TokenBackground from "../../assets/img/TokenSale/token.png"
-import HiveLogo from "../../assets/img/TokenSale/hivelogo.png"
-import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png"
-import { Container } from "react-bootstrap"
-import Countdown, { zeroPad } from "react-countdown"
+import styled from "styled-components";
+import CoinBackground from "../../assets/img/TokenSale/coinbackground.png";
+import UserGenerated from "../../assets/img/TokenSale/User-generated.png";
+import TokenBackground from "../../assets/img/TokenSale/token.png";
+import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
+import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
+import { Container } from "react-bootstrap";
+import Countdown, { zeroPad } from "react-countdown";
 const Rendered = ({ days, hours, minutes, seconds }) => (
-  <div className="countdown">
-    <div className="countdown__group">
-      <div className="countdown__item">
-        <span className="countdown__time">{zeroPad(days)}</span>
-        <span className="countdown__label">Days</span>
+  <div className='countdown'>
+    <div className='countdown__group'>
+      <div className='countdown__item'>
+        <span className='countdown__time'>{zeroPad(days)}</span>
+        <span className='countdown__label'>Days</span>
       </div>
-      <div className="countdown__item">
-        <span className="countdown__time">{zeroPad(hours)}</span>
-        <span className="countdown__label">Hours</span>
+      <div className='countdown__item'>
+        <span className='countdown__time'>{zeroPad(hours)}</span>
+        <span className='countdown__label'>Hours</span>
       </div>
     </div>
-    <div className="countdown__group">
-      <div className="countdown__item">
-        <span className="countdown__time">{zeroPad(minutes)}</span>
-        <span className="countdown__label">Minutes</span>
+    <div className='countdown__group'>
+      <div className='countdown__item'>
+        <span className='countdown__time'>{zeroPad(minutes)}</span>
+        <span className='countdown__label'>Minutes</span>
       </div>
-      <div className="countdown__item">
-        <span className="countdown__time">{zeroPad(seconds)}</span>
-        <span className="countdown__label">Seconds</span>
+      <div className='countdown__item'>
+        <span className='countdown__time'>{zeroPad(seconds)}</span>
+        <span className='countdown__label'>Seconds</span>
       </div>
     </div>
   </div>
-)
+);
 const TokenSale = () => {
   // friday 26th UTC 2am
   return (
     <Div>
       <StyledTokenSales>
-        <div className="title-main">
+        <div className='title-main'>
           <StyledTitle>Token</StyledTitle>
           <StyledSubTitle>Sale</StyledSubTitle>
         </div>
         <StyledBar>
           <HiveProgessBar fluid>
             <Bar>
-              <img src={HiveLogo} alt="Hive Logo" />
-              <span className="title">HIVE-ENGINE IDO</span>
+              <img src={HiveLogo} alt='Hive Logo' />
+              <span className='title'>HIVE-ENGINE IDO</span>
               <Countdown
                 date={new Date("Nov 26 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
@@ -52,8 +52,8 @@ const TokenSale = () => {
           </HiveProgessBar>
           <PolygonProgessBar fluid>
             <Bar>
-              <img src={PolygonLogo} alt="Polygon Logo" />
-              <span className="title">Polygon IDO</span>
+              <img src={PolygonLogo} alt='Polygon Logo' />
+              <span className='title'>Polygon IDO</span>
               <Countdown
                 date={new Date("Dec 7 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
@@ -62,18 +62,18 @@ const TokenSale = () => {
           </PolygonProgessBar>
         </StyledBar>
         <StyledButton>Read more</StyledButton>
-        <StyledTokenImage src={TokenBackground} alt="Token Background" />
-        <StyledUserGenerated src={UserGenerated} alt="User" />
+        <StyledTokenImage src={TokenBackground} alt='Token Background' />
+        <StyledUserGenerated src={UserGenerated} alt='User' />
       </StyledTokenSales>
     </Div>
-  )
-}
+  );
+};
 
 const Div = styled.div`
   /* background: url(${CoinBackground}) no-repeat; */
   background-position: top center;
   background-size: cover;
-`
+`;
 const StyledTokenSales = styled(Container)`
   position: relative;
   text-align: center;
@@ -93,7 +93,7 @@ const StyledTokenSales = styled(Container)`
   @media screen and (max-width: 768px) {
     max-width: 94%;
   }
-`
+`;
 const Title = styled.span`
   font-weight: bold;
   font-size: 77px;
@@ -110,11 +110,12 @@ const Title = styled.span`
     font-size: 32px;
     line-height: 60px;
   }
-`
+`;
 const StyledTitle = styled(Title)`
   color: #6a9df9;
   padding-right: 20px;
   position: relative;
+  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
   &::before {
     content: "";
     position: absolute;
@@ -128,10 +129,11 @@ const StyledTitle = styled(Title)`
       top: 0px;
     }
   }
-`
+`;
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
   position: relative;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
   &::before {
     content: "";
     position: absolute;
@@ -146,7 +148,7 @@ const StyledSubTitle = styled(Title)`
       top: 0px;
     }
   }
-`
+`;
 const StyledTokenImage = styled.img`
   position: absolute;
   top: 150px;
@@ -154,7 +156,7 @@ const StyledTokenImage = styled.img`
   max-width: 664px;
   max-height: 566px;
   z-index: -10;
-`
+`;
 const StyledUserGenerated = styled.img`
   position: absolute;
   display: block;
@@ -179,11 +181,11 @@ const StyledUserGenerated = styled.img`
       left: -60px;
     }
   }
-`
+`;
 
 const StyledBar = styled.div`
   margin-top: 63px;
-`
+`;
 const ProgessBar = styled(Container)`
   background: #262626 0% 0% no-repeat padding-box;
   margin: 0 auto;
@@ -200,7 +202,7 @@ const ProgessBar = styled(Container)`
   @media screen and (max-width: 1400px) {
     max-width: unset;
   }
-`
+`;
 const HiveProgessBar = styled(ProgessBar)`
   margin-bottom: 60px;
   display: flex;
@@ -208,14 +210,14 @@ const HiveProgessBar = styled(ProgessBar)`
     background-color: #ff0000;
     width: 50%;
   }
-`
+`;
 const PolygonProgessBar = styled(ProgessBar)`
   display: flex;
   .progessBar-fill-inner {
     background-color: #1969ff;
     width: 35%;
   }
-`
+`;
 const Bar = styled.div`
   display: flex;
   align-items: center;
@@ -277,7 +279,7 @@ const Bar = styled.div`
       font-weight: bold;
       color: #d9d9d9;
     }
-    @media screen and (max-width: 919px) {
+    @media screen and (max-width: 991px) {
       flex-direction: column;
       margin-left: 0;
     }
@@ -305,7 +307,7 @@ const Bar = styled.div`
       }
     }
   }
-`
+`;
 
 const StyledButton = styled.button`
   min-width: 160px;
@@ -336,5 +338,5 @@ const StyledButton = styled.button`
     line-height: 34px;
     font-weight: 500;
   }
-`
-export default TokenSale
+`;
+export default TokenSale;
