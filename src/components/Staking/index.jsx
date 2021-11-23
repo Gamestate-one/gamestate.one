@@ -91,6 +91,20 @@ const StyledStakingTitleLeft = styled.p`
   margin-top: 135px;
   margin-left: 4px;
   display: inline-block;
+
+  /* width: 745px;
+  height: 77px;
+  margin: 58px 0 28px 7px;
+  padding: 17px 17px 15px 0;
+  text-shadow: 0 0 98px rgba(231, 64, 240, 0.77), 0 3px 6px #9e08a6;
+  -webkit-text-stroke: 1px #e740f0;
+  color: transparent;
+  background-color: #e740f0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-family: Whyte; */
+
   &::before {
     position: absolute;
     content: "";
@@ -290,7 +304,7 @@ const StyledDescRight = styled.span`
   line-height: 28px;
   color: #d4d4d4;
   margin-left: 100px;
-  width: 520px;
+  /* width: 520px; */
   /* margin-right: -16px; */
   margin-top: 26px;
   @media screen and (max-width: 991px) {
@@ -315,14 +329,6 @@ const Staking = () => {
             xs={{ order: 2 }}
             className="mt-170"
           >
-            {/* <StyledUserTitle>STAKING &</StyledUserTitle>
-            <StyledSubUserTitle>LIQUIDITY REWARDS</StyledSubUserTitle>
-            <StyledUserDescription>
-              Holders of the native STATE token will be able to stake or enter
-              into liquidity pools to earn rewards. Early adopters acquiring one
-              of the limited edition Quantum Accelerator NFTs get access to
-              exclusive content, enhanced rewards and multiplier bonuses.
-            </StyledUserDescription> */}
             <StyledStakingTitleLeft>STAKING &</StyledStakingTitleLeft>
             <StyledTitleLeft>LIQUIDITY REWARDS</StyledTitleLeft>
             <StyledDescLeft>
