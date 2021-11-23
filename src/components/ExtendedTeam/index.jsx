@@ -44,7 +44,7 @@ const StyledMobileTeamRow = styled(Row)`
 `
 
 const StyledItemColMobile = styled.div`
-  padding: 0px 6px 40px;
+  padding: 0px 6px 0px;
   width: 50%;
   margin-top: 28px;
 `
