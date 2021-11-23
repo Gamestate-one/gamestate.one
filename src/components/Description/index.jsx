@@ -4,6 +4,7 @@ import Avatar from "../../assets/img/Description/avatar.png";
 import Banner from "../../assets/img/Description/banner.png";
 import GridBackground from "../../assets/img/Description/gridBackground.png";
 import UnifiedBackground from "../../assets/img/Description/unifiedBackground.png";
+import UserGenerated from "../../assets/img/TokenSale/User-generated.png";
 
 const Description = () => {
   return (
@@ -46,6 +47,7 @@ const Description = () => {
           </StyledGameContent>
         </Row>
       </StyledContainer>
+      <StyledUserGenerated src={UserGenerated} alt='User' />
       <img
         className='gridBackground'
         src={GridBackground}
@@ -93,6 +95,13 @@ const Div = styled.div`
 `;
 const StyledContainer = styled(Container)`
   max-width: 94%;
+  padding-top: 220px;
+  @media screen and (max-width: 767px) {
+    padding-top: 150px;
+  }
+  @media screen and (max-width: 575px) {
+    padding-top: 100px;
+  }
 `;
 const P = styled.p`
   letter-spacing: 0px;
@@ -234,12 +243,13 @@ const StyledGameTitle = styled(P)`
   font-weight: bold;
   font-size: 77px;
   line-height: 60px;
-  color: #6a9df9;
+  /* color: #6a9df9; */
   text-transform: uppercase;
   height: 77px;
   position: relative;
-  text-shadow: 0 0 98px #163f8c, 0 3px 6px #163f8c;
-  -webkit-text-stroke: 1px #3178ff;
+  color: transparent;
+  text-shadow: 0px 0px 98px rgba(22, 63, 140, 0.1), 0 1px 3px #3178ff;
+  -webkit-text-stroke: 0.5px #3178ff;
   @media screen and (max-width: 1759px) {
     font-weight: bold;
     font-size: 57px;
@@ -321,4 +331,31 @@ const StyledGameDescription = styled(P)`
     max-width: 300px;
   }
 `;
+
+const StyledUserGenerated = styled.img`
+  position: absolute;
+  display: block;
+  left: -60px;
+  top: 0;
+  width: 106%;
+  max-height: 211px;
+  animation: linear infinite;
+  -webkit-animation: linear infinite;
+  -moz-animation: linear infinite;
+  -o-animation: linear infinite;
+  animation-name: run;
+  animation-duration: 60s;
+  @keyframes run {
+    0% {
+      left: -240px;
+    }
+    50% {
+      left: 60px;
+    }
+    100% {
+      left: -240px;
+    }
+  }
+`;
+
 export default Description;

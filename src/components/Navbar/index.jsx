@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import Logo from "../../assets/img/Logo/logo.png";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import styled from "styled-components";
+import close from "../../assets/img/close.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [text, setText] = useState("LITE PAPER");
-  // const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
@@ -16,12 +16,6 @@ const Header = () => {
       }
     };
   }, []);
-  // isShowMenuMobile
-  //   ? (document.getElementsByTagName("body")[0].style.position = "fixed")
-  //   : (document.getElementsByTagName("body")[0].style.position = "static");
-  // const handleClickIconMenu = (e) => {
-  //   setIsShowMenuMobile(!isShowMenuMobile);
-  // };
   return (
     <Div>
       <StyledNavbar
@@ -35,10 +29,7 @@ const Header = () => {
           <Navbar.Brand href='#'>
             <StyledImg src={Logo} alt='Logo' />
           </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls='responsive-navbar-nav'
-            // onClick={handleClickIconMenu}
-          />
+          <StyledNavbarToggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
               <StyledFirstButton
@@ -56,7 +47,7 @@ const Header = () => {
               </StyledSecondButton>
               <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
               <StyledFourthButton
-                href='https://blurt.blog/@gamestate'
+                href='https://getstarted.gamestate.one'
                 target='_blank'
               >
                 GET STARTED
@@ -145,7 +136,14 @@ const StyledNav = styled(Nav)`
   justify-content: flex-end;
   align-items: center;
 `;
-
+const StyledNavbarToggle = styled(Navbar.Toggle)`
+  /* &:focus {
+    outline: none;
+    border: none;
+  }
+  & > .navbar-toggler-icon {
+  } */
+`;
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
@@ -168,6 +166,16 @@ const StyledContainer = styled(Container)`
     }
     .navbar-toggler {
       margin-right: 3%;
+    }
+  }
+  & > .navbar-toggler.collapsed {
+    & > .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+  & > .navbar-toggler {
+    & > .navbar-toggler-icon {
+      background-image: url(${close});
     }
   }
 `;
