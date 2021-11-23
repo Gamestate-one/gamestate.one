@@ -50,6 +50,9 @@ const StyledStaking = styled(Container)`
       margin-top: -500px;
     }
   }
+  @media screen and (max-width: 500px) {
+    margin-top: -100px;
+  }
 `
 const StyledStakingColLeft = styled(Col)`
   padding-left: 112px;
