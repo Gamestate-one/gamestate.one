@@ -42,18 +42,10 @@ const StyledStaking = styled(Container)`
       margin-top: -182px;
     }
   }
-  @media screen and (max-width: 576px) {
-    .row {
-      /* margin: 0; */
-    }
-  }
   @media screen and (max-width: 767px) {
     .mt-156 {
       padding-top: 0;
     }
-    /* .row {
-      margin: 0;
-    } */
     .mt-170 {
       margin-top: -500px;
     }

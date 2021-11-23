@@ -64,8 +64,10 @@ const StyledBlockForm = styled(Col)`
       0% no-repeat padding-box;
     opacity: 0.91;
     filter: blur(16px);
+    -o-filter: blur(10px);
     -webkit-filter: blur(16px);
     -moz-filter: blur(16px);
+    -ms-filter: blur(16px);
     width: 100px;
     height: 100%;
   }
