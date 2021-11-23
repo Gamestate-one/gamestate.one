@@ -51,7 +51,7 @@ const StyledStaking = styled(Container)`
     }
   }
   @media screen and (max-width: 500px) {
-    margin-top: -100px;
+    margin-top: -150px;
   }
 `
 const StyledStakingColLeft = styled(Col)`
@@ -89,9 +89,10 @@ const StyledStakingTitleLeft = styled.p`
   margin-top: 135px;
   margin-left: 4px;
   display: inline-block;
-  /* color: transparent;
-  text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef; */
+  color: transparent;
+  /* text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e13beb; */
   -webkit-text-stroke: 1px #e740f0;
+  text-shadow: 0 0 98px #e740f0c4, 0 1px 3px #e13beb;
 
   &::before {
     position: absolute;
@@ -107,10 +108,10 @@ const StyledStakingTitleLeft = styled.p`
   &::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: 30px;
     left: 0;
     width: 100%;
-    height: 20px;
+    height: 40px;
     background: #e740f0 0% 0% no-repeat padding-box;
     filter: blur(41px);
     z-index: 19;
@@ -218,7 +219,7 @@ const StyledStakingTitleRight = styled.span`
   letter-spacing: 0;
   line-height: 80px;
   color: #6a9df9;
-  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #3178ff; */
   text-transform: uppercase;
   position: relative;
   z-index: 50;
@@ -236,6 +237,9 @@ const StyledStakingTitleRight = styled.span`
   }
   & span {
     position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px #3178ff;
+    text-shadow: 0px 1px 3px #4785f9, 0px 0px 7px #163f8c;
   }
   & span::before {
     content: "";
