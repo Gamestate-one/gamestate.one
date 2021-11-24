@@ -124,7 +124,7 @@ const StyledStakingTitleLeft = styled.p`
     &:after {
       top: 10px;
       left: 0;
-      width: 28%;
+      width: 100%;
       height: 15px;
       filter: blur(15px);
     }
@@ -140,10 +140,10 @@ const StyledStakingTitleLeft = styled.p`
     }
     &:after {
       filter: unset;
-      width: 69%;
+      /* width: 69%; */
       z-index: -1;
       height: 0;
-      box-shadow: 20px 5px 28px 8px #e740f0;
+      box-shadow: 0px 5px 28px 8px #e740f0;
     }
   }
 `
@@ -246,11 +246,19 @@ const StyledStakingTitleRight = styled.span`
     position: absolute;
     top: 0;
     right: 0;
-    height: 40px;
+    /* height: 40px;
     background: #6294ef 0% 0% no-repeat padding-box;
     opacity: 1;
-    filter: blur(39px);
-    z-index: -1;
+    filter: blur(39px); */
+
+    @media screen and (max-width: 576px) {
+      filter: unset;
+      /* width: 69%; */
+      z-index: -1;
+      height: 0;
+      box-shadow: 0px 5px 28px 8px #6294ef;
+      z-index: -1;
+    }
   }
   & span:nth-child(1)::before {
     width: 100%;
@@ -269,6 +277,16 @@ const StyledStakingTitleRight = styled.span`
     }
     &:after {
       right: -8px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    & span::before {
+      filter: unset;
+      /* width: 69%; */
+      z-index: -1;
+      height: 0;
+      box-shadow: 0px 5px 28px 8px #6294ef;
+      z-index: -1;
     }
   }
   @media screen and (max-width: 414px) {
