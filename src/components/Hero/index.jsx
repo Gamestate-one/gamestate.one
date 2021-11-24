@@ -1,23 +1,23 @@
-import styled from "styled-components";
-import HeroVideo from "../../assets/videos/herovideo.mp4";
+import styled from "styled-components"
+import HeroVideo from "../../assets/videos/herovideo.mp4"
 const Hero = () => {
   return (
     <Div>
       <video
-        width='100%'
-        height='80%'
+        width="100%"
+        height="80%"
         autoPlay
         loop
         muted
         playsInline
-        preload='auto'
+        preload="auto"
       >
-        <source src={HeroVideo} type='video/mp4' />
+        <source src={HeroVideo} type="video/mp4" />
       </video>
     </Div>
-  );
-};
-export default Hero;
+  )
+}
+export default Hero
 
 const Div = styled.div`
   text-align: center;
@@ -28,4 +28,4 @@ const Div = styled.div`
   @media screen and (max-width: 991px) {
     padding-bottom: 30px;
   }
-`;
+`
