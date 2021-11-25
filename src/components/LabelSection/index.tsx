@@ -1,6 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-const StyledLabelSection = styled.div`
+interface LabelSectionInterface {
+  label?: string
+  note?: string
+  className?: string
+  before?: any
+  topAuto?: string
+}
+const StyledLabelSection = styled.div<{ isbefore: boolean }>`
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -37,7 +44,7 @@ const StyledLabelSection = styled.div`
     background: transparent linear-gradient(180deg, #163f8c 0%, #9e08a6 100%) 0%
       0% no-repeat padding-box;
     z-index: -1;
-    display: ${(props) => props.before && "none"};
+    display: ${(props) => props.isbefore && "none"};
   }
   & .note {
     font-size: 16px;
@@ -59,13 +66,17 @@ const StyledLabelSection = styled.div`
     margin: 20px;
   }
 `
-const LabelSection = ({ label, note, className, before, topAuto }) => {
+const LabelSection = ({
+  label,
+  note,
+  className,
+  before,
+  topAuto,
+}: LabelSectionInterface) => {
   return (
-    <StyledLabelSection className={className} before={before}>
+    <StyledLabelSection className={className} isbefore={before}>
       {note && <span className="note">{note}</span>}
-      <span top={topAuto} className={topAuto}>
-        {label}
-      </span>
+      <span className={topAuto}>{label}</span>
     </StyledLabelSection>
   )
 }

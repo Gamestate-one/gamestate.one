@@ -79,7 +79,7 @@ const StyledItemColMobile = styled.div`
   width: 50%;
   margin-top: 28px;
 `
-const StyledItemImage = styled.div`
+const StyledItemImage = styled.div<{ image: string }>`
   background-image: url(${(props) => props.image});
   background-position: center center;
   background-size: cover;

@@ -27,7 +27,11 @@ const StyledBlockLogo = styled(Row)`
   }
 `
 
-const StyledLogo = styled.img`
+const StyledLogo = styled.img<{
+  width: string
+  height: string
+  right?: string
+}>`
   max-width: ${(props) => props.width}px;
   max-height: ${(props) => props.height}px;
   margin-right: ${(props) => props.right}px;
