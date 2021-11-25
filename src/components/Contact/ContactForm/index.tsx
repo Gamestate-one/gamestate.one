@@ -127,6 +127,7 @@ const StyledButton = styled(Button)`
   padding: 22px 0;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  outline: none;
   border-radius: 4px;
   width: 100%;
   font-size: 24px;
@@ -155,33 +156,10 @@ const StyledCountTextarea = styled.span`
   opacity: 0.34;
   margin-top: 5px;
 `
-;(function () {
-  var IE = /*@cc_on!@*/ false
-  if (!IE) {
-    return
-  }
-  if (document.compatMode && document.compatMode === "BackCompat") {
-    if (document.getElementById("af-form-934404387")) {
-      document.getElementById("af-form-934404387").className =
-        "af-form af-quirksMode"
-    }
-    if (document.getElementById("af-body-934404387")) {
-      document.getElementById("af-body-934404387").className =
-        "af-body inline af-quirksMode"
-    }
-    if (document.getElementById("af-header-934404387")) {
-      document.getElementById("af-header-934404387").className =
-        "af-header af-quirksMode"
-    }
-    if (document.getElementById("af-footer-934404387")) {
-      document.getElementById("af-footer-934404387").className =
-        "af-footer af-quirksMode"
-    }
-  }
-})()
+
 const ContactForm = () => {
   const [numberChar, setNumberChar] = useState(0)
-  const handleTextareaOnChange = (e) => {
+  const handleTextareaOnChange = (e: any) => {
     setNumberChar(e.target.value.length)
   }
   return (
@@ -207,7 +185,6 @@ const ContactForm = () => {
             type="hidden"
             name="redirect"
             value="https://www.aweber.com/thankyou-coi.htm?m=text"
-            id="redirect_b23008da4cf05e76dfb6dbb5ea415045"
           />
 
           <input type="hidden" name="meta_adtracking" value="Gamestate" />
@@ -229,13 +206,7 @@ const ContactForm = () => {
           <StyledColInput xxl={12}>
             <StyledInput className="mb-3" controlId="formBasicName">
               <Form.Label>Name *</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                className="text"
-                tabIndex="500"
-                required
-              />
+              <Form.Control type="text" name="name" className="text" required />
               <StyledIconInput src={bookIcon} />
             </StyledInput>
           </StyledColInput>
@@ -246,7 +217,6 @@ const ContactForm = () => {
                 type="text"
                 className="text"
                 name="custom Social URL"
-                tabIndex="501"
                 required
               />
               <StyledIconInput src={urlIcon} alt="" />
@@ -259,7 +229,6 @@ const ContactForm = () => {
                 type="text"
                 className="text"
                 name="custom Organization"
-                tabIndex="502"
                 required
               />
               <StyledIconInput src={organizationIcon} width="20px" />
@@ -272,7 +241,6 @@ const ContactForm = () => {
                 className="text"
                 type="email"
                 name="email"
-                tabIndex="503"
                 required
               />
               <StyledIconInput src={emailIcon} />
@@ -284,9 +252,8 @@ const ContactForm = () => {
                 <Form.Control
                   as="textarea"
                   style={{ height: "198px" }}
-                  maxLength="1000"
+                  maxLength={1000}
                   onChange={handleTextareaOnChange}
-                  tabIndex="504"
                   name="custom Message"
                   required
                 />
@@ -295,9 +262,7 @@ const ContactForm = () => {
             </StyledInput>
           </StyledColInput>
           <StyledColInput md={12}>
-            <StyledButton variant="primary" type="submit">
-              SEND NOW
-            </StyledButton>
+            <StyledButton type="submit">SEND NOW</StyledButton>
           </StyledColInput>
           <div id="af-footer-934404387" className="af-footer">
             <div className="bodyText">

@@ -147,16 +147,14 @@ const StyledStakingTitleLeft = styled.p`
     }
   }
 `
-const StyledImgNft = styled.div`
+const StyledImgNft = styled.div<{ image: string; height: number }>`
   background-image: url(${(props) => props.image});
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   height: ${(props) => props.height}px;
-  /* @media screen and (max-width: 1399px) {
-    margin-top: ${(props) => props.top}px;
-  } */
+
   @media screen and (max-width: 767px) {
     &.mt-200 {
       /* margin-top: -200px; */
@@ -343,7 +341,7 @@ const Staking = () => {
             </StyledDescLeft>
           </StyledStakingColLeft>
           <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
-            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
+            <StyledImgNft image={StakingNftImage} height={1186} />
           </Col>
         </Row>
         <Row className="mt-350">
@@ -351,7 +349,6 @@ const Staking = () => {
             <StyledImgNft
               image={StakingCupImage}
               height={780}
-              // top="165"
               className="mt-200"
             />
           </Col>
