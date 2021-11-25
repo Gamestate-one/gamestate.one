@@ -8,9 +8,16 @@ import Twitter from "../../assets/img/Explore/twitter.svg";
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
+
+export interface TextProps {
+  width?: string;
+}
+
+export interface TypedProps {}
+
 const Monitor = () => {
-  const el = useRef(null);
-  const typed = useRef(null);
+  const el = useRef<any>(null);
+  const typed = useRef<any>(null);
 
   useEffect(() => {
     const options = {
@@ -169,7 +176,7 @@ const StyledHead = styled.div`
   }
 `;
 const StyledImg = styled.a`
-  max-width: ${(props) => props.width};
+  max-width: ${(props: TextProps) => props.width};
   @media screen and (max-width: 576px) {
     img {
       max-height: 60px;
