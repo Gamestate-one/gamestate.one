@@ -1,12 +1,12 @@
 /* font */
 @font-face {
-  font-family: 'Matrix';
-  src: url(styles/fonts/LcdSolid-VPzB.ttf) format('truetype');
+  font-family: "Matrix";
+  src: url(./assets/fonts/LcdSolid-VPzB.ttf) format("truetype");
   font-display: swap;
 }
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #000000 0% 0% no-repeat padding-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
