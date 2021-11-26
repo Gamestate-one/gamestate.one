@@ -39,11 +39,10 @@ const Header = () => {
                 PITCH DECK
               </StyledFirstButton>
               <StyledSecondButton
-                href="#"
-                onMouseEnter={() => setText('COMING SOON')}
-                onMouseLeave={() => setText('META PAPER')}
+                href="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Gamestate-Meta-Paper.pdf"
+                target="_blank"
               >
-                {text}
+                META PAPER
               </StyledSecondButton>
               <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
               <StyledFourthButton
