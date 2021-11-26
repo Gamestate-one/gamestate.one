@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import CoinBackground from 'app/assets/img/TokenSale/coinbackground.png';
-import TokenBackground from 'app/assets/img/TokenSale/token.png';
-import HiveLogo from 'app/assets/img/TokenSale/hivelogo.png';
-import PolygonLogo from 'app/assets/img/TokenSale/polygonlogo.png';
-import { Container } from 'react-bootstrap';
-import Countdown, { zeroPad } from 'react-countdown';
+import styled from "styled-components";
+import CoinBackground from "../../assets/img/TokenSale/coinbackground.png";
+import TokenBackground from "../../assets/img/TokenSale/token.png";
+import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
+import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
+import { Container } from "react-bootstrap";
+import Countdown, { zeroPad } from "react-countdown";
 
 export interface CountdownProps {
   days?: any;
