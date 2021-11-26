@@ -9,6 +9,9 @@ import coreRicardo from "../../assets/img/Team/coreRicardo.png"
 import coreSang from "../../assets/img/Team/coreSang.png"
 import coreTung from "../../assets/img/Team/coreTung.png"
 import coreViet from "../../assets/img/Team/coreViet.png"
+import coreManne from "../../assets/img/Team/coreManne.png"
+import corePeck from "../../assets/img/Team/corePeck.png"
+import coreMartinez from "../../assets/img/Team/coreMartinez.png"
 import mobileCoreCong from "../../assets/img/Team/mobileCoreCong.png"
 import mobileCoreKobus from "../../assets/img/Team/mobileCoreKobus.png"
 import mobileCoreLocke from "../../assets/img/Team/mobileCoreLocke.png"
@@ -17,6 +20,9 @@ import mobileCoreRicardo from "../../assets/img/Team/mobileCoreRicardo.png"
 import mobileCoreSang from "../../assets/img/Team/mobileCoreSang.png"
 import mobileCoreTung from "../../assets/img/Team/mobileCoreTung.png"
 import mobileCoreViet from "../../assets/img/Team/mobileCoreViet.png"
+import mobileCoreManne from "../../assets/img/Team/mobileCoreManne.png"
+import mobileCorePeck from "../../assets/img/Team/mobileCorePeck.png"
+import mobileCoreMartinez from "../../assets/img/Team/mobileCoreMartinez.png"
 import AvatarItem from "../AvatarItem"
 import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
@@ -118,6 +124,7 @@ const StyledItemDesc = styled.p`
   flex: 1;
   margin-top: 8px;
 `
+
 const CORE_TEAM = [
   {
     src: coreRicardo,
@@ -166,6 +173,24 @@ const CORE_TEAM = [
     name: "SANG THE DUONG",
     job: "3D DESIGNER",
     desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education.",
+  },
+  {
+    src: coreManne,
+    name: "Rycharde Manne",
+    job: "Metanomics Architect",
+    desc: "Published mathematics author, Oxford educated cryptonomics researcher, extensively proficient in stress testing algorithmic optimisations, designing and managing DeFi investments.",
+  },
+  {
+    src: corePeck,
+    name: "Sean Peck",
+    job: "Business Strategist",
+    desc: "MBA. Finance & Human Resources, BA. Biz Management. Experienced in manufacturing management, startups, valuations, mergers, acquisitions, project management, scaling, and strategic management.",
+  },
+  {
+    src: coreMartinez,
+    name: "Licarmen Martinez",
+    job: "Synergy Alliances",
+    desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
 ]
 
@@ -217,6 +242,24 @@ const MOBILE_CORE_TEAM = [
     name: "SANG THE DUONG",
     job: "3D DESIGNER",
     desc: "More than 5 years’ experience designing for various AR/VR applications, ranging from games, simulation, travel, and education.",
+  },
+  {
+    image: mobileCoreManne,
+    name: "Rycharde Manne",
+    job: "Metanomics Architect",
+    desc: "Published mathematics author, Oxford educated cryptonomics researcher, extensively proficient in stress testing algorithmic optimisations, designing and managing DeFi investments.",
+  },
+  {
+    image: mobileCorePeck,
+    name: "Sean Peck",
+    job: "Business Strategist",
+    desc: "MBA. Finance & Human Resources, BA. Biz Management. Experienced in manufacturing management, startups, valuations, mergers, acquisitions, project management, scaling, and strategic management.",
+  },
+  {
+    image: mobileCoreMartinez,
+    name: "Licarmen Martinez",
+    job: "Synergy Alliances",
+    desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
 ]
 const CoreTeam = () => {
