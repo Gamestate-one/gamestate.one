@@ -50,7 +50,7 @@ const TokenSale = () => {
               <img src={HiveLogo} alt="Hive Logo" />
               <span className="title">HIVE-ENGINE IDO</span>
               <Countdown
-                date={new Date('Nov 26 2021 05:00:00 UTC').getTime()}
+                date={new Date('Nov 26 2021 10:00:00 UTC').getTime()}
                 renderer={Rendered}
               />
             </Bar>
