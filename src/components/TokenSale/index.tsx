@@ -71,15 +71,15 @@ const TokenSale = () => {
             </Bar>
           </PolygonProgessBar>
         </StyledBar>
-        <StyledButton>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://getstarted.gamestate.one/"
-          >
-            Read more
-          </a>
-        </StyledButton>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://getstarted.gamestate.one/"
+        >
+          <StyledButton>Read more </StyledButton>
+        </a>
+
         <StyledTokenImage src={TokenBackground} alt="Token Background" />
       </StyledTokenSales>
     </Div>
@@ -340,10 +340,8 @@ const StyledButton = styled.button`
   line-height: 42px;
   font-weight: 500;
   text-transform: uppercase;
-  a {
-    color: #ffffff;
-    text-decoration: none;
-  }
+  color: #ffffff;
+  text-decoration: none;
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
