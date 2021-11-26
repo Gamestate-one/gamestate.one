@@ -19,23 +19,22 @@ const Igos = () => {
               an early opportunity to become part of games in the early startup
               phase.
             </StyledDescription>
-            <StyledButton>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8'
-              >
-                Read more
-              </a>
-            </StyledButton>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://medium.com/@gamestate/blurt-enginedrop-attestation-gamestate-megaverse-bbc48fd530f8"
+            >
+              <StyledButton>Read more </StyledButton>
+            </a>
           </StyledContent>
           <Col
-            className='pe-0'
+            className="pe-0"
             xs={{ span: 12, order: 2 }}
             sm={{ span: 12, order: 2 }}
             xl={{ span: 6, order: 2 }}
           >
-            <Banner src={BannerImage} alt='banner' />
+            <Banner src={BannerImage} alt="banner" />
           </Col>
         </StyledRow>
       </StyledContainer>
@@ -184,15 +183,13 @@ const StyledButton = styled.button`
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
   height: 50px;
-  a {
-    color: #ffffff;
-    text-shadow: 2px 4px 6px #ffffffbe;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 42px;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+  color: #ffffff;
+  text-shadow: 2px 4px 6px #ffffffbe;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 42px;
+  text-decoration: none;
+  text-transform: uppercase;
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
