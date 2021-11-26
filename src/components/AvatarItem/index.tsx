@@ -1,8 +1,8 @@
 import React from "react"
 import { Card } from "react-bootstrap"
 import styled from "styled-components"
-
-const StyledAvatar = styled.div`
+import { AvatarItemInterface } from "../../types/AvatarItemInterface"
+const StyledAvatar = styled.div<{ image: string }>`
   background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: center center;
@@ -87,7 +87,7 @@ const StyledCardDesc = styled(Card.Text)`
   margin-bottom: auto;
 `
 
-const AvatarItem = ({ item }) => {
+const AvatarItem = ({ item }: { item: AvatarItemInterface }) => {
   return (
     <StyledAvatar image={item.src}>
       <StyledCardInfo border="primary">

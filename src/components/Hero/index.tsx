@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import HeroVideo from "../../assets/videos/herovideo.mp4";
+
 const Hero = () => {
   return (
     <Div>

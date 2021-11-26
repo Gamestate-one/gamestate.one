@@ -50,6 +50,9 @@ const StyledStaking = styled(Container)`
       margin-top: -500px;
     }
   }
+  @media screen and (max-width: 500px) {
+    margin-top: -150px;
+  }
 `
 const StyledStakingColLeft = styled(Col)`
   padding-left: 112px;
@@ -86,9 +89,10 @@ const StyledStakingTitleLeft = styled.p`
   margin-top: 135px;
   margin-left: 4px;
   display: inline-block;
-  /* color: transparent;
-  text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e640ef; */
+  color: transparent;
+  /* text-shadow: 0 0 4px rgba(231, 64, 240, 0.77), 0 3px 6px #e13beb; */
   -webkit-text-stroke: 1px #e740f0;
+  text-shadow: 0 0 98px #e740f0c4, 0 1px 3px #e13beb;
 
   &::before {
     position: absolute;
@@ -104,10 +108,10 @@ const StyledStakingTitleLeft = styled.p`
   &::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: 30px;
     left: 0;
     width: 100%;
-    height: 20px;
+    height: 40px;
     background: #e740f0 0% 0% no-repeat padding-box;
     filter: blur(41px);
     z-index: 19;
@@ -120,7 +124,7 @@ const StyledStakingTitleLeft = styled.p`
     &:after {
       top: 10px;
       left: 0;
-      width: 28%;
+      width: 100%;
       height: 15px;
       filter: blur(15px);
     }
@@ -136,23 +140,21 @@ const StyledStakingTitleLeft = styled.p`
     }
     &:after {
       filter: unset;
-      width: 69%;
+      /* width: 69%; */
       z-index: -1;
       height: 0;
-      box-shadow: 20px 5px 28px 8px #e740f0;
+      box-shadow: 0px 5px 28px 8px #e740f0;
     }
   }
 `
-const StyledImgNft = styled.div`
+const StyledImgNft = styled.div<{ image: string; height: number }>`
   background-image: url(${(props) => props.image});
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   height: ${(props) => props.height}px;
-  /* @media screen and (max-width: 1399px) {
-    margin-top: ${(props) => props.top}px;
-  } */
+
   @media screen and (max-width: 767px) {
     &.mt-200 {
       /* margin-top: -200px; */
@@ -215,7 +217,7 @@ const StyledStakingTitleRight = styled.span`
   letter-spacing: 0;
   line-height: 80px;
   color: #6a9df9;
-  text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #163f8c;
+  /* text-shadow: 0px 3px 6px #163f8c, 0px 0px 98px #3178ff; */
   text-transform: uppercase;
   position: relative;
   z-index: 50;
@@ -233,17 +235,28 @@ const StyledStakingTitleRight = styled.span`
   }
   & span {
     position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px #3178ff;
+    text-shadow: 0px 1px 3px #4785f9, 0px 0px 7px #163f8c;
   }
   & span::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    height: 40px;
+    /* height: 40px;
     background: #6294ef 0% 0% no-repeat padding-box;
     opacity: 1;
-    filter: blur(39px);
-    z-index: -1;
+    filter: blur(39px); */
+
+    @media screen and (max-width: 576px) {
+      filter: unset;
+      /* width: 69%; */
+      z-index: -1;
+      height: 0;
+      box-shadow: 0px 5px 28px 8px #6294ef;
+      z-index: -1;
+    }
   }
   & span:nth-child(1)::before {
     width: 100%;
@@ -262,6 +275,16 @@ const StyledStakingTitleRight = styled.span`
     }
     &:after {
       right: -8px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    & span::before {
+      filter: unset;
+      /* width: 69%; */
+      z-index: -1;
+      height: 0;
+      box-shadow: 0px 5px 28px 8px #6294ef;
+      z-index: -1;
     }
   }
   @media screen and (max-width: 414px) {
@@ -318,7 +341,7 @@ const Staking = () => {
             </StyledDescLeft>
           </StyledStakingColLeft>
           <Col lg={{ span: 6, order: 1 }} xs={{ order: 1 }}>
-            <StyledImgNft image={StakingNftImage} height={1186} top="-100" />
+            <StyledImgNft image={StakingNftImage} height={1186} />
           </Col>
         </Row>
         <Row className="mt-350">
@@ -326,7 +349,6 @@ const Staking = () => {
             <StyledImgNft
               image={StakingCupImage}
               height={780}
-              // top="165"
               className="mt-200"
             />
           </Col>

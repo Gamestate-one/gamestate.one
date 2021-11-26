@@ -5,7 +5,14 @@ import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
 import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
 import { Container } from "react-bootstrap";
 import Countdown, { zeroPad } from "react-countdown";
-const Rendered = ({ days, hours, minutes, seconds }) => (
+
+export interface CountdownProps {
+  days?: any;
+  hours?: any;
+  minutes?: any;
+  seconds?: any;
+}
+const Rendered = ({ days, hours, minutes, seconds }: CountdownProps) => (
   <div className='countdown'>
     <div className='countdown__group'>
       <div className='countdown__item'>
@@ -43,7 +50,7 @@ const TokenSale = () => {
               <img src={HiveLogo} alt='Hive Logo' />
               <span className='title'>HIVE-ENGINE IDO</span>
               <Countdown
-                date={new Date("Nov 26 2021 02:00:00 UTC").getTime()}
+                date={new Date("Nov 26 2021 04:00:00 UTC").getTime()}
                 renderer={Rendered}
               />
             </Bar>

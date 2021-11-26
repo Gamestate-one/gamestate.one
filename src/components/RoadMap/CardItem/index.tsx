@@ -1,5 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+
+interface CardItemInterface {
+  label?: string
+  content: Array<string>
+  color: string
+  className: string
+}
 const StyledLabelCard = styled.span`
   background-color: ${(props) => props.color};
   color: #fff;
@@ -51,7 +58,7 @@ const StyledContent = styled.ul`
     padding-bottom: 16px;
   }
 `
-const CardItem = ({ label, content, color, className }) => {
+const CardItem = ({ label, content, color, className }: CardItemInterface) => {
   return (
     <StyledCardItem className={className}>
       <StyledLabelCard color={color}>{label}</StyledLabelCard>
