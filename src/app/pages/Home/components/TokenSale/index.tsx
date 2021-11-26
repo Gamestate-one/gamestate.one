@@ -49,10 +49,15 @@ const TokenSale = () => {
             <Bar>
               <img src={HiveLogo} alt="Hive Logo" />
               <span className="title">HIVE-ENGINE IDO</span>
-              <Countdown
+              {/* <Countdown
                 date={new Date('Nov 26 2021 10:00:00 UTC').getTime()}
                 renderer={Rendered}
-              />
+              /> */}
+              <div className="progessBar">
+                <div className="progessBar-fill">
+                  <div className="progessBar-fill-inner"></div>
+                </div>
+              </div>
             </Bar>
           </HiveProgessBar>
           <PolygonProgessBar fluid>
@@ -63,10 +68,23 @@ const TokenSale = () => {
                 date={new Date('Dec 7 2021 02:00:00 UTC').getTime()}
                 renderer={Rendered}
               />
+              {/* <div className="progessBar">
+                <div className="progessBar-fill">
+                  <div className="progessBar-fill-inner"></div>
+                </div>
+              </div> */}
             </Bar>
           </PolygonProgessBar>
         </StyledBar>
-        <StyledButton>Read more</StyledButton>
+        <StyledButton>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://getstarted.gamestate.one/"
+          >
+            Read more
+          </a>
+        </StyledButton>
         <StyledTokenImage src={TokenBackground} alt="Token Background" />
       </StyledTokenSales>
     </Div>
@@ -186,7 +204,7 @@ const HiveProgessBar = styled(ProgessBar)`
   display: flex;
   .progessBar-fill-inner {
     background-color: #ff0000;
-    width: 50%;
+    width: 15%;
   }
 `;
 const PolygonProgessBar = styled(ProgessBar)`
@@ -262,6 +280,32 @@ const Bar = styled.div`
       margin-left: 0;
     }
   }
+  .progessBar {
+    background-color: #13151f;
+    opacity: 1;
+    height: 81px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68%;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 24px;
+      margin-top: 12px;
+      width: 80%;
+    }
+    .progessBar-fill {
+      background-color: #000000;
+      width: 90%;
+      height: 10px;
+      border-radius: 13px;
+      .progessBar-fill-inner {
+        height: 10px;
+        border-radius: 13px;
+      }
+    }
+  }
+
   @media screen and (max-width: 991px) {
     flex-direction: column;
     & img {
@@ -295,13 +339,16 @@ const StyledButton = styled.button`
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
   height: 50px;
-  color: #ffffff;
   text-shadow: 2px 4px 6px #ffffffbe;
   text-decoration: none;
   font-size: 18px;
   line-height: 42px;
   font-weight: 500;
   text-transform: uppercase;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
