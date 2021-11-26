@@ -45,7 +45,7 @@ const Partners = () => {
       <StyledBlockLogo className="align-items-center flex-wrap mt-5 mb-124">
         <StyledLogo width="260" height="128" src={logoSplin} right="150" />
         <StyledLogo width="600" height="128" src={logoDefi} right="113" />
-        <StyledLogo width="264" height="185" src={logoAnother} right="117" />
+        <StyledLogo width="264" height="210" src={logoAnother} right="117" />
         <StyledLogo width="141" height="141" src={logoDig} right="0" />
         <StyledLogo width="477" height="76" src={logoHive} right="184" />
         <StyledLogo width="306" height="157" src={logoN} right="160" />
