@@ -5,15 +5,18 @@ const Hero = () => {
   return (
     <Div>
       <video
-        width='100%'
-        height='80%'
+        width="100%"
+        height="80%"
         autoPlay
         loop
         muted
         playsInline
-        preload='auto'
+        preload="auto"
       >
-        <source src={HeroVideo} type='video/mp4' />
+        <source
+          src="https://gamestatevideo.s3.us-east-2.amazonaws.com/herovideo.mp4"
+          type="video/mp4"
+        />
       </video>
     </Div>
   );
