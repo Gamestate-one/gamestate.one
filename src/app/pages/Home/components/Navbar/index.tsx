@@ -6,7 +6,6 @@ import close from 'app/assets/img/close.png';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [text, setText] = useState('META PAPER');
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
