@@ -1,18 +1,18 @@
-import { Container } from "react-bootstrap";
-import styled from "styled-components";
-import Background from "../../assets/img/Explore/background.png";
+import { Container } from "react-bootstrap"
+import styled from "styled-components"
+import Background from "../../assets/img/Explore/background.png"
 // import HeroBanner from "../../assets/img/Explore/Giff_Chip.gif";
-import ChipEffect from "../../assets/videos/Chip_Effect.mp4";
-import { useState } from "react";
+import ChipEffect from "../../assets/videos/Chip_Effect.mp4"
+import { useState } from "react"
 
 const Explore = () => {
-  const [text, setText] = useState("BUY");
-  const [textsd, setTextsd] = useState("NOW");
+  const [text, setText] = useState("BUY")
+  const [textsd, setTextsd] = useState("NOW")
   return (
     <Div>
       <StyledContainer>
         <StyledHeroVideo autoPlay loop muted playsInline>
-          <source src={ChipEffect} type='video/mp4' />
+          <source src={ChipEffect} type="video/mp4" />
         </StyledHeroVideo>
         <StyledDescription>
           <SpanPurple>Quantum Accelerator</SpanPurple> - Experience enhancing
@@ -21,12 +21,12 @@ const Explore = () => {
         </StyledDescription>
         <StyledButton
           onMouseEnter={() => {
-            setText("COMING");
-            setTextsd("SOON");
+            setText("COMING")
+            setTextsd("SOON")
           }}
           onMouseLeave={() => {
-            setText("BUY");
-            setTextsd("NOW");
+            setText("BUY")
+            setTextsd("NOW")
           }}
         >
           <StyledSpan>{text}</StyledSpan>
@@ -34,15 +34,15 @@ const Explore = () => {
         </StyledButton>
       </StyledContainer>
     </Div>
-  );
-};
+  )
+}
 
 const Div = styled.div`
   /* background-image: url(${Background}); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #05080a;
-`;
+`
 const StyledContainer = styled(Container)`
   opacity: 1;
   text-align: center;
@@ -52,14 +52,14 @@ const StyledContainer = styled(Container)`
   @media (max-width: 767px) {
     padding-bottom: 51px;
   }
-`;
+`
 const StyledHeroVideo = styled.video`
   /* max-width: 783px; */
   /* margin-top: 80px; */
   margin-bottom: 40px;
   width: 100%;
   max-height: 800px;
-`;
+`
 const StyledDescription = styled.div`
   font-weight: bold;
   font-size: 46px;
@@ -82,7 +82,7 @@ const StyledDescription = styled.div`
     line-height: 28px;
     padding-bottom: 40px;
   }
-`;
+`
 const StyledButton = styled.button`
   position: relative;
   width: 100%;
@@ -134,7 +134,7 @@ const StyledButton = styled.button`
       height: 37px;
     }
   }
-`;
+`
 const Span = styled.span`
   font-size: 23px;
   font-weight: 500;
@@ -144,16 +144,16 @@ const Span = styled.span`
     font-size: 14px;
     line-height: 37px;
   }
-`;
+`
 const StyledSpan = styled(Span)`
   padding-right: 13px;
   color: #2f85ff;
   text-shadow: 0px 3px 6px #7fb0f5, 0px 3px 6px #2f85ff;
-`;
+`
 const StyledSubSpan = styled(Span)`
   text-shadow: 0px 3px 6px #da87de, 0px 3px 6px #e740f0;
   color: #e740f0;
-`;
+`
 const SpanPurple = styled.span`
   color: #e740f0;
   position: relative;
@@ -169,9 +169,13 @@ const SpanPurple = styled.span`
     top: 50%;
     transform: translateY(-50%);
     @media screen and (max-width: 991px) {
-      height: 22px;
-      top: 0px;
+      /* height: 22px; */
+      /* top: 0px; */
+      filter: unset;
+      background: unset;
+      height: 0;
+      box-shadow: 0px 0px 50px 10px #e740f0;
     }
   }
-`;
-export default Explore;
+`
+export default Explore
