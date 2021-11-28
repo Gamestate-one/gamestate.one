@@ -8,12 +8,12 @@ const Hero = () => {
       {isLoading && <SolarSystemLoading color="yellow" />}
       <video
         width="100%"
-        height="auto"
+        height="80%"
         autoPlay
         loop
         muted
         playsInline
-        preload="none"
+        preload="auto"
         onLoadStart={() => {
           setIsLoading(true)
         }}
