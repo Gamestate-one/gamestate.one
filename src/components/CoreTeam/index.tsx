@@ -23,6 +23,7 @@ import mobileCoreViet from "../../assets/img/Team/mobileCoreViet.png"
 import mobileCoreManne from "../../assets/img/Team/mobileCoreManne.png"
 import mobileCorePeck from "../../assets/img/Team/mobileCorePeck.png"
 import mobileCoreMartinez from "../../assets/img/Team/mobileCoreMartinez.png"
+import anonymous from "../../assets/img/Team/anonymous.png"
 import AvatarItem from "../AvatarItem"
 import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
@@ -192,6 +193,12 @@ const CORE_TEAM = [
     job: "Synergy Alliances",
     desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
+  {
+    src: anonymous,
+    name: "",
+    job: "",
+    desc: "",
+  },
 ]
 
 const MOBILE_CORE_TEAM = [
@@ -261,6 +268,12 @@ const MOBILE_CORE_TEAM = [
     job: "Synergy Alliances",
     desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
+  {
+    image: anonymous,
+    name: "",
+    job: "",
+    desc: "",
+  },
 ]
 const CoreTeam = () => {
   return (
@@ -277,7 +290,7 @@ const CoreTeam = () => {
         <StyledTeamRow>
           {CORE_TEAM.map((item, idx) => (
             <StyledItemCol md={6} xxl={3} key={idx}>
-              <AvatarItem item={item} />
+              <AvatarItem item={item} anonymous={idx === 11} />
             </StyledItemCol>
           ))}
         </StyledTeamRow>
