@@ -17,7 +17,7 @@ const Hero = () => {
         onLoadStart={() => {
           setIsLoading(true);
         }}
-        onLoadedData={() => {
+        onCanPlay={() => {
           setIsLoading(false);
         }}
       >
