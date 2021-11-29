@@ -33,7 +33,7 @@ const StyledCardInfo = styled(Card)`
   margin: 0 12px 12px 12px;
   text-align: center;
   border: none;
-  display: ${(props) => props.anonymous && "none"};
+  display: ${(props) => props.anonymous === 1 && "none"};
   @media screen and (max-width: 1791px) {
     min-height: 239px;
   }
@@ -97,7 +97,7 @@ const AvatarItem = ({
 }) => {
   return (
     <StyledAvatar image={item.src}>
-      <StyledCardInfo border="primary" anonymous={anonymous}>
+      <StyledCardInfo border="primary" anonymous={anonymous ? 1 : 0}>
         <Card.Body className="d-flex flex-column px-1">
           <StyledCardName dangerouslySetInnerHTML={{ __html: item.name }} />
           <StyledCardJob>{item.job}</StyledCardJob>

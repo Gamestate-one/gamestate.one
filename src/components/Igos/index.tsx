@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import BannerImage from "../../assets/img/Igos/banner.png";
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import BannerImage from "../../assets/img/Igos/banner.png"
 
 const Igos = () => {
   return (
@@ -39,14 +39,14 @@ const Igos = () => {
         </StyledRow>
       </StyledContainer>
     </Div>
-  );
-};
+  )
+}
 
 const Div = styled.div`
   background: transparent
     linear-gradient(111deg, #163f8c 0%, #8f65be 48%, #e740f0 100%) 0% 0%
     no-repeat padding-box;
-`;
+`
 const StyledContainer = styled(Container)`
   opacity: 1;
   padding-top: 80px;
@@ -56,7 +56,7 @@ const StyledContainer = styled(Container)`
     padding-top: 70px;
     padding-bottom: 60px;
   }
-`;
+`
 const P = styled.p`
   letter-spacing: 0px;
   display: flex;
@@ -66,8 +66,8 @@ const P = styled.p`
   @media (max-width: 1759px) {
     margin-bottom: 20px;
   }
-`;
-const StyledRow = styled(Row)``;
+`
+const StyledRow = styled(Row)``
 const StyledContent = styled(Col)`
   padding-top: 50px;
   @media screen and (max-width: 1199px) {
@@ -107,14 +107,14 @@ const StyledContent = styled(Col)`
       }
     }
   }
-`;
+`
 const Banner = styled.img`
   width: 100%;
   height: 100%;
   @media screen and (max-width: 1199px) {
     padding-top: 48px;
   }
-`;
+`
 const StyledTitle = styled(P)`
   position: relative;
   font-weight: bold;
@@ -158,7 +158,7 @@ const StyledTitle = styled(P)`
       top: -40px;
     }
   }
-`;
+`
 const StyledDescription = styled(P)`
   font-weight: 500;
   font-size: 20px;
@@ -175,38 +175,36 @@ const StyledDescription = styled(P)`
     font-size: 16px;
     line-height: 19px;
   }
-`;
+`
 const StyledButton = styled.button`
   min-width: 160px;
+  margin-top: 60px;
   background-color: transparent;
   border: 3px solid #ffffff;
   box-shadow: 0px 0px 6px 4px #ffffff;
   border-radius: 48px;
   height: 50px;
-  color: #ffffff;
   text-shadow: 2px 4px 6px #ffffffbe;
-  font-weight: 500;
+  text-decoration: none;
   font-size: 18px;
   line-height: 42px;
-  text-decoration: none;
+  font-weight: 500;
   text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
   @media screen and (max-width: 654px) {
     min-width: 140px;
     height: 40px;
-    a {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 34px;
-    }
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 500;
   }
   @media screen and (max-width: 427px) {
     min-width: 100px;
     height: 40px;
-    a {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 34px;
-    }
+    font-size: 12px;
+    line-height: 34px;
+    font-weight: 500;
   }
-`;
-export default Igos;
+`
+export default Igos
