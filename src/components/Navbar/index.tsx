@@ -20,34 +20,34 @@ const Header = () => {
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed="top"
-        expand="lg"
-        variant="dark"
+        fixed='top'
+        expand='lg'
+        variant='dark'
       >
         <StyledContainer>
-          <Navbar.Brand href="#">
-            <StyledImg src={Logo} alt="Logo" />
+          <Navbar.Brand href='#'>
+            <StyledImg src={Logo} alt='Logo' />
           </Navbar.Brand>
-          <StyledNavbarToggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <StyledNavbarToggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
             <StyledNav>
               <StyledFirstButton
-                href="https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1"
-                target="_blank"
+                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
+                target='_blank'
               >
                 PITCH DECK
               </StyledFirstButton>
               <StyledSecondButton
-                href="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Gamestate-Meta-Paper-v1.pdf"
-                target="_blank"
+                href='https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Gamestate-Meta-Paper-v1.pdf'
+                target='_blank'
               >
-                META PAPER
+                METAPAPER
               </StyledSecondButton>
 
-              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
+              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
               <StyledFourthButton
-                href="https://getstarted.gamestate.one"
-                target="_blank"
+                href='https://getstarted.gamestate.one'
+                target='_blank'
               >
                 GET STARTED
               </StyledFourthButton>
