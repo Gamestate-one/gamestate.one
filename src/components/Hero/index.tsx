@@ -1,32 +1,40 @@
 import styled from "styled-components"
 import { useState } from "react"
-import { SolarSystemLoading } from "react-loadingg"
+import Loading from "../Loading"
+const StyledLoadingProgress = styled(Loading)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 10px;
+`
 const Hero = () => {
-  const [isLoading, setIsLoading] = useState(false)
-  const StyledLoading = styled(SolarSystemLoading)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  `
+  const [isLoading, setIsLoading] = useState(true)
   return (
     <Div>
-      {isLoading && <StyledLoading color="yellow" />}
+      {isLoading && <StyledLoadingProgress done={100} />}
       <video
-        width="100%"
-        height="80%"
-        autoPlay
+        width={isLoading ? "0" : "100%"}
+        height={isLoading ? "0" : "80%"}
+        autoPlay={true}
         loop
         muted
         playsInline
-        preload="none"
+        preload="auto"
         onLoadStart={() => {
           setIsLoading(true)
         }}
-        onCanPlay={() => {
-          setIsLoading(false)
+        onLoadedData={() => {
+          const delay = setTimeout(() => {
+            setIsLoading(false)
+          }, 3000)
+          if (!isLoading) {
+            clearTimeout(delay)
+          }
         }}
       >
         <source
@@ -38,8 +46,9 @@ const Hero = () => {
   )
 }
 export default Hero
+
 const Div = styled.div`
-  position: relative;
+  /* position: relative; */
   text-align: center;
   display: flex;
   justify-content: center;

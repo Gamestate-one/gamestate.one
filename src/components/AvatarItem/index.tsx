@@ -33,6 +33,7 @@ const StyledCardInfo = styled(Card)`
   margin: 0 12px 12px 12px;
   text-align: center;
   border: none;
+  display: ${(props) => props.anonymous && "none"};
   @media screen and (max-width: 1791px) {
     min-height: 239px;
   }
@@ -87,10 +88,16 @@ const StyledCardDesc = styled(Card.Text)`
   margin-bottom: auto;
 `
 
-const AvatarItem = ({ item }: { item: AvatarItemInterface }) => {
+const AvatarItem = ({
+  item,
+  anonymous,
+}: {
+  item: AvatarItemInterface
+  anonymous?: boolean
+}) => {
   return (
     <StyledAvatar image={item.src}>
-      <StyledCardInfo border="primary">
+      <StyledCardInfo border="primary" anonymous={anonymous}>
         <Card.Body className="d-flex flex-column px-1">
           <StyledCardName dangerouslySetInnerHTML={{ __html: item.name }} />
           <StyledCardJob>{item.job}</StyledCardJob>
