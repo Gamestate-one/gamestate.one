@@ -22,7 +22,7 @@ const Hero = () => {
         }}
       >
         <source
-          src='https://gamestatevideo.s3.us-east-2.amazonaws.com/herovideo.mp4'
+          src='https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Logo_Effect_VS1.mp4'
           type='video/mp4'
         />
       </video>
