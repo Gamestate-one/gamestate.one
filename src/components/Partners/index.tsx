@@ -12,9 +12,16 @@ import logoEdso from "../../assets/img/Logo/logoEdso.svg"
 import logoBlockchain from "../../assets/img/Logo/logoDemo.svg"
 import logoPolygon from "../../assets/img/Logo/logoPolygon.svg"
 import logoArweave from "../../assets/img/Logo/logoArweave.svg"
-const StyledBlockLogo = styled(Row)`
+const StyledBlockLogo = styled(Row)<{ technology?: number }>`
   margin-bottom: 124px;
-  justify-content: center;
+  ${(props) =>
+    props.technology === 1
+      ? `
+    justify-content: space-evenly;
+    width: 82%;
+    margin: 0 auto;`
+      : `
+    justify-content: center; `}
 
   @media screen and (max-width: 1788px) {
     & img {
@@ -56,11 +63,14 @@ const Partners = () => {
       <Row>
         <LabelSection label="TECHNOLOGY PARTNERS" topAuto="mt-auto" />
       </Row>
-      <StyledBlockLogo className="align-items-center flex-wrap mt-5 mb-124">
-        <StyledLogo width="314" height="54" src={logoPolygon} right="136" />
-        <StyledLogo width="858" height="186" src={logoBlockchain} right="128" />
-        <StyledLogo width="314" height="54" src={logoEdso} right="71" />
-        <StyledLogo width="306" height="157" src={logoN} right="160" />
+      <StyledBlockLogo
+        className="align-items-center flex-wrap mt-5 mb-124"
+        technology={1}
+      >
+        <StyledLogo width="314" height="54" src={logoPolygon} />
+        <StyledLogo width="858" height="186" src={logoBlockchain} />
+        <StyledLogo width="314" height="54" src={logoEdso} />
+        <StyledLogo width="306" height="157" src={logoN} />
         <StyledLogo width="314" height="54" src={logoArweave} />
       </StyledBlockLogo>
     </Container>
