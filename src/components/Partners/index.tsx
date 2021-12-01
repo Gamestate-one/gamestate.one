@@ -45,6 +45,10 @@ const StyledLogo = styled.img<{
   max-height: ${(props) => props.height}px;
   margin-right: ${(props) => props.right}px;
 `
+const StyledBlockLogoPolygon = styled(Row)`
+  justify-content: center;
+  margin: 70px 0;
+`
 const Partners = () => {
   return (
     <Container>
@@ -57,7 +61,6 @@ const Partners = () => {
         <StyledLogo width="264" height="210" src={logoAnother} right="117" />
         <StyledLogo width="141" height="141" src={logoDig} right="0" />
         <StyledLogo width="477" height="76" src={logoHive} right="184" />
-        {/* <StyledLogo width="197" height="197" src={logoVR} right="170" /> */}
         <StyledLogo width="215" height="198" src={logoBirt} />
       </StyledBlockLogo>
       <Row>
@@ -67,11 +70,13 @@ const Partners = () => {
         className="align-items-center flex-wrap mt-5 mb-124"
         technology={1}
       >
-        <StyledLogo width="314" height="54" src={logoPolygon} />
         <StyledLogo width="858" height="186" src={logoBlockchain} />
         <StyledLogo width="314" height="54" src={logoEdso} />
         <StyledLogo width="306" height="157" src={logoN} />
         <StyledLogo width="314" height="54" src={logoArweave} />
+        <StyledBlockLogoPolygon>
+          <StyledLogo width="314" height="54" src={logoPolygon} />
+        </StyledBlockLogoPolygon>
       </StyledBlockLogo>
     </Container>
   )
