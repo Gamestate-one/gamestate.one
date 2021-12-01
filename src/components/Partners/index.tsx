@@ -54,12 +54,12 @@ const Partners = () => {
         <StyledLogo width="215" height="198" src={logoBirt} />
       </StyledBlockLogo>
       <Row>
-        <LabelSection label="SYNERGY PARTNERS" topAuto="mt-auto" />
+        <LabelSection label="TECHNOLOGY PARTNERS" topAuto="mt-auto" />
       </Row>
       <StyledBlockLogo className="align-items-center flex-wrap mt-5 mb-124">
+        <StyledLogo width="314" height="54" src={logoPolygon} right="136" />
         <StyledLogo width="858" height="186" src={logoBlockchain} right="128" />
         <StyledLogo width="314" height="54" src={logoEdso} right="71" />
-        <StyledLogo width="314" height="54" src={logoPolygon} right="136" />
         <StyledLogo width="306" height="157" src={logoN} right="160" />
         <StyledLogo width="314" height="54" src={logoArweave} />
       </StyledBlockLogo>
