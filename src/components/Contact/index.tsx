@@ -98,7 +98,7 @@ const StyledBlockForm = styled(Col)`
 `
 const Contact = () => {
   return (
-    <StyledContainerContact fluid="xl">
+    <StyledContainerContact fluid="xl" id="contact-form">
       <StyledBlockContact>
         <StyledImageContact md={12} lg={6} />
         <StyledBlockForm md={12} lg={6}>
