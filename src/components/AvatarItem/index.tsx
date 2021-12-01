@@ -95,7 +95,19 @@ const AvatarItem = ({
   item: AvatarItemInterface
   anonymous?: boolean
 }) => {
-  return (
+  return anonymous ? (
+    <a href="#contact-form">
+      <StyledAvatar image={item.src}>
+        <StyledCardInfo border="primary" anonymous={anonymous ? 1 : 0}>
+          <Card.Body className="d-flex flex-column px-1">
+            <StyledCardName dangerouslySetInnerHTML={{ __html: item.name }} />
+            <StyledCardJob>{item.job}</StyledCardJob>
+            <StyledCardDesc>{item.desc}</StyledCardDesc>
+          </Card.Body>
+        </StyledCardInfo>
+      </StyledAvatar>
+    </a>
+  ) : (
     <StyledAvatar image={item.src}>
       <StyledCardInfo border="primary" anonymous={anonymous ? 1 : 0}>
         <Card.Body className="d-flex flex-column px-1">

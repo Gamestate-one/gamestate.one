@@ -295,14 +295,25 @@ const CoreTeam = () => {
           ))}
         </StyledTeamRow>
         <StyledMobileTeamRow>
-          {MOBILE_CORE_TEAM.map((item, idx) => (
-            <StyledItemColMobile key={idx}>
-              <StyledItemImage image={item.image} />
-              <StyledItemName>{item.name}</StyledItemName>
-              <StyledItemJob>{item.job}</StyledItemJob>
-              <StyledItemDesc>{item.desc}</StyledItemDesc>
-            </StyledItemColMobile>
-          ))}
+          {MOBILE_CORE_TEAM.map((item, idx) =>
+            item.name === "" ? (
+              <StyledItemColMobile key={idx}>
+                <a href="#contact-form">
+                  <StyledItemImage image={item.image} />
+                  <StyledItemName>{item.name}</StyledItemName>
+                  <StyledItemJob>{item.job}</StyledItemJob>
+                  <StyledItemDesc>{item.desc}</StyledItemDesc>
+                </a>
+              </StyledItemColMobile>
+            ) : (
+              <StyledItemColMobile key={idx}>
+                <StyledItemImage image={item.image} />
+                <StyledItemName>{item.name}</StyledItemName>
+                <StyledItemJob>{item.job}</StyledItemJob>
+                <StyledItemDesc>{item.desc}</StyledItemDesc>
+              </StyledItemColMobile>
+            ),
+          )}
         </StyledMobileTeamRow>
       </Container>
     </StyledBlockCoreTeam>
