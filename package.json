@@ -24,7 +24,14 @@
     "styled-components": "^5.3.3",
     "typed.js": "^2.0.12",
     "typing-effect-reactjs": "^1.4.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "kafkajs": "^1.15.0",
+    "redis": "^3.1.2",
+    "web3": "^1.6.1",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
   },
   "scripts": {
     "start": "react-scripts start",
