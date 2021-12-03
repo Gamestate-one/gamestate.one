@@ -4,7 +4,7 @@ import Loading from "../Loading"
 const StyledLoadingProgress = styled(Loading)`
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,7 +19,7 @@ const Hero = () => {
       {isLoading && <StyledLoadingProgress done={100} />}
       <video
         width={isLoading ? "0" : "100%"}
-        height={isLoading ? "0" : "80%"}
+        height={isLoading ? "0" : "100%"}
         autoPlay={true}
         loop
         muted
@@ -38,7 +38,7 @@ const Hero = () => {
         }}
       >
         <source
-          src="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Logo_Effect_VS1.mp4"
+          src="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/GS_Cinematic_v01.mp4"
           type="video/mp4"
         />
       </video>
@@ -52,9 +52,11 @@ const Div = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 93px;
   background-color: #05080a;
-  @media screen and (max-width: 991px) {
-    padding-bottom: 30px;
+
+  @media screen and (max-width: 576px) {
+    /* padding-bottom: 30px; */
+    padding-top: 66px;
   }
 `

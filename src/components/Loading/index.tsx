@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 const StyledLoading = styled.div`
   /* height: 800px; */
-  min-height: 34vw;
+  /* min-height: 34vw; */
+  min-height: 58vw;
   height: 100%;
   width: 100%;
   display: flex;
@@ -19,6 +20,7 @@ const StyledLoading = styled.div`
     border-radius: 20px;
     /* position: relative; */
     margin: 15px 0;
+    margin-top: -8vw;
     height: 10px;
     width: 60%;
   }
