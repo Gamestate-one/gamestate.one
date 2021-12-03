@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { useState } from "react"
 import Loading from "../Loading"
+import VolumeUpIcon from "@mui/icons-material/VolumeUp"
+import VolumeOffIcon from "@mui/icons-material/VolumeOff"
 const StyledLoadingProgress = styled(Loading)`
   display: flex;
   justify-content: center;
@@ -14,6 +16,7 @@ const StyledLoadingProgress = styled(Loading)`
 `
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(true)
+  const [isTurnOnSound, setIsTurnOnSound] = useState(true)
   return (
     <Div>
       {isLoading && <StyledLoadingProgress done={100} />}
@@ -22,7 +25,7 @@ const Hero = () => {
         height={isLoading ? "0" : "100%"}
         autoPlay={true}
         loop
-        muted
+        muted={isTurnOnSound}
         playsInline
         preload="auto"
         onLoadStart={() => {
@@ -42,13 +45,18 @@ const Hero = () => {
           type="video/mp4"
         />
       </video>
+      {!isLoading && (
+        <StyledIconSound onClick={() => setIsTurnOnSound(!isTurnOnSound)}>
+          {isTurnOnSound ? <VolumeOffIcon /> : <VolumeUpIcon />}
+        </StyledIconSound>
+      )}
     </Div>
   )
 }
 export default Hero
 
 const Div = styled.div`
-  /* position: relative; */
+  position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -58,5 +66,17 @@ const Div = styled.div`
   @media screen and (max-width: 576px) {
     /* padding-bottom: 30px; */
     padding-top: 66px;
+  }
+`
+const StyledIconSound = styled.div`
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  color: white;
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 576px) {
+    top: 80px;
   }
 `
