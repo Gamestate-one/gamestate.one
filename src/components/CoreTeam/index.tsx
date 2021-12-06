@@ -12,6 +12,7 @@ import coreViet from "../../assets/img/Team/coreViet.png"
 import coreManne from "../../assets/img/Team/coreManne.png"
 import corePeck from "../../assets/img/Team/corePeck.png"
 import coreMartinez from "../../assets/img/Team/coreMartinez.png"
+import coreTien from "../../assets/img/Team/coreTien.png"
 import mobileCoreCong from "../../assets/img/Team/mobileCoreCong.png"
 import mobileCoreKobus from "../../assets/img/Team/mobileCoreKobus.png"
 import mobileCoreLocke from "../../assets/img/Team/mobileCoreLocke.png"
@@ -22,8 +23,8 @@ import mobileCoreTung from "../../assets/img/Team/mobileCoreTung.png"
 import mobileCoreViet from "../../assets/img/Team/mobileCoreViet.png"
 import mobileCoreManne from "../../assets/img/Team/mobileCoreManne.png"
 import mobileCorePeck from "../../assets/img/Team/mobileCorePeck.png"
-import mobileCoreMartinez from "../../assets/img/Team/mobileCoreMartinez.png"
-import anonymous from "../../assets/img/Team/anonymous.png"
+// import mobileCoreMartinez from "../../assets/img/Team/mobileCoreMartinez.png"
+// import anonymous from "../../assets/img/Team/anonymous.png"
 import AvatarItem from "../AvatarItem"
 import team from "../../assets/img/Team/team.png"
 import styled from "styled-components"
@@ -165,7 +166,7 @@ const CORE_TEAM = [
   },
   {
     src: coreViet,
-    name: `VIET &nbsp;TUAN VU`,
+    name: `VIET TUAN VU`,
     job: "VR GAME SPECIALIST",
     desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
@@ -194,10 +195,10 @@ const CORE_TEAM = [
     desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
   {
-    src: anonymous,
-    name: "",
-    job: "",
-    desc: "",
+    src: coreTien,
+    name: "TIEN NGUYEN",
+    job: "Digital Marketing Specialist",
+    desc: "Digital marketing with a focus on social media, web development, SEO, software development, e-commerce, edtech and fintech.",
   },
 ]
 
@@ -240,7 +241,7 @@ const MOBILE_CORE_TEAM = [
   },
   {
     image: mobileCoreViet,
-    name: `VIET  TUAN VU`,
+    name: `VIET TUAN VU`,
     job: "VR GAME SPECIALIST",
     desc: "18 years’ experience in the fields of telecommunications and IT. More than 5 years involved in collaborating and providing AR/VR solutions to a wide range of industries.",
   },
@@ -263,16 +264,17 @@ const MOBILE_CORE_TEAM = [
     desc: "MBA. Finance & Human Resources, BA. Biz Management. Experienced in manufacturing management, startups, valuations, mergers, acquisitions, project management, scaling, and strategic management.",
   },
   {
-    image: mobileCoreMartinez,
+    image: coreMartinez,
     name: "Licarmen Martinez",
     job: "Synergy Alliances",
     desc: "PhD. Management Science, skilled in industrial relations, managing agile tools in blockchain teams and communities, international speaker, organizer of international virtual events.",
   },
+
   {
-    image: anonymous,
-    name: "",
-    job: "",
-    desc: "",
+    image: coreTien,
+    name: "TIEN NGUYEN",
+    job: "Digital Marketing Specialist",
+    desc: "Digital marketing with a focus on social media, web development, SEO, software development, e-commerce, edtech and fintech.",
   },
 ]
 const CoreTeam = () => {
@@ -290,30 +292,30 @@ const CoreTeam = () => {
         <StyledTeamRow>
           {CORE_TEAM.map((item, idx) => (
             <StyledItemCol md={6} xxl={3} key={idx}>
-              <AvatarItem item={item} anonymous={idx === 11} />
+              <AvatarItem item={item} />
+              {/* <AvatarItem item={item} anonymous={idx === 11} /> */}
             </StyledItemCol>
           ))}
         </StyledTeamRow>
         <StyledMobileTeamRow>
-          {MOBILE_CORE_TEAM.map((item, idx) =>
-            item.name === "" ? (
-              <StyledItemColMobile key={idx}>
-                <a href="#contact-form">
-                  <StyledItemImage image={item.image} />
-                  <StyledItemName>{item.name}</StyledItemName>
-                  <StyledItemJob>{item.job}</StyledItemJob>
-                  <StyledItemDesc>{item.desc}</StyledItemDesc>
-                </a>
-              </StyledItemColMobile>
-            ) : (
-              <StyledItemColMobile key={idx}>
-                <StyledItemImage image={item.image} />
-                <StyledItemName>{item.name}</StyledItemName>
-                <StyledItemJob>{item.job}</StyledItemJob>
-                <StyledItemDesc>{item.desc}</StyledItemDesc>
-              </StyledItemColMobile>
-            ),
-          )}
+          {MOBILE_CORE_TEAM.map((item, idx) => (
+            // item.name === "" ? (
+            //   <StyledItemColMobile key={idx}>
+            //     <a href="#contact-form">
+            //       <StyledItemImage image={item.image} />
+            //       <StyledItemName>{item.name}</StyledItemName>
+            //       <StyledItemJob>{item.job}</StyledItemJob>
+            //       <StyledItemDesc>{item.desc}</StyledItemDesc>
+            //     </a>
+            //   </StyledItemColMobile>
+            // ) : (
+            <StyledItemColMobile key={idx}>
+              <StyledItemImage image={item.image} />
+              <StyledItemName>{item.name}</StyledItemName>
+              <StyledItemJob>{item.job}</StyledItemJob>
+              <StyledItemDesc>{item.desc}</StyledItemDesc>
+            </StyledItemColMobile>
+          ))}
         </StyledMobileTeamRow>
       </Container>
     </StyledBlockCoreTeam>

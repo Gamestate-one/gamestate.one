@@ -1,16 +1,17 @@
-import styled from "styled-components";
-import CoinBackground from "../../assets/img/TokenSale/coinbackground.png";
-import TokenBackground from "../../assets/img/TokenSale/token.png";
-import HiveLogo from "../../assets/img/TokenSale/hivelogo.png";
-import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png";
-import { Container } from "react-bootstrap";
-import Countdown, { zeroPad } from "react-countdown";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import styled from "styled-components"
+import CoinBackground from "../../assets/img/TokenSale/coinbackground.png"
+import TokenBackground from "../../assets/img/TokenSale/token.png"
+// import HiveLogo from "../../assets/img/TokenSale/hivelogo.png"
+import PolygonLogo from "../../assets/img/TokenSale/polygonlogo.png"
+import { Container } from "react-bootstrap"
+import Countdown, { zeroPad } from "react-countdown"
 
 export interface CountdownProps {
-  days?: any;
-  hours?: any;
-  minutes?: any;
-  seconds?: any;
+  days?: any
+  hours?: any
+  minutes?: any
+  seconds?: any
 }
 const Rendered = ({ days, hours, minutes, seconds }: CountdownProps) => (
   <div className="countdown">
@@ -35,7 +36,7 @@ const Rendered = ({ days, hours, minutes, seconds }: CountdownProps) => (
       </div>
     </div>
   </div>
-);
+)
 const TokenSale = () => {
   return (
     <Div>
@@ -45,27 +46,27 @@ const TokenSale = () => {
           <StyledSubTitle>Sale</StyledSubTitle>
         </div>
         <StyledBar>
-          <HiveProgessBar fluid>
+          {/* <HiveProgessBar fluid>
             <Bar>
               <img src={HiveLogo} alt="Hive Logo" />
               <span className="title">HIVE-ENGINE IDO</span>
-              {/* <Countdown
+              <Countdown
                 date={new Date('Nov 26 2021 10:00:00 UTC').getTime()}
                 renderer={Rendered}
-              /> */}
+              />
               <div className="progessBar">
                 <div className="progessBar-fill">
                   <div className="progessBar-fill-inner"></div>
                 </div>
               </div>
             </Bar>
-          </HiveProgessBar>
+          </HiveProgessBar> */}
           <PolygonProgessBar fluid>
             <Bar>
               <img src={PolygonLogo} alt="Polygon Logo" />
               <span className="title">Polygon IDO</span>
               <Countdown
-                date={new Date("Dec 7 2021 02:00:00 UTC").getTime()}
+                date={new Date("Dec 10 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
               />
             </Bar>
@@ -83,14 +84,14 @@ const TokenSale = () => {
         <StyledTokenImage src={TokenBackground} alt="Token Background" />
       </StyledTokenSales>
     </Div>
-  );
-};
+  )
+}
 
 const Div = styled.div`
   /* background: url(${CoinBackground}) no-repeat; */
   background-position: top center;
   background-size: cover;
-`;
+`
 const StyledTokenSales = styled(Container)`
   position: relative;
   text-align: center;
@@ -109,7 +110,7 @@ const StyledTokenSales = styled(Container)`
   @media screen and (max-width: 768px) {
     max-width: 94%;
   }
-`;
+`
 const Title = styled.span`
   font-weight: bold;
   font-size: 77px;
@@ -126,7 +127,7 @@ const Title = styled.span`
     font-size: 32px;
     line-height: 60px;
   }
-`;
+`
 const StyledTitle = styled(Title)`
   color: #6a9df9;
   padding-right: 20px;
@@ -145,7 +146,7 @@ const StyledTitle = styled(Title)`
       top: 0px;
     }
   }
-`;
+`
 const StyledSubTitle = styled(Title)`
   color: #e740f0;
   position: relative;
@@ -164,7 +165,7 @@ const StyledSubTitle = styled(Title)`
       top: 0px;
     }
   }
-`;
+`
 const StyledTokenImage = styled.img`
   position: absolute;
   top: 150px;
@@ -172,11 +173,11 @@ const StyledTokenImage = styled.img`
   max-width: 664px;
   max-height: 566px;
   z-index: -10;
-`;
+`
 
 const StyledBar = styled.div`
   margin-top: 63px;
-`;
+`
 const ProgessBar = styled(Container)`
   background: #262626 0% 0% no-repeat padding-box;
   margin: 0 auto;
@@ -193,7 +194,7 @@ const ProgessBar = styled(Container)`
   @media screen and (max-width: 1400px) {
     max-width: unset;
   }
-`;
+`
 const HiveProgessBar = styled(ProgessBar)`
   margin-bottom: 60px;
   display: flex;
@@ -201,14 +202,14 @@ const HiveProgessBar = styled(ProgessBar)`
     background-color: #ff0000;
     width: 15%;
   }
-`;
+`
 const PolygonProgessBar = styled(ProgessBar)`
   display: flex;
   .progessBar-fill-inner {
     background-color: #1969ff;
     width: 35%;
   }
-`;
+`
 const Bar = styled.div`
   display: flex;
   align-items: center;
@@ -324,7 +325,7 @@ const Bar = styled.div`
       }
     }
   }
-`;
+`
 //test
 const StyledButton = styled.button`
   min-width: 160px;
@@ -356,5 +357,5 @@ const StyledButton = styled.button`
     line-height: 34px;
     font-weight: 500;
   }
-`;
-export default TokenSale;
+`
+export default TokenSale
