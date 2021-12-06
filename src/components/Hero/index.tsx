@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import Loading from "../Loading"
 import VolumeUpIcon from "@mui/icons-material/VolumeUp"
 import VolumeOffIcon from "@mui/icons-material/VolumeOff"
@@ -19,14 +19,27 @@ const Hero = () => {
   const videoRef = useRef<any>()
   const [isLoading, setIsLoading] = useState(true)
   const [isTurnOnSound, setIsTurnOnSound] = useState(true)
+  const [isControls, setIsControls] = useState(false)
+  const ios =
+    !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
   const handleClickFullscreen = () => {
     const videoElement = videoRef.current
     if (videoElement.requestFullscreen) videoElement.requestFullscreen()
-    else if (videoElement.webkitRequestFullscreen)
-      videoElement.webkitRequestFullscreen()
-    else if (videoElement.msRequestFullscreen)
+    else if (videoElement.webkitRequestFullscreen) {
+      videoElement.webkitEnterFullScreen()
+    } else if (ios) {
+      videoElement.webkitEnterFullScreen()
+    } else if (videoElement.msRequestFullscreen)
       videoElement.msRequestFullscreen()
   }
+  useEffect(() => {
+    videoRef.current?.addEventListener("contextmenu", (e: any) => {
+      e.preventDefault()
+    })
+    if (window.innerWidth < 576) {
+      setIsControls(true)
+    }
+  }, [])
   return (
     <Div>
       {isLoading && <StyledLoadingProgress done={100} />}
@@ -34,7 +47,8 @@ const Hero = () => {
         ref={videoRef}
         width={isLoading ? "0" : "100%"}
         height={isLoading ? "0" : "100%"}
-        autoPlay={true}
+        autoPlay
+        controls={isControls}
         loop
         muted={isTurnOnSound}
         playsInline
@@ -42,21 +56,19 @@ const Hero = () => {
         onLoadStart={() => {
           setIsLoading(true)
         }}
-        onLoadedData={() => {
+        onCanPlay={() => {
           const delay = setTimeout(() => {
             setIsLoading(false)
           }, 3000)
-          if (!isLoading) {
-            clearTimeout(delay)
-          }
+          !isLoading && clearTimeout(delay)
         }}
       >
         <source
-          src="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/GS_Cinematic_v01.mp4"
+          src="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/GS_Cinematic_v04_HQ.mp4"
           type="video/mp4"
         />
       </video>
-      {!isLoading && (
+      {!isLoading && !isControls && (
         <>
           <StyledIconSound onClick={() => setIsTurnOnSound(!isTurnOnSound)}>
             {isTurnOnSound ? <VolumeOffIcon /> : <VolumeUpIcon />}
@@ -78,6 +90,15 @@ const Div = styled.div`
   justify-content: center;
   padding-top: 93px;
   background-color: #05080a;
+  & video {
+    &::-webkit-media-controls-volume-slider {
+      display: none;
+    }
+
+    &::-webkit-media-controls-mute-button {
+      display: none;
+    }
+  }
   @media screen and (max-width: 576px) {
     padding-top: 66px;
   }
