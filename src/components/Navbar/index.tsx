@@ -1,53 +1,53 @@
-import { useState, useEffect } from "react";
-import Logo from "../../assets/img/Logo/logo.png";
-import { Nav, Navbar, Container } from "react-bootstrap";
-import styled from "styled-components";
-import close from "../../assets/img/close.png";
+import { useState, useEffect } from "react"
+import Logo from "../../assets/img/Logo/logo.png"
+import { Nav, Navbar, Container } from "react-bootstrap"
+import styled from "styled-components"
+import close from "../../assets/img/close.png"
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 10) {
-        setScrolled(true);
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
-  }, []);
+    }
+  }, [])
   return (
     <Div>
       <StyledNavbar
         className={scrolled && "add-boxshadow"}
         collapseOnSelect
-        fixed='top'
-        expand='lg'
-        variant='dark'
+        fixed="top"
+        expand="lg"
+        variant="dark"
       >
         <StyledContainer>
-          <Navbar.Brand href='#'>
-            <StyledImg src={Logo} alt='Logo' />
+          <Navbar.Brand href="#">
+            <StyledImg src={Logo} alt="Logo" />
           </Navbar.Brand>
-          <StyledNavbarToggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
+          <StyledNavbarToggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <StyledNav>
               <StyledFirstButton
-                href='https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1'
-                target='_blank'
+                href="https://docs.google.com/presentation/d/1RnP4BVUzkm8dxNpl9WijcnW4WF5uRqzt/present?slide=id.p1"
+                target="_blank"
               >
                 PITCH DECK
               </StyledFirstButton>
               <StyledSecondButton
-                href='https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Gamestate-Meta-Paper-v1.pdf'
-                target='_blank'
+                href="https://s3.ap-southeast-1.amazonaws.com/defiforyou.uk/Gamestate-metapaper-20211208.pdf"
+                target="_blank"
               >
                 METAPAPER
               </StyledSecondButton>
 
-              <StyledThirdButton href='#staking'>STAKING</StyledThirdButton>
+              <StyledThirdButton href="#staking">STAKING</StyledThirdButton>
               <StyledFourthButton
-                href='https://getstarted.gamestate.one'
-                target='_blank'
+                href="https://getstarted.gamestate.one"
+                target="_blank"
               >
                 GET STARTED
               </StyledFourthButton>
@@ -56,9 +56,9 @@ const Header = () => {
         </StyledContainer>
       </StyledNavbar>
     </Div>
-  );
-};
-export default Header;
+  )
+}
+export default Header
 
 const A = styled.a`
   text-align: center;
@@ -89,7 +89,7 @@ const A = styled.a`
     margin-bottom: 50px;
     margin-left: 0;
   }
-`;
+`
 const StyledFirstButton = styled(A)`
   color: #81efff;
   border: 3px solid #81efff;
@@ -99,7 +99,7 @@ const StyledFirstButton = styled(A)`
     color: #81efff;
     transform: scale(1.05);
   }
-`;
+`
 const StyledSecondButton = styled(A)`
   color: #ffffff;
   border: 3px solid #ffffff;
@@ -109,7 +109,7 @@ const StyledSecondButton = styled(A)`
     color: #ffffff;
     transform: scale(1.05);
   }
-`;
+`
 
 const StyledThirdButton = styled(A)`
   color: #1ad177;
@@ -120,7 +120,7 @@ const StyledThirdButton = styled(A)`
     color: #1ad177;
     transform: scale(1.05);
   }
-`;
+`
 const StyledFourthButton = styled(A)`
   color: #e740f0;
   border: 3px solid #e740f0;
@@ -130,11 +130,11 @@ const StyledFourthButton = styled(A)`
     color: #e740f0;
     transform: scale(1.05);
   }
-`;
+`
 const StyledNav = styled(Nav)`
   justify-content: flex-end;
   align-items: center;
-`;
+`
 const StyledNavbarToggle = styled(Navbar.Toggle)`
   /* &:focus {
     outline: none;
@@ -142,7 +142,7 @@ const StyledNavbarToggle = styled(Navbar.Toggle)`
   }
   & > .navbar-toggler-icon {
   } */
-`;
+`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
@@ -150,7 +150,7 @@ const StyledImg = styled.img`
     max-width: 195px;
     max-height: 53px;
   }
-`;
+`
 const StyledContainer = styled(Container)`
   height: 100%;
   max-width: 94%;
@@ -177,7 +177,7 @@ const StyledContainer = styled(Container)`
       background-image: url(${close});
     }
   }
-`;
+`
 const StyledNavbar = styled(Navbar)`
   background-color: #000000;
   max-height: 102px;
@@ -199,9 +199,9 @@ const StyledNavbar = styled(Navbar)`
       padding-bottom: 20px;
     }
   }
-`;
+`
 const Div = styled.div`
   .add-boxshadow {
     box-shadow: 0px 3px 6px #9e08a6;
   }
-`;
+`
