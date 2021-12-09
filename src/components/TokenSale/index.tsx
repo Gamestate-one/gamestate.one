@@ -66,7 +66,7 @@ const TokenSale = () => {
               <img src={PolygonLogo} alt="Polygon Logo" />
               <span className="title">Polygon IDO</span>
               <Countdown
-                date={new Date("Dec 10 2021 02:00:00 UTC").getTime()}
+                date={new Date("Dec 15 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
               />
             </Bar>
