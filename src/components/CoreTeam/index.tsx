@@ -23,6 +23,8 @@ import mobileCoreTung from "../../assets/img/Team/mobileCoreTung.png"
 import mobileCoreViet from "../../assets/img/Team/mobileCoreViet.png"
 import mobileCoreManne from "../../assets/img/Team/mobileCoreManne.png"
 import mobileCorePeck from "../../assets/img/Team/mobileCorePeck.png"
+import mobileCoreTien from "../../assets/img/Team/mobileCoreTien.png"
+
 // import mobileCoreMartinez from "../../assets/img/Team/mobileCoreMartinez.png"
 // import anonymous from "../../assets/img/Team/anonymous.png"
 import AvatarItem from "../AvatarItem"
@@ -271,7 +273,7 @@ const MOBILE_CORE_TEAM = [
   },
 
   {
-    image: coreTien,
+    image: mobileCoreTien,
     name: "TIEN NGUYEN",
     job: "Digital Marketing Specialist",
     desc: "Digital marketing with a focus on social media, web development, SEO, software development, e-commerce, edtech and fintech.",
