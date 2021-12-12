@@ -5,6 +5,9 @@ import logo from "../../assets/img/Logo/logo.svg"
 const StyledBlockFooter = styled(Container)`
   max-width: 94%;
   /* max-width: 1820px; */
+  @media screen and (min-width: 2440px) {
+    max-width: 1820px;
+  }
   @media screen and (max-width: 991px) {
     & img {
       max-width: 264px;
