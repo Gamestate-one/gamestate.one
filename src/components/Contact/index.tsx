@@ -8,6 +8,9 @@ const StyledContainerContact = styled(Container)`
   @media screen and (min-width: 1200px) {
     max-width: 94%;
   }
+  @media screen and (min-width: 2440px) {
+    max-width: 1820px;
+  }
 `
 const StyledBlockContact = styled(Row)`
   display: flex;
