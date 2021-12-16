@@ -65,7 +65,7 @@ const TokenSale = () => {
           <PolygonProgessBar fluid>
             <Bar>
               <img src={PolygonLogo} alt="Polygon Logo" />
-              <span className="title">Polygon IDO CLOSE TIME</span>
+              <span className="title">Polygon IDO DURATION</span>
               <div className="progessBar">
                 <div className="progessBar-fill">
                   <div className="progessBar-fill-inner"></div>

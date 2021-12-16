@@ -90,13 +90,15 @@ const Div = styled.div`
   justify-content: center;
   padding-top: 93px;
   background-color: #05080a;
-  & video {
-    &::-webkit-media-controls-volume-slider {
-      display: none;
-    }
+  @media screen and (min-width: 576px) {
+    & video {
+      &::-webkit-media-controls-volume-slider {
+        display: none;
+      }
 
-    &::-webkit-media-controls-mute-button {
-      display: none;
+      &::-webkit-media-controls-mute-button {
+        display: none;
+      }
     }
   }
   @media screen and (max-width: 576px) {
