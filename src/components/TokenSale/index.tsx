@@ -61,14 +61,20 @@ const TokenSale = () => {
               </div>
             </Bar>
           </HiveProgessBar> */}
+          <StyledCloseTime>December 19, 2021 02:00 AM GMT</StyledCloseTime>
           <PolygonProgessBar fluid>
             <Bar>
               <img src={PolygonLogo} alt="Polygon Logo" />
-              <span className="title">Polygon IDO</span>
-              <Countdown
+              <span className="title">Polygon IDO CLOSE TIME</span>
+              <div className="progessBar">
+                <div className="progessBar-fill">
+                  <div className="progessBar-fill-inner"></div>
+                </div>
+              </div>
+              {/* <Countdown
                 date={new Date("Dec 16 2021 02:00:00 UTC").getTime()}
                 renderer={Rendered}
-              />
+              /> */}
             </Bar>
           </PolygonProgessBar>
         </StyledBar>
@@ -86,7 +92,14 @@ const TokenSale = () => {
     </Div>
   )
 }
-
+const StyledCloseTime = styled.p`
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  @media screen and (max-width: 991px) {
+    font-size: 24px;
+  }
+`
 const Div = styled.div`
   /* background: url(${CoinBackground}) no-repeat; */
   background-position: top center;
@@ -188,7 +201,7 @@ const ProgessBar = styled(Container)`
   max-width: 60%;
   /* height: 122px; */
   min-height: 157px;
-  @media screen and (max-width: 1700px) {
+  @media screen and (max-width: 1919px) {
     max-width: 80%;
   }
   @media screen and (max-width: 1400px) {
@@ -215,6 +228,8 @@ const Bar = styled.div`
   align-items: center;
   width: 100%;
   text-align: left;
+  justify-content: flex-end;
+
   img {
     margin-left: 30px;
     margin-right: 24px;
@@ -233,6 +248,7 @@ const Bar = styled.div`
     opacity: 1;
     margin-right: 22px;
     min-width: 212px;
+    margin-right: auto;
     @media (max-width: 1199px) {
       font-size: 20px;
       font-weight: 500;
@@ -284,7 +300,7 @@ const Bar = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 68%;
+    width: 59%;
     @media screen and (max-width: 991px) {
       margin-bottom: 24px;
       margin-top: 12px;
